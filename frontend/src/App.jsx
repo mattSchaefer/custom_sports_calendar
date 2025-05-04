@@ -16,8 +16,8 @@ function App() {
 
   return (
     <div className="p-10 text-center">
-      <h1 className="text-2xl font-bold">Django Ninja + React Boilerplate</h1>
-      <p className="mt-4 text-lg">{message || "Loading..."}</p>
+      <h1 className="text-2xl font-bold main-header">Sports Calendar Plus</h1>
+      <p className="mt-4 text-lg">All your favorite sports, all in one place</p>
     </div>
   );
 }
