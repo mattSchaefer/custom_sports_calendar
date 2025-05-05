@@ -1,10 +1,32 @@
+.p5canvascontainer{
+  width: 100%;
+  height : 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+body{
+  background: #0a0118;
+  color: #fff;
+}
+h1{
+  letter-spacing: -3px;
+}
+.header-container{
+  position: absolute;
+  top: 25%;
+  left: 0;
+  z-index: 10000;
+  width: 100vw;
+}
 .main-header{
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(88deg,#fff,#7a78e7 31%,#b678e7);
   background-clip: text;
 }
 #root {
-  max-width: 1280px;
+  width: 100vw;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
