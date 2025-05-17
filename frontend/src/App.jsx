@@ -17,11 +17,22 @@ function App() {
 
   return (
     <div className="p-10 text-center">
-      <span className="header-container on-top">
-        <h1 className="text-2xl font-bold main-header">Sports Calendar Plus</h1>
-        <p className="mt-4 text-lg">All your favorite sports, all in one place</p>
-      </span>
-      <P5Canvas />
+      <div className="section" id="section-1">
+        <span className="header-container on-top">
+          <span className="h1-container">
+            <h1 className="text-2xl font-bold main-header"> <i className="fa fa-thin fa-futbol"> </i>Sports Calendar Plus</h1>
+            <h1 className="sub-header">One single calendar, all your favorit games</h1>
+          </span>
+          <span className="header-buttons">
+            <button>Learn More</button>
+            <button>Get Started</button>
+          </span>
+          <p className="header-paragraph">Watching sports all weekend?  No need to check 5 different league schedules periodically- Configure your perfect sports calendar, spanning multiple leagues and teams, without the hastle.</p>
+        </span>
+        <P5Canvas />
+      </div>
+      <div className="section" id="section-2">
+      </div>
     </div>
   );
 }
