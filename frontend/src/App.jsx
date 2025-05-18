@@ -9,9 +9,15 @@ function App() {
   const [message, setMessage] = useState("")
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/hello")
+    fetch("http://127.0.0.1:8000/api/get_eventsseason", {
+            method:"POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            
+        })
       .then(response => response.json())
-      .then(data => setMessage(data.message))
+      .then(data => console.log(data))
       .catch(error => console.error("Error fetching data:", error));
   }, []);
 
