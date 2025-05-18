@@ -23,11 +23,12 @@ function App() {
             <h1 className="text-2xl font-bold main-header"> <i className="fa fa-thin fa-futbol"> </i>Sports Calendar Plus</h1>
             <h1 className="sub-header">One single calendar, all your favorit games</h1>
           </span>
+          <p className="header-paragraph">Smartly integrate all your sports into one calendar.</p>
           <span className="header-buttons">
-            <button>Learn More</button>
-            <button>Get Started</button>
+            <button className="header-btn">Learn More</button>
+            <button id="get-started-btn" className="header-btn">Get Started</button>
           </span>
-          <p className="header-paragraph">Watching sports all weekend?  No need to check 5 different league schedules periodically- Configure your perfect sports calendar, spanning multiple leagues and teams, without the hastle.</p>
+          
         </span>
         <P5Canvas />
       </div>
