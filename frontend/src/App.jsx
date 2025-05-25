@@ -7,15 +7,22 @@ import P5Canvas from './components/P5Canvas.jsx'
 function App() {
   const [count, setCount] = useState(0)
   const [message, setMessage] = useState("")
-
+  const rq = {
+        //url: "http://127.0.0.1:8000/api/get_eventsseason",
+        url: "http://127.0.1:8000/api/get_league_teams",
+        options: {
+          method:"POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            leagueId: "4424",
+            //year: "2025"
+          })
+        }
+    }
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/get_eventsseason", {
-            method:"POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            
-        })
+    fetch(rq.url, rq.options)
       .then(response => response.json())
       .then(data => console.log(data))
       .catch(error => console.error("Error fetching data:", error));
