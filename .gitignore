@@ -22,12 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-<<<<<<< HEAD
 .env
-=======
 __pycache__/
 *.py[cod]
->>>>>>> frontend-work
 .env
 __pycache__/
 *.pyc
+notes.txt
