@@ -8,8 +8,8 @@ export const build_save_user_request = (user) => {
             },
             body: JSON.stringify({
                 uid: user.uid,
-                email: user.email,
-                displayName: user.displayName,
+                email: user.email || "none provided",
+                displayName: user.displayName || "none provided",
                 provider: user.provider
             })
         }
