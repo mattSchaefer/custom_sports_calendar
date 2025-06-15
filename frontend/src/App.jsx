@@ -37,10 +37,10 @@ function App() {
       }
   };
   useEffect(() => {
-    fetch(rq.url, rq.options)
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.error("Error fetching data:", error));
+    // fetch(rq.url, rq.options)
+    //   .then(response => response.json())
+    //   .then(data => console.log(data))
+    //   .catch(error => console.error("Error fetching data:", error));
   }, []);
 
   return (

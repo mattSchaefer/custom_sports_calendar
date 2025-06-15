@@ -5,6 +5,7 @@ import requests
 import json
 from django.conf import settings
 from dotenv import load_dotenv
+from backend.services.firestore_user_handler import seed_games
 load_dotenv()
 def api_key():
     return os.getenv("SPORTS_DATA_API_KEY")
@@ -82,6 +83,7 @@ def get_league_season(leagueId, year):
     else:
         return JsonResponse({"error": "Failed to fetch data"}, status=response.status_code)
 def get_league_teams_meta(leagueId):
+    #seed_games() 
     resource = f"lookup_all_teams.php?id={leagueId}"
     url = build_request_url(resource)
     headers = build_request_headers()
