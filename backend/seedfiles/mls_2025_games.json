@@ -1,0 +1,3387 @@
+[
+    {
+        "date": "Sunday, June 8, 2025 7:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        },
+        "away": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 9:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LAFC",
+            "id": "18966"
+        },
+        "away": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 9:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        },
+        "away": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        },
+        "away": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        },
+        "away": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 4:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        },
+        "away": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        },
+        "away": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        },
+        "away": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        },
+        "away": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        },
+        "away": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        },
+        "away": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        },
+        "away": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        },
+        "away": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        },
+        "away": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        },
+        "away": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        }
+    },
+    {
+        "date": "Sunday, June 8, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        },
+        "away": {
+            "team_name": "D.C. United",
+            "id": "193"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        },
+        "away": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        },
+        "away": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        },
+        "away": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        },
+        "away": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        },
+        "away": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        },
+        "away": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        },
+        "away": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        },
+        "away": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        },
+        "away": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        },
+        "away": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        },
+        "away": {
+            "team_name": "LAFC",
+            "id": "18966"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        },
+        "away": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        },
+        "away": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "D.C. United",
+            "id": "193"
+        },
+        "away": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        },
+        "away": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        },
+        "away": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        },
+        "away": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        },
+        "away": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        },
+        "away": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        },
+        "away": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        },
+        "away": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        },
+        "away": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        },
+        "away": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LAFC",
+            "id": "18966"
+        },
+        "away": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        },
+        "away": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        }
+    },
+    {
+        "date": "Wednesday, June 25, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        },
+        "away": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 6:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        },
+        "away": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        },
+        "away": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        },
+        "away": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        },
+        "away": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        },
+        "away": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 7:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        },
+        "away": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        },
+        "away": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "D.C. United",
+            "id": "193"
+        },
+        "away": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        },
+        "away": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        },
+        "away": {
+            "team_name": "LAFC",
+            "id": "18966"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        },
+        "away": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        },
+        "away": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        },
+        "away": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        },
+        "away": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        }
+    },
+    {
+        "date": "Sunday, June 29, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        },
+        "away": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 5:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        },
+        "away": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        },
+        "away": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LAFC",
+            "id": "18966"
+        },
+        "away": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        },
+        "away": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        },
+        "away": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        },
+        "away": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        },
+        "away": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        },
+        "away": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        },
+        "away": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        },
+        "away": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        },
+        "away": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        },
+        "away": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        },
+        "away": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        },
+        "away": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        },
+        "away": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        },
+        "away": {
+            "team_name": "D.C. United",
+            "id": "193"
+        }
+    },
+    {
+        "date": "Sunday, July 6, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LAFC",
+            "id": "18966"
+        },
+        "away": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 7:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        },
+        "away": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        },
+        "away": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        },
+        "away": {
+            "team_name": "D.C. United",
+            "id": "193"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        },
+        "away": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        },
+        "away": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        },
+        "away": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        },
+        "away": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        },
+        "away": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        },
+        "away": {
+            "team_name": "LAFC",
+            "id": "18966"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        },
+        "away": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        },
+        "away": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        },
+        "away": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        },
+        "away": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        },
+        "away": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        },
+        "away": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        },
+        "away": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        },
+        "away": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        },
+        "away": {
+            "team_name": "D.C. United",
+            "id": "193"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        },
+        "away": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        },
+        "away": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        },
+        "away": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        },
+        "away": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        },
+        "away": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        },
+        "away": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        },
+        "away": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        },
+        "away": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LAFC",
+            "id": "18966"
+        },
+        "away": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        },
+        "away": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        }
+    },
+    {
+        "date": "Sunday, July 13, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        },
+        "away": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 9:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025
+    },
+    {
+        "date": "Wednesday, July 23, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        },
+        "away": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        },
+        "away": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        },
+        "away": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        },
+        "away": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LAFC",
+            "id": "18966"
+        },
+        "away": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        },
+        "away": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 7:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        },
+        "away": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        },
+        "away": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        },
+        "away": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "D.C. United",
+            "id": "193"
+        },
+        "away": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        },
+        "away": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        },
+        "away": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        },
+        "away": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        },
+        "away": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        }
+    },
+    {
+        "date": "Wednesday, July 23, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        },
+        "away": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        }
+    },
+    {
+        "date": "Saturday, August 9, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        },
+        "away": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        }
+    },
+    {
+        "date": "Saturday, August 9, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        },
+        "away": {
+            "team_name": "D.C. United",
+            "id": "193"
+        }
+    },
+    {
+        "date": "Saturday, August 9, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        },
+        "away": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        }
+    },
+    {
+        "date": "Saturday, August 9, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        },
+        "away": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        }
+    },
+    {
+        "date": "Saturday, August 9, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        },
+        "away": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        }
+    },
+    {
+        "date": "Saturday, August 9, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        },
+        "away": {
+            "team_name": "LAFC",
+            "id": "18966"
+        }
+    },
+    {
+        "date": "Saturday, August 9, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        },
+        "away": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        }
+    },
+    {
+        "date": "Saturday, August 9, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        },
+        "away": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        }
+    },
+    {
+        "date": "Saturday, August 9, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        },
+        "away": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        }
+    },
+    {
+        "date": "Saturday, August 9, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        },
+        "away": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 6:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        },
+        "away": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 6:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        },
+        "away": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 6:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        },
+        "away": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 8:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        },
+        "away": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 10:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        },
+        "away": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        },
+        "away": {
+            "team_name": "D.C. United",
+            "id": "193"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        },
+        "away": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        },
+        "away": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        },
+        "away": {
+            "team_name": "LAFC",
+            "id": "18966"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        },
+        "away": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        },
+        "away": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        },
+        "away": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        },
+        "away": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        },
+        "away": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        },
+        "away": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        },
+        "away": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        }
+    },
+    {
+        "date": "Sunday, August 10, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        },
+        "away": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 5:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        },
+        "away": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 7:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        },
+        "away": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 9:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        },
+        "away": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        },
+        "away": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        },
+        "away": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "D.C. United",
+            "id": "193"
+        },
+        "away": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        },
+        "away": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        },
+        "away": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        },
+        "away": {
+            "team_name": "LAFC",
+            "id": "18966"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        },
+        "away": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        },
+        "away": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        },
+        "away": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        },
+        "away": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        },
+        "away": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        }
+    },
+    {
+        "date": "Sunday, August 17, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        },
+        "away": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 4:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        },
+        "away": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 7:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        },
+        "away": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 9:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        },
+        "away": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        },
+        "away": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        },
+        "away": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        },
+        "away": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        },
+        "away": {
+            "team_name": "D.C. United",
+            "id": "193"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        },
+        "away": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        },
+        "away": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        },
+        "away": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        },
+        "away": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        },
+        "away": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        },
+        "away": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        },
+        "away": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        },
+        "away": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        },
+        "away": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        }
+    },
+    {
+        "date": "Sunday, August 24, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        },
+        "away": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        }
+    },
+    {
+        "date": "Monday, September 1, 2025 TBD (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LAFC",
+            "id": "18966"
+        },
+        "away": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        }
+    },
+    {
+        "date": "Monday, September 1, 2025 7:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        },
+        "away": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        }
+    },
+    {
+        "date": "Monday, September 1, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        },
+        "away": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        }
+    },
+    {
+        "date": "Monday, September 1, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        },
+        "away": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        },
+        "away": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        },
+        "away": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        },
+        "away": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "D.C. United",
+            "id": "193"
+        },
+        "away": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        },
+        "away": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        },
+        "away": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        },
+        "away": {
+            "team_name": "LAFC",
+            "id": "18966"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        },
+        "away": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        },
+        "away": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        },
+        "away": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        },
+        "away": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        },
+        "away": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        },
+        "away": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        },
+        "away": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        }
+    },
+    {
+        "date": "Saturday, September 13, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        },
+        "away": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        },
+        "away": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        },
+        "away": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 2:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        },
+        "away": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 4:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        },
+        "away": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        },
+        "away": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        },
+        "away": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        },
+        "away": {
+            "team_name": "D.C. United",
+            "id": "193"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        },
+        "away": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        },
+        "away": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        },
+        "away": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        },
+        "away": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        },
+        "away": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        },
+        "away": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        },
+        "away": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        }
+    },
+    {
+        "date": "Tuesday, September 16, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        },
+        "away": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 9:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LAFC",
+            "id": "18966"
+        },
+        "away": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        },
+        "away": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        },
+        "away": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 2:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        },
+        "away": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 4:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        },
+        "away": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        },
+        "away": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "D.C. United",
+            "id": "193"
+        },
+        "away": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        },
+        "away": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        },
+        "away": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        },
+        "away": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        },
+        "away": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        },
+        "away": {
+            "team_name": "LAFC",
+            "id": "18966"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        },
+        "away": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        },
+        "away": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        },
+        "away": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        },
+        "away": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        },
+        "away": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        }
+    },
+    {
+        "date": "Sunday, September 21, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        },
+        "away": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        }
+    },
+    {
+        "date": "Saturday, October 4, 2025 2:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "D.C. United",
+            "id": "193"
+        },
+        "away": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        }
+    },
+    {
+        "date": "Saturday, October 4, 2025 4:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        },
+        "away": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        }
+    },
+    {
+        "date": "Saturday, October 4, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        },
+        "away": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        }
+    },
+    {
+        "date": "Saturday, October 4, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        },
+        "away": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        }
+    },
+    {
+        "date": "Saturday, October 4, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        },
+        "away": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        }
+    },
+    {
+        "date": "Saturday, October 4, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        },
+        "away": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        }
+    },
+    {
+        "date": "Saturday, October 4, 2025 7:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        },
+        "away": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        }
+    },
+    {
+        "date": "Saturday, October 4, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        },
+        "away": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        }
+    },
+    {
+        "date": "Saturday, October 4, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        },
+        "away": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        }
+    },
+    {
+        "date": "Saturday, October 4, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        },
+        "away": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        }
+    },
+    {
+        "date": "Saturday, October 4, 2025 8:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        },
+        "away": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        }
+    },
+    {
+        "date": "Saturday, October 4, 2025 9:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        },
+        "away": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        }
+    },
+    {
+        "date": "Saturday, October 4, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        },
+        "away": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        }
+    },
+    {
+        "date": "Sunday, October 5, 2025 9:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        },
+        "away": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        }
+    },
+    {
+        "date": "Sunday, October 5, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LAFC",
+            "id": "18966"
+        },
+        "away": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        }
+    },
+    {
+        "date": "Sunday, October 5, 2025 10:30 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LAFC",
+            "id": "18966"
+        },
+        "away": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 6:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Atlanta United FC",
+            "id": "18418"
+        },
+        "away": {
+            "team_name": "D.C. United",
+            "id": "193"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 6:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Charlotte FC",
+            "id": "21300"
+        },
+        "away": {
+            "team_name": "Philadelphia Union",
+            "id": "10739"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 6:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Columbus Crew",
+            "id": "183"
+        },
+        "away": {
+            "team_name": "New York Red Bulls",
+            "id": "190"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 6:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "FC Cincinnati",
+            "id": "18267"
+        },
+        "away": {
+            "team_name": "CF Montréal",
+            "id": "9720"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 6:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Nashville SC",
+            "id": "18986"
+        },
+        "away": {
+            "team_name": "Inter Miami CF",
+            "id": "20232"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 6:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New England Revolution",
+            "id": "189"
+        },
+        "away": {
+            "team_name": "Chicago Fire FC",
+            "id": "182"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 6:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "New York City FC",
+            "id": "17606"
+        },
+        "away": {
+            "team_name": "Seattle Sounders FC",
+            "id": "9726"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 6:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Toronto FC",
+            "id": "7318"
+        },
+        "away": {
+            "team_name": "Orlando City SC",
+            "id": "12011"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 9:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Colorado Rapids",
+            "id": "184"
+        },
+        "away": {
+            "team_name": "LAFC",
+            "id": "18966"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 9:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "LA Galaxy",
+            "id": "187"
+        },
+        "away": {
+            "team_name": "Minnesota United FC",
+            "id": "17362"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 9:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Portland Timbers",
+            "id": "9723"
+        },
+        "away": {
+            "team_name": "San Diego FC",
+            "id": "22529"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 9:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "San Jose Earthquakes",
+            "id": "191"
+        },
+        "away": {
+            "team_name": "Austin FC",
+            "id": "20906"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 9:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Sporting Kansas City",
+            "id": "186"
+        },
+        "away": {
+            "team_name": "Houston Dynamo FC",
+            "id": "6077"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 9:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "St. Louis CITY SC",
+            "id": "21812"
+        },
+        "away": {
+            "team_name": "Real Salt Lake",
+            "id": "4771"
+        }
+    },
+    {
+        "date": "Saturday, October 18, 2025 9:00 PM (EST)",
+        "league_name": "MLS",
+        "season": 2025,
+        "home": {
+            "team_name": "Vancouver Whitecaps",
+            "id": "9727"
+        },
+        "away": {
+            "team_name": "FC Dallas",
+            "id": "185"
+        }
+    }
+]

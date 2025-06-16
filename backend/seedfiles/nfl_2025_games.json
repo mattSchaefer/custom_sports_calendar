@@ -1,0 +1,4116 @@
+[
+    {
+        "date": "Thursday, September 4, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Dallas",
+            "team_name": "Dallas Cowboys",
+            "id": "dal"
+        },
+        "away": {
+            "team_name": "Philadelphia Eagles",
+            "team_name_short": "Philadelphia",
+            "id": "phi"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 8:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "YouTube",
+        "home": {
+            "team_name_short": "Kansas City",
+            "team_name": "Kansas City Chiefs",
+            "id": "kc"
+        },
+        "away": {
+            "team_name": "Los Angeles Chargers",
+            "team_name_short": "Los Angeles",
+            "id": "lac"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Tampa Bay",
+            "team_name": "Tampa Bay Buccaneers",
+            "id": "tb"
+        },
+        "away": {
+            "team_name": "Atlanta Falcons",
+            "team_name_short": "Atlanta",
+            "id": "atl"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Cincinnati",
+            "team_name": "Cincinnati Bengals",
+            "id": "cin"
+        },
+        "away": {
+            "team_name": "Cleveland Browns",
+            "team_name_short": "Cleveland",
+            "id": "cle"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Miami",
+            "team_name": "Miami Dolphins",
+            "id": "mia"
+        },
+        "away": {
+            "team_name": "Indianapolis Colts",
+            "team_name_short": "Indianapolis",
+            "id": "ind"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Las Vegas",
+            "team_name": "Las Vegas Raiders",
+            "id": "lv"
+        },
+        "away": {
+            "team_name": "New England Patriots",
+            "team_name_short": "New England",
+            "id": "ne"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Arizona",
+            "team_name": "Arizona Cardinals",
+            "id": "ari"
+        },
+        "away": {
+            "team_name": "New Orleans Saints",
+            "team_name_short": "New Orleans",
+            "id": "no"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Pittsburgh",
+            "team_name": "Pittsburgh Steelers",
+            "id": "pit"
+        },
+        "away": {
+            "team_name": "New York Jets",
+            "team_name_short": "New York",
+            "id": "nyj"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Giants",
+            "id": "nyg"
+        },
+        "away": {
+            "team_name": "Washington Commanders",
+            "team_name_short": "Washington",
+            "id": "wsh"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Carolina",
+            "team_name": "Carolina Panthers",
+            "id": "car"
+        },
+        "away": {
+            "team_name": "Jacksonville Jaguars",
+            "team_name_short": "Jacksonville",
+            "id": "jax"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Tennessee",
+            "team_name": "Tennessee Titans",
+            "id": "ten"
+        },
+        "away": {
+            "team_name": "Denver Broncos",
+            "team_name_short": "Denver",
+            "id": "den"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "San Francisco",
+            "team_name": "San Francisco 49ers",
+            "id": "sf"
+        },
+        "away": {
+            "team_name": "Seattle Seahawks",
+            "team_name_short": "Seattle",
+            "id": "sea"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Detroit",
+            "team_name": "Detroit Lions",
+            "id": "det"
+        },
+        "away": {
+            "team_name": "Green Bay Packers",
+            "team_name_short": "Green Bay",
+            "id": "gb"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Houston",
+            "team_name": "Houston Texans",
+            "id": "hou"
+        },
+        "away": {
+            "team_name": "Los Angeles Rams",
+            "team_name_short": "Los Angeles",
+            "id": "lar"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Baltimore",
+            "team_name": "Baltimore Ravens",
+            "id": "bal"
+        },
+        "away": {
+            "team_name": "Buffalo Bills",
+            "team_name_short": "Buffalo",
+            "id": "buf"
+        }
+    },
+    {
+        "date": "Thursday, September 4, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ABC",
+        "home": {
+            "team_name_short": "Minnesota",
+            "team_name": "Minnesota Vikings",
+            "id": "min"
+        },
+        "away": {
+            "team_name": "Chicago Bears",
+            "team_name_short": "Chicago",
+            "id": "chi"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "Washington",
+            "team_name": "Washington Commanders",
+            "id": "wsh"
+        },
+        "away": {
+            "team_name": "Green Bay Packers",
+            "team_name_short": "Green Bay",
+            "id": "gb"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Jacksonville",
+            "team_name": "Jacksonville Jaguars",
+            "id": "jax"
+        },
+        "away": {
+            "team_name": "Cincinnati Bengals",
+            "team_name_short": "Cincinnati",
+            "id": "cin"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Giants",
+            "id": "nyg"
+        },
+        "away": {
+            "team_name": "Dallas Cowboys",
+            "team_name_short": "Dallas",
+            "id": "dal"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Chicago",
+            "team_name": "Chicago Bears",
+            "id": "chi"
+        },
+        "away": {
+            "team_name": "Detroit Lions",
+            "team_name_short": "Detroit",
+            "id": "det"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Rams",
+            "id": "lar"
+        },
+        "away": {
+            "team_name": "Tennessee Titans",
+            "team_name_short": "Tennessee",
+            "id": "ten"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New England",
+            "team_name": "New England Patriots",
+            "id": "ne"
+        },
+        "away": {
+            "team_name": "Miami Dolphins",
+            "team_name_short": "Miami",
+            "id": "mia"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "San Francisco",
+            "team_name": "San Francisco 49ers",
+            "id": "sf"
+        },
+        "away": {
+            "team_name": "New Orleans Saints",
+            "team_name_short": "New Orleans",
+            "id": "no"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Buffalo",
+            "team_name": "Buffalo Bills",
+            "id": "buf"
+        },
+        "away": {
+            "team_name": "New York Jets",
+            "team_name_short": "New York",
+            "id": "nyj"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Seattle",
+            "team_name": "Seattle Seahawks",
+            "id": "sea"
+        },
+        "away": {
+            "team_name": "Pittsburgh Steelers",
+            "team_name_short": "Pittsburgh",
+            "id": "pit"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Cleveland",
+            "team_name": "Cleveland Browns",
+            "id": "cle"
+        },
+        "away": {
+            "team_name": "Baltimore Ravens",
+            "team_name_short": "Baltimore",
+            "id": "bal"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Denver",
+            "team_name": "Denver Broncos",
+            "id": "den"
+        },
+        "away": {
+            "team_name": "Indianapolis Colts",
+            "team_name_short": "Indianapolis",
+            "id": "ind"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Carolina",
+            "team_name": "Carolina Panthers",
+            "id": "car"
+        },
+        "away": {
+            "team_name": "Arizona Cardinals",
+            "team_name_short": "Arizona",
+            "id": "ari"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Philadelphia",
+            "team_name": "Philadelphia Eagles",
+            "id": "phi"
+        },
+        "away": {
+            "team_name": "Kansas City Chiefs",
+            "team_name_short": "Kansas City",
+            "id": "kc"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Atlanta",
+            "team_name": "Atlanta Falcons",
+            "id": "atl"
+        },
+        "away": {
+            "team_name": "Minnesota Vikings",
+            "team_name_short": "Minnesota",
+            "id": "min"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 7:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ABC",
+        "home": {
+            "team_name_short": "Tampa Bay",
+            "team_name": "Tampa Bay Buccaneers",
+            "id": "tb"
+        },
+        "away": {
+            "team_name": "Houston Texans",
+            "team_name_short": "Houston",
+            "id": "hou"
+        }
+    },
+    {
+        "date": "Thursday, September 11, 2025 10:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ESPN",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Chargers",
+            "id": "lac"
+        },
+        "away": {
+            "team_name": "Las Vegas Raiders",
+            "team_name_short": "Las Vegas",
+            "id": "lv"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "Miami",
+            "team_name": "Miami Dolphins",
+            "id": "mia"
+        },
+        "away": {
+            "team_name": "Buffalo Bills",
+            "team_name_short": "Buffalo",
+            "id": "buf"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Green Bay",
+            "team_name": "Green Bay Packers",
+            "id": "gb"
+        },
+        "away": {
+            "team_name": "Cleveland Browns",
+            "team_name_short": "Cleveland",
+            "id": "cle"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Indianapolis",
+            "team_name": "Indianapolis Colts",
+            "id": "ind"
+        },
+        "away": {
+            "team_name": "Tennessee Titans",
+            "team_name_short": "Tennessee",
+            "id": "ten"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Cincinnati",
+            "team_name": "Cincinnati Bengals",
+            "id": "cin"
+        },
+        "away": {
+            "team_name": "Minnesota Vikings",
+            "team_name_short": "Minnesota",
+            "id": "min"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Pittsburgh",
+            "team_name": "Pittsburgh Steelers",
+            "id": "pit"
+        },
+        "away": {
+            "team_name": "New England Patriots",
+            "team_name_short": "New England",
+            "id": "ne"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Rams",
+            "id": "lar"
+        },
+        "away": {
+            "team_name": "Philadelphia Eagles",
+            "team_name_short": "Philadelphia",
+            "id": "phi"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Jets",
+            "id": "nyj"
+        },
+        "away": {
+            "team_name": "Tampa Bay Buccaneers",
+            "team_name_short": "Tampa Bay",
+            "id": "tb"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Las Vegas",
+            "team_name": "Las Vegas Raiders",
+            "id": "lv"
+        },
+        "away": {
+            "team_name": "Washington Commanders",
+            "team_name_short": "Washington",
+            "id": "wsh"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Atlanta",
+            "team_name": "Atlanta Falcons",
+            "id": "atl"
+        },
+        "away": {
+            "team_name": "Carolina Panthers",
+            "team_name_short": "Carolina",
+            "id": "car"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Houston",
+            "team_name": "Houston Texans",
+            "id": "hou"
+        },
+        "away": {
+            "team_name": "Jacksonville Jaguars",
+            "team_name_short": "Jacksonville",
+            "id": "jax"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Denver",
+            "team_name": "Denver Broncos",
+            "id": "den"
+        },
+        "away": {
+            "team_name": "Los Angeles Chargers",
+            "team_name_short": "Los Angeles",
+            "id": "lac"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New Orleans",
+            "team_name": "New Orleans Saints",
+            "id": "no"
+        },
+        "away": {
+            "team_name": "Seattle Seahawks",
+            "team_name_short": "Seattle",
+            "id": "sea"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Dallas",
+            "team_name": "Dallas Cowboys",
+            "id": "dal"
+        },
+        "away": {
+            "team_name": "Chicago Bears",
+            "team_name_short": "Chicago",
+            "id": "chi"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Arizona",
+            "team_name": "Arizona Cardinals",
+            "id": "ari"
+        },
+        "away": {
+            "team_name": "San Francisco 49ers",
+            "team_name_short": "San Francisco",
+            "id": "sf"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Kansas City",
+            "team_name": "Kansas City Chiefs",
+            "id": "kc"
+        },
+        "away": {
+            "team_name": "New York Giants",
+            "team_name_short": "New York",
+            "id": "nyg"
+        }
+    },
+    {
+        "date": "Thursday, September 18, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ABC",
+        "home": {
+            "team_name_short": "Detroit",
+            "team_name": "Detroit Lions",
+            "id": "det"
+        },
+        "away": {
+            "team_name": "Baltimore Ravens",
+            "team_name_short": "Baltimore",
+            "id": "bal"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "Seattle",
+            "team_name": "Seattle Seahawks",
+            "id": "sea"
+        },
+        "away": {
+            "team_name": "Arizona Cardinals",
+            "team_name_short": "Arizona",
+            "id": "ari"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 9:30 AM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NFL Net",
+        "home": {
+            "team_name_short": "Minnesota",
+            "team_name": "Minnesota Vikings",
+            "id": "min"
+        },
+        "away": {
+            "team_name": "Pittsburgh Steelers",
+            "team_name_short": "Pittsburgh",
+            "id": "pit"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Washington",
+            "team_name": "Washington Commanders",
+            "id": "wsh"
+        },
+        "away": {
+            "team_name": "Atlanta Falcons",
+            "team_name_short": "Atlanta",
+            "id": "atl"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New Orleans",
+            "team_name": "New Orleans Saints",
+            "id": "no"
+        },
+        "away": {
+            "team_name": "Buffalo Bills",
+            "team_name_short": "Buffalo",
+            "id": "buf"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Cleveland",
+            "team_name": "Cleveland Browns",
+            "id": "cle"
+        },
+        "away": {
+            "team_name": "Detroit Lions",
+            "team_name_short": "Detroit",
+            "id": "det"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Carolina",
+            "team_name": "Carolina Panthers",
+            "id": "car"
+        },
+        "away": {
+            "team_name": "New England Patriots",
+            "team_name_short": "New England",
+            "id": "ne"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Chargers",
+            "id": "lac"
+        },
+        "away": {
+            "team_name": "New York Giants",
+            "team_name_short": "New York",
+            "id": "nyg"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Philadelphia",
+            "team_name": "Philadelphia Eagles",
+            "id": "phi"
+        },
+        "away": {
+            "team_name": "Tampa Bay Buccaneers",
+            "team_name_short": "Tampa Bay",
+            "id": "tb"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Tennessee",
+            "team_name": "Tennessee Titans",
+            "id": "ten"
+        },
+        "away": {
+            "team_name": "Houston Texans",
+            "team_name_short": "Houston",
+            "id": "hou"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Indianapolis",
+            "team_name": "Indianapolis Colts",
+            "id": "ind"
+        },
+        "away": {
+            "team_name": "Los Angeles Rams",
+            "team_name_short": "Los Angeles",
+            "id": "lar"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Jacksonville",
+            "team_name": "Jacksonville Jaguars",
+            "id": "jax"
+        },
+        "away": {
+            "team_name": "San Francisco 49ers",
+            "team_name_short": "San Francisco",
+            "id": "sf"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Baltimore",
+            "team_name": "Baltimore Ravens",
+            "id": "bal"
+        },
+        "away": {
+            "team_name": "Kansas City Chiefs",
+            "team_name_short": "Kansas City",
+            "id": "kc"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Chicago",
+            "team_name": "Chicago Bears",
+            "id": "chi"
+        },
+        "away": {
+            "team_name": "Las Vegas Raiders",
+            "team_name_short": "Las Vegas",
+            "id": "lv"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Green Bay",
+            "team_name": "Green Bay Packers",
+            "id": "gb"
+        },
+        "away": {
+            "team_name": "Dallas Cowboys",
+            "team_name_short": "Dallas",
+            "id": "dal"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 7:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ESPN",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Jets",
+            "id": "nyj"
+        },
+        "away": {
+            "team_name": "Miami Dolphins",
+            "team_name_short": "Miami",
+            "id": "mia"
+        }
+    },
+    {
+        "date": "Thursday, September 25, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ABC",
+        "home": {
+            "team_name_short": "Cincinnati",
+            "team_name": "Cincinnati Bengals",
+            "id": "cin"
+        },
+        "away": {
+            "team_name": "Denver Broncos",
+            "team_name_short": "Denver",
+            "id": "den"
+        }
+    },
+    {
+        "date": "Thursday, October 2, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "San Francisco",
+            "team_name": "San Francisco 49ers",
+            "id": "sf"
+        },
+        "away": {
+            "team_name": "Los Angeles Rams",
+            "team_name_short": "Los Angeles",
+            "id": "lar"
+        }
+    },
+    {
+        "date": "Thursday, October 2, 2025 9:30 AM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NFL Net",
+        "home": {
+            "team_name_short": "Minnesota",
+            "team_name": "Minnesota Vikings",
+            "id": "min"
+        },
+        "away": {
+            "team_name": "Cleveland Browns",
+            "team_name_short": "Cleveland",
+            "id": "cle"
+        }
+    },
+    {
+        "date": "Thursday, October 2, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Las Vegas",
+            "team_name": "Las Vegas Raiders",
+            "id": "lv"
+        },
+        "away": {
+            "team_name": "Indianapolis Colts",
+            "team_name_short": "Indianapolis",
+            "id": "ind"
+        }
+    },
+    {
+        "date": "Thursday, October 2, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Giants",
+            "id": "nyg"
+        },
+        "away": {
+            "team_name": "New Orleans Saints",
+            "team_name_short": "New Orleans",
+            "id": "no"
+        }
+    },
+    {
+        "date": "Thursday, October 2, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Dallas",
+            "team_name": "Dallas Cowboys",
+            "id": "dal"
+        },
+        "away": {
+            "team_name": "New York Jets",
+            "team_name_short": "New York",
+            "id": "nyj"
+        }
+    },
+    {
+        "date": "Thursday, October 2, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Denver",
+            "team_name": "Denver Broncos",
+            "id": "den"
+        },
+        "away": {
+            "team_name": "Philadelphia Eagles",
+            "team_name_short": "Philadelphia",
+            "id": "phi"
+        }
+    },
+    {
+        "date": "Thursday, October 2, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Miami",
+            "team_name": "Miami Dolphins",
+            "id": "mia"
+        },
+        "away": {
+            "team_name": "Carolina Panthers",
+            "team_name_short": "Carolina",
+            "id": "car"
+        }
+    },
+    {
+        "date": "Thursday, October 2, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Houston",
+            "team_name": "Houston Texans",
+            "id": "hou"
+        },
+        "away": {
+            "team_name": "Baltimore Ravens",
+            "team_name_short": "Baltimore",
+            "id": "bal"
+        }
+    },
+    {
+        "date": "Thursday, October 2, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Tennessee",
+            "team_name": "Tennessee Titans",
+            "id": "ten"
+        },
+        "away": {
+            "team_name": "Arizona Cardinals",
+            "team_name_short": "Arizona",
+            "id": "ari"
+        }
+    },
+    {
+        "date": "Thursday, October 2, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Tampa Bay",
+            "team_name": "Tampa Bay Buccaneers",
+            "id": "tb"
+        },
+        "away": {
+            "team_name": "Seattle Seahawks",
+            "team_name_short": "Seattle",
+            "id": "sea"
+        }
+    },
+    {
+        "date": "Thursday, October 2, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Detroit",
+            "team_name": "Detroit Lions",
+            "id": "det"
+        },
+        "away": {
+            "team_name": "Cincinnati Bengals",
+            "team_name_short": "Cincinnati",
+            "id": "cin"
+        }
+    },
+    {
+        "date": "Thursday, October 2, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Washington",
+            "team_name": "Washington Commanders",
+            "id": "wsh"
+        },
+        "away": {
+            "team_name": "Los Angeles Chargers",
+            "team_name_short": "Los Angeles",
+            "id": "lac"
+        }
+    },
+    {
+        "date": "Thursday, October 2, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "New England",
+            "team_name": "New England Patriots",
+            "id": "ne"
+        },
+        "away": {
+            "team_name": "Buffalo Bills",
+            "team_name_short": "Buffalo",
+            "id": "buf"
+        }
+    },
+    {
+        "date": "Thursday, October 2, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ABC",
+        "home": {
+            "team_name_short": "Kansas City",
+            "team_name": "Kansas City Chiefs",
+            "id": "kc"
+        },
+        "away": {
+            "team_name": "Jacksonville Jaguars",
+            "team_name_short": "Jacksonville",
+            "id": "jax"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "Philadelphia",
+            "team_name": "Philadelphia Eagles",
+            "id": "phi"
+        },
+        "away": {
+            "team_name": "New York Giants",
+            "team_name_short": "New York",
+            "id": "nyg"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 9:30 AM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NFL Net",
+        "home": {
+            "team_name_short": "Denver",
+            "team_name": "Denver Broncos",
+            "id": "den"
+        },
+        "away": {
+            "team_name": "New York Jets",
+            "team_name_short": "New York",
+            "id": "nyj"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Arizona",
+            "team_name": "Arizona Cardinals",
+            "id": "ari"
+        },
+        "away": {
+            "team_name": "Indianapolis Colts",
+            "team_name_short": "Indianapolis",
+            "id": "ind"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Chargers",
+            "id": "lac"
+        },
+        "away": {
+            "team_name": "Miami Dolphins",
+            "team_name_short": "Miami",
+            "id": "mia"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Cleveland",
+            "team_name": "Cleveland Browns",
+            "id": "cle"
+        },
+        "away": {
+            "team_name": "Pittsburgh Steelers",
+            "team_name_short": "Pittsburgh",
+            "id": "pit"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "San Francisco",
+            "team_name": "San Francisco 49ers",
+            "id": "sf"
+        },
+        "away": {
+            "team_name": "Tampa Bay Buccaneers",
+            "team_name_short": "Tampa Bay",
+            "id": "tb"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Dallas",
+            "team_name": "Dallas Cowboys",
+            "id": "dal"
+        },
+        "away": {
+            "team_name": "Carolina Panthers",
+            "team_name_short": "Carolina",
+            "id": "car"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Seattle",
+            "team_name": "Seattle Seahawks",
+            "id": "sea"
+        },
+        "away": {
+            "team_name": "Jacksonville Jaguars",
+            "team_name_short": "Jacksonville",
+            "id": "jax"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Rams",
+            "id": "lar"
+        },
+        "away": {
+            "team_name": "Baltimore Ravens",
+            "team_name_short": "Baltimore",
+            "id": "bal"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Tennessee",
+            "team_name": "Tennessee Titans",
+            "id": "ten"
+        },
+        "away": {
+            "team_name": "Las Vegas Raiders",
+            "team_name_short": "Las Vegas",
+            "id": "lv"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Cincinnati",
+            "team_name": "Cincinnati Bengals",
+            "id": "cin"
+        },
+        "away": {
+            "team_name": "Green Bay Packers",
+            "team_name_short": "Green Bay",
+            "id": "gb"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New England",
+            "team_name": "New England Patriots",
+            "id": "ne"
+        },
+        "away": {
+            "team_name": "New Orleans Saints",
+            "team_name_short": "New Orleans",
+            "id": "no"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Detroit",
+            "team_name": "Detroit Lions",
+            "id": "det"
+        },
+        "away": {
+            "team_name": "Kansas City Chiefs",
+            "team_name_short": "Kansas City",
+            "id": "kc"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 7:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ESPN",
+        "home": {
+            "team_name_short": "Buffalo",
+            "team_name": "Buffalo Bills",
+            "id": "buf"
+        },
+        "away": {
+            "team_name": "Atlanta Falcons",
+            "team_name_short": "Atlanta",
+            "id": "atl"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ABC",
+        "home": {
+            "team_name_short": "Chicago",
+            "team_name": "Chicago Bears",
+            "id": "chi"
+        },
+        "away": {
+            "team_name": "Washington Commanders",
+            "team_name_short": "Washington",
+            "id": "wsh"
+        }
+    },
+    {
+        "date": "Thursday, October 9, 2025 ",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": ""
+    },
+    {
+        "date": "Thursday, October 16, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "Pittsburgh",
+            "team_name": "Pittsburgh Steelers",
+            "id": "pit"
+        },
+        "away": {
+            "team_name": "Cincinnati Bengals",
+            "team_name_short": "Cincinnati",
+            "id": "cin"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 9:30 AM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NFL Net",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Rams",
+            "id": "lar"
+        },
+        "away": {
+            "team_name": "Jacksonville Jaguars",
+            "team_name_short": "Jacksonville",
+            "id": "jax"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "New Orleans",
+            "team_name": "New Orleans Saints",
+            "id": "no"
+        },
+        "away": {
+            "team_name": "Chicago Bears",
+            "team_name_short": "Chicago",
+            "id": "chi"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Miami",
+            "team_name": "Miami Dolphins",
+            "id": "mia"
+        },
+        "away": {
+            "team_name": "Cleveland Browns",
+            "team_name_short": "Cleveland",
+            "id": "cle"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New England",
+            "team_name": "New England Patriots",
+            "id": "ne"
+        },
+        "away": {
+            "team_name": "Tennessee Titans",
+            "team_name_short": "Tennessee",
+            "id": "ten"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Las Vegas",
+            "team_name": "Las Vegas Raiders",
+            "id": "lv"
+        },
+        "away": {
+            "team_name": "Kansas City Chiefs",
+            "team_name_short": "Kansas City",
+            "id": "kc"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Philadelphia",
+            "team_name": "Philadelphia Eagles",
+            "id": "phi"
+        },
+        "away": {
+            "team_name": "Minnesota Vikings",
+            "team_name_short": "Minnesota",
+            "id": "min"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Carolina",
+            "team_name": "Carolina Panthers",
+            "id": "car"
+        },
+        "away": {
+            "team_name": "New York Jets",
+            "team_name_short": "New York",
+            "id": "nyj"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Giants",
+            "id": "nyg"
+        },
+        "away": {
+            "team_name": "Denver Broncos",
+            "team_name_short": "Denver",
+            "id": "den"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Indianapolis",
+            "team_name": "Indianapolis Colts",
+            "id": "ind"
+        },
+        "away": {
+            "team_name": "Los Angeles Chargers",
+            "team_name_short": "Los Angeles",
+            "id": "lac"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Washington",
+            "team_name": "Washington Commanders",
+            "id": "wsh"
+        },
+        "away": {
+            "team_name": "Dallas Cowboys",
+            "team_name_short": "Dallas",
+            "id": "dal"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Green Bay",
+            "team_name": "Green Bay Packers",
+            "id": "gb"
+        },
+        "away": {
+            "team_name": "Arizona Cardinals",
+            "team_name_short": "Arizona",
+            "id": "ari"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Atlanta",
+            "team_name": "Atlanta Falcons",
+            "id": "atl"
+        },
+        "away": {
+            "team_name": "San Francisco 49ers",
+            "team_name_short": "San Francisco",
+            "id": "sf"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 7:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ABC",
+        "home": {
+            "team_name_short": "Tampa Bay",
+            "team_name": "Tampa Bay Buccaneers",
+            "id": "tb"
+        },
+        "away": {
+            "team_name": "Detroit Lions",
+            "team_name_short": "Detroit",
+            "id": "det"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 10:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ESPN+",
+        "home": {
+            "team_name_short": "Houston",
+            "team_name": "Houston Texans",
+            "id": "hou"
+        },
+        "away": {
+            "team_name": "Seattle Seahawks",
+            "team_name_short": "Seattle",
+            "id": "sea"
+        }
+    },
+    {
+        "date": "Thursday, October 16, 2025 ",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": ""
+    },
+    {
+        "date": "Thursday, October 23, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "Minnesota",
+            "team_name": "Minnesota Vikings",
+            "id": "min"
+        },
+        "away": {
+            "team_name": "Los Angeles Chargers",
+            "team_name_short": "Los Angeles",
+            "id": "lac"
+        }
+    },
+    {
+        "date": "Thursday, October 23, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Miami",
+            "team_name": "Miami Dolphins",
+            "id": "mia"
+        },
+        "away": {
+            "team_name": "Atlanta Falcons",
+            "team_name_short": "Atlanta",
+            "id": "atl"
+        }
+    },
+    {
+        "date": "Thursday, October 23, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Jets",
+            "id": "nyj"
+        },
+        "away": {
+            "team_name": "Cincinnati Bengals",
+            "team_name_short": "Cincinnati",
+            "id": "cin"
+        }
+    },
+    {
+        "date": "Thursday, October 23, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Cleveland",
+            "team_name": "Cleveland Browns",
+            "id": "cle"
+        },
+        "away": {
+            "team_name": "New England Patriots",
+            "team_name_short": "New England",
+            "id": "ne"
+        }
+    },
+    {
+        "date": "Thursday, October 23, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Giants",
+            "id": "nyg"
+        },
+        "away": {
+            "team_name": "Philadelphia Eagles",
+            "team_name_short": "Philadelphia",
+            "id": "phi"
+        }
+    },
+    {
+        "date": "Thursday, October 23, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Buffalo",
+            "team_name": "Buffalo Bills",
+            "id": "buf"
+        },
+        "away": {
+            "team_name": "Carolina Panthers",
+            "team_name_short": "Carolina",
+            "id": "car"
+        }
+    },
+    {
+        "date": "Thursday, October 23, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Chicago",
+            "team_name": "Chicago Bears",
+            "id": "chi"
+        },
+        "away": {
+            "team_name": "Baltimore Ravens",
+            "team_name_short": "Baltimore",
+            "id": "bal"
+        }
+    },
+    {
+        "date": "Thursday, October 23, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "San Francisco",
+            "team_name": "San Francisco 49ers",
+            "id": "sf"
+        },
+        "away": {
+            "team_name": "Houston Texans",
+            "team_name_short": "Houston",
+            "id": "hou"
+        }
+    },
+    {
+        "date": "Thursday, October 23, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Tampa Bay",
+            "team_name": "Tampa Bay Buccaneers",
+            "id": "tb"
+        },
+        "away": {
+            "team_name": "New Orleans Saints",
+            "team_name_short": "New Orleans",
+            "id": "no"
+        }
+    },
+    {
+        "date": "Thursday, October 23, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Dallas",
+            "team_name": "Dallas Cowboys",
+            "id": "dal"
+        },
+        "away": {
+            "team_name": "Denver Broncos",
+            "team_name_short": "Denver",
+            "id": "den"
+        }
+    },
+    {
+        "date": "Thursday, October 23, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Tennessee",
+            "team_name": "Tennessee Titans",
+            "id": "ten"
+        },
+        "away": {
+            "team_name": "Indianapolis Colts",
+            "team_name_short": "Indianapolis",
+            "id": "ind"
+        }
+    },
+    {
+        "date": "Thursday, October 23, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Green Bay",
+            "team_name": "Green Bay Packers",
+            "id": "gb"
+        },
+        "away": {
+            "team_name": "Pittsburgh Steelers",
+            "team_name_short": "Pittsburgh",
+            "id": "pit"
+        }
+    },
+    {
+        "date": "Thursday, October 23, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ABC",
+        "home": {
+            "team_name_short": "Washington",
+            "team_name": "Washington Commanders",
+            "id": "wsh"
+        },
+        "away": {
+            "team_name": "Kansas City Chiefs",
+            "team_name_short": "Kansas City",
+            "id": "kc"
+        }
+    },
+    {
+        "date": "Thursday, October 30, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "Baltimore",
+            "team_name": "Baltimore Ravens",
+            "id": "bal"
+        },
+        "away": {
+            "team_name": "Miami Dolphins",
+            "team_name_short": "Miami",
+            "id": "mia"
+        }
+    },
+    {
+        "date": "Thursday, October 30, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Chicago",
+            "team_name": "Chicago Bears",
+            "id": "chi"
+        },
+        "away": {
+            "team_name": "Cincinnati Bengals",
+            "team_name_short": "Cincinnati",
+            "id": "cin"
+        }
+    },
+    {
+        "date": "Thursday, October 30, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Minnesota",
+            "team_name": "Minnesota Vikings",
+            "id": "min"
+        },
+        "away": {
+            "team_name": "Detroit Lions",
+            "team_name_short": "Detroit",
+            "id": "det"
+        }
+    },
+    {
+        "date": "Thursday, October 30, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Carolina",
+            "team_name": "Carolina Panthers",
+            "id": "car"
+        },
+        "away": {
+            "team_name": "Green Bay Packers",
+            "team_name_short": "Green Bay",
+            "id": "gb"
+        }
+    },
+    {
+        "date": "Thursday, October 30, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Chargers",
+            "id": "lac"
+        },
+        "away": {
+            "team_name": "Tennessee Titans",
+            "team_name_short": "Tennessee",
+            "id": "ten"
+        }
+    },
+    {
+        "date": "Thursday, October 30, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Atlanta",
+            "team_name": "Atlanta Falcons",
+            "id": "atl"
+        },
+        "away": {
+            "team_name": "New England Patriots",
+            "team_name_short": "New England",
+            "id": "ne"
+        }
+    },
+    {
+        "date": "Thursday, October 30, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "San Francisco",
+            "team_name": "San Francisco 49ers",
+            "id": "sf"
+        },
+        "away": {
+            "team_name": "New York Giants",
+            "team_name_short": "New York",
+            "id": "nyg"
+        }
+    },
+    {
+        "date": "Thursday, October 30, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Indianapolis",
+            "team_name": "Indianapolis Colts",
+            "id": "ind"
+        },
+        "away": {
+            "team_name": "Pittsburgh Steelers",
+            "team_name_short": "Pittsburgh",
+            "id": "pit"
+        }
+    },
+    {
+        "date": "Thursday, October 30, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Denver",
+            "team_name": "Denver Broncos",
+            "id": "den"
+        },
+        "away": {
+            "team_name": "Houston Texans",
+            "team_name_short": "Houston",
+            "id": "hou"
+        }
+    },
+    {
+        "date": "Thursday, October 30, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Jacksonville",
+            "team_name": "Jacksonville Jaguars",
+            "id": "jax"
+        },
+        "away": {
+            "team_name": "Las Vegas Raiders",
+            "team_name_short": "Las Vegas",
+            "id": "lv"
+        }
+    },
+    {
+        "date": "Thursday, October 30, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "New Orleans",
+            "team_name": "New Orleans Saints",
+            "id": "no"
+        },
+        "away": {
+            "team_name": "Los Angeles Rams",
+            "team_name_short": "Los Angeles",
+            "id": "lar"
+        }
+    },
+    {
+        "date": "Thursday, October 30, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Kansas City",
+            "team_name": "Kansas City Chiefs",
+            "id": "kc"
+        },
+        "away": {
+            "team_name": "Buffalo Bills",
+            "team_name_short": "Buffalo",
+            "id": "buf"
+        }
+    },
+    {
+        "date": "Thursday, October 30, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Seattle",
+            "team_name": "Seattle Seahawks",
+            "id": "sea"
+        },
+        "away": {
+            "team_name": "Washington Commanders",
+            "team_name_short": "Washington",
+            "id": "wsh"
+        }
+    },
+    {
+        "date": "Thursday, October 30, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ABC",
+        "home": {
+            "team_name_short": "Arizona",
+            "team_name": "Arizona Cardinals",
+            "id": "ari"
+        },
+        "away": {
+            "team_name": "Dallas Cowboys",
+            "team_name_short": "Dallas",
+            "id": "dal"
+        }
+    },
+    {
+        "date": "Thursday, November 6, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "Las Vegas",
+            "team_name": "Las Vegas Raiders",
+            "id": "lv"
+        },
+        "away": {
+            "team_name": "Denver Broncos",
+            "team_name_short": "Denver",
+            "id": "den"
+        }
+    },
+    {
+        "date": "Thursday, November 6, 2025 9:30 AM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NFL Net",
+        "home": {
+            "team_name_short": "Atlanta",
+            "team_name": "Atlanta Falcons",
+            "id": "atl"
+        },
+        "away": {
+            "team_name": "Indianapolis Colts",
+            "team_name_short": "Indianapolis",
+            "id": "ind"
+        }
+    },
+    {
+        "date": "Thursday, November 6, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Giants",
+            "id": "nyg"
+        },
+        "away": {
+            "team_name": "Chicago Bears",
+            "team_name_short": "Chicago",
+            "id": "chi"
+        }
+    },
+    {
+        "date": "Thursday, November 6, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Buffalo",
+            "team_name": "Buffalo Bills",
+            "id": "buf"
+        },
+        "away": {
+            "team_name": "Miami Dolphins",
+            "team_name_short": "Miami",
+            "id": "mia"
+        }
+    },
+    {
+        "date": "Thursday, November 6, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Baltimore",
+            "team_name": "Baltimore Ravens",
+            "id": "bal"
+        },
+        "away": {
+            "team_name": "Minnesota Vikings",
+            "team_name_short": "Minnesota",
+            "id": "min"
+        }
+    },
+    {
+        "date": "Thursday, November 6, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Cleveland",
+            "team_name": "Cleveland Browns",
+            "id": "cle"
+        },
+        "away": {
+            "team_name": "New York Jets",
+            "team_name_short": "New York",
+            "id": "nyj"
+        }
+    },
+    {
+        "date": "Thursday, November 6, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New England",
+            "team_name": "New England Patriots",
+            "id": "ne"
+        },
+        "away": {
+            "team_name": "Tampa Bay Buccaneers",
+            "team_name_short": "Tampa Bay",
+            "id": "tb"
+        }
+    },
+    {
+        "date": "Thursday, November 6, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "New Orleans",
+            "team_name": "New Orleans Saints",
+            "id": "no"
+        },
+        "away": {
+            "team_name": "Carolina Panthers",
+            "team_name_short": "Carolina",
+            "id": "car"
+        }
+    },
+    {
+        "date": "Thursday, November 6, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Jacksonville",
+            "team_name": "Jacksonville Jaguars",
+            "id": "jax"
+        },
+        "away": {
+            "team_name": "Houston Texans",
+            "team_name_short": "Houston",
+            "id": "hou"
+        }
+    },
+    {
+        "date": "Thursday, November 6, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Arizona",
+            "team_name": "Arizona Cardinals",
+            "id": "ari"
+        },
+        "away": {
+            "team_name": "Seattle Seahawks",
+            "team_name_short": "Seattle",
+            "id": "sea"
+        }
+    },
+    {
+        "date": "Thursday, November 6, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Rams",
+            "id": "lar"
+        },
+        "away": {
+            "team_name": "San Francisco 49ers",
+            "team_name_short": "San Francisco",
+            "id": "sf"
+        }
+    },
+    {
+        "date": "Thursday, November 6, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Detroit",
+            "team_name": "Detroit Lions",
+            "id": "det"
+        },
+        "away": {
+            "team_name": "Washington Commanders",
+            "team_name_short": "Washington",
+            "id": "wsh"
+        }
+    },
+    {
+        "date": "Thursday, November 6, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Pittsburgh",
+            "team_name": "Pittsburgh Steelers",
+            "id": "pit"
+        },
+        "away": {
+            "team_name": "Los Angeles Chargers",
+            "team_name_short": "Los Angeles",
+            "id": "lac"
+        }
+    },
+    {
+        "date": "Thursday, November 6, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ABC",
+        "home": {
+            "team_name_short": "Philadelphia",
+            "team_name": "Philadelphia Eagles",
+            "id": "phi"
+        },
+        "away": {
+            "team_name": "Green Bay Packers",
+            "team_name_short": "Green Bay",
+            "id": "gb"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Jets",
+            "id": "nyj"
+        },
+        "away": {
+            "team_name": "New England Patriots",
+            "team_name_short": "New England",
+            "id": "ne"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 9:30 AM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NFL Net",
+        "home": {
+            "team_name_short": "Washington",
+            "team_name": "Washington Commanders",
+            "id": "wsh"
+        },
+        "away": {
+            "team_name": "Miami Dolphins",
+            "team_name_short": "Miami",
+            "id": "mia"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Carolina",
+            "team_name": "Carolina Panthers",
+            "id": "car"
+        },
+        "away": {
+            "team_name": "Atlanta Falcons",
+            "team_name_short": "Atlanta",
+            "id": "atl"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Tampa Bay",
+            "team_name": "Tampa Bay Buccaneers",
+            "id": "tb"
+        },
+        "away": {
+            "team_name": "Buffalo Bills",
+            "team_name_short": "Buffalo",
+            "id": "buf"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Houston",
+            "team_name": "Houston Texans",
+            "id": "hou"
+        },
+        "away": {
+            "team_name": "Tennessee Titans",
+            "team_name_short": "Tennessee",
+            "id": "ten"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Chicago",
+            "team_name": "Chicago Bears",
+            "id": "chi"
+        },
+        "away": {
+            "team_name": "Minnesota Vikings",
+            "team_name_short": "Minnesota",
+            "id": "min"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Green Bay",
+            "team_name": "Green Bay Packers",
+            "id": "gb"
+        },
+        "away": {
+            "team_name": "New York Giants",
+            "team_name_short": "New York",
+            "id": "nyg"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Cincinnati",
+            "team_name": "Cincinnati Bengals",
+            "id": "cin"
+        },
+        "away": {
+            "team_name": "Pittsburgh Steelers",
+            "team_name_short": "Pittsburgh",
+            "id": "pit"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Chargers",
+            "id": "lac"
+        },
+        "away": {
+            "team_name": "Jacksonville Jaguars",
+            "team_name_short": "Jacksonville",
+            "id": "jax"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Seattle",
+            "team_name": "Seattle Seahawks",
+            "id": "sea"
+        },
+        "away": {
+            "team_name": "Los Angeles Rams",
+            "team_name_short": "Los Angeles",
+            "id": "lar"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "San Francisco",
+            "team_name": "San Francisco 49ers",
+            "id": "sf"
+        },
+        "away": {
+            "team_name": "Arizona Cardinals",
+            "team_name_short": "Arizona",
+            "id": "ari"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Baltimore",
+            "team_name": "Baltimore Ravens",
+            "id": "bal"
+        },
+        "away": {
+            "team_name": "Cleveland Browns",
+            "team_name_short": "Cleveland",
+            "id": "cle"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Kansas City",
+            "team_name": "Kansas City Chiefs",
+            "id": "kc"
+        },
+        "away": {
+            "team_name": "Denver Broncos",
+            "team_name_short": "Denver",
+            "id": "den"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Detroit",
+            "team_name": "Detroit Lions",
+            "id": "det"
+        },
+        "away": {
+            "team_name": "Philadelphia Eagles",
+            "team_name_short": "Philadelphia",
+            "id": "phi"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ABC",
+        "home": {
+            "team_name_short": "Dallas",
+            "team_name": "Dallas Cowboys",
+            "id": "dal"
+        },
+        "away": {
+            "team_name": "Las Vegas Raiders",
+            "team_name_short": "Las Vegas",
+            "id": "lv"
+        }
+    },
+    {
+        "date": "Thursday, November 13, 2025 ",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": ""
+    },
+    {
+        "date": "Thursday, November 20, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "Buffalo",
+            "team_name": "Buffalo Bills",
+            "id": "buf"
+        },
+        "away": {
+            "team_name": "Houston Texans",
+            "team_name_short": "Houston",
+            "id": "hou"
+        }
+    },
+    {
+        "date": "Thursday, November 20, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Pittsburgh",
+            "team_name": "Pittsburgh Steelers",
+            "id": "pit"
+        },
+        "away": {
+            "team_name": "Chicago Bears",
+            "team_name_short": "Chicago",
+            "id": "chi"
+        }
+    },
+    {
+        "date": "Thursday, November 20, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New England",
+            "team_name": "New England Patriots",
+            "id": "ne"
+        },
+        "away": {
+            "team_name": "Cincinnati Bengals",
+            "team_name_short": "Cincinnati",
+            "id": "cin"
+        }
+    },
+    {
+        "date": "Thursday, November 20, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Giants",
+            "id": "nyg"
+        },
+        "away": {
+            "team_name": "Detroit Lions",
+            "team_name_short": "Detroit",
+            "id": "det"
+        }
+    },
+    {
+        "date": "Thursday, November 20, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Minnesota",
+            "team_name": "Minnesota Vikings",
+            "id": "min"
+        },
+        "away": {
+            "team_name": "Green Bay Packers",
+            "team_name_short": "Green Bay",
+            "id": "gb"
+        }
+    },
+    {
+        "date": "Thursday, November 20, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Seattle",
+            "team_name": "Seattle Seahawks",
+            "id": "sea"
+        },
+        "away": {
+            "team_name": "Tennessee Titans",
+            "team_name_short": "Tennessee",
+            "id": "ten"
+        }
+    },
+    {
+        "date": "Thursday, November 20, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Indianapolis",
+            "team_name": "Indianapolis Colts",
+            "id": "ind"
+        },
+        "away": {
+            "team_name": "Kansas City Chiefs",
+            "team_name_short": "Kansas City",
+            "id": "kc"
+        }
+    },
+    {
+        "date": "Thursday, November 20, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Jets",
+            "id": "nyj"
+        },
+        "away": {
+            "team_name": "Baltimore Ravens",
+            "team_name_short": "Baltimore",
+            "id": "bal"
+        }
+    },
+    {
+        "date": "Thursday, November 20, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Cleveland",
+            "team_name": "Cleveland Browns",
+            "id": "cle"
+        },
+        "away": {
+            "team_name": "Las Vegas Raiders",
+            "team_name_short": "Las Vegas",
+            "id": "lv"
+        }
+    },
+    {
+        "date": "Thursday, November 20, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Jacksonville",
+            "team_name": "Jacksonville Jaguars",
+            "id": "jax"
+        },
+        "away": {
+            "team_name": "Arizona Cardinals",
+            "team_name_short": "Arizona",
+            "id": "ari"
+        }
+    },
+    {
+        "date": "Thursday, November 20, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Philadelphia",
+            "team_name": "Philadelphia Eagles",
+            "id": "phi"
+        },
+        "away": {
+            "team_name": "Dallas Cowboys",
+            "team_name_short": "Dallas",
+            "id": "dal"
+        }
+    },
+    {
+        "date": "Thursday, November 20, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Atlanta",
+            "team_name": "Atlanta Falcons",
+            "id": "atl"
+        },
+        "away": {
+            "team_name": "New Orleans Saints",
+            "team_name_short": "New Orleans",
+            "id": "no"
+        }
+    },
+    {
+        "date": "Thursday, November 20, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Tampa Bay",
+            "team_name": "Tampa Bay Buccaneers",
+            "id": "tb"
+        },
+        "away": {
+            "team_name": "Los Angeles Rams",
+            "team_name_short": "Los Angeles",
+            "id": "lar"
+        }
+    },
+    {
+        "date": "Thursday, November 20, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ESPN",
+        "home": {
+            "team_name_short": "Carolina",
+            "team_name": "Carolina Panthers",
+            "id": "car"
+        },
+        "away": {
+            "team_name": "San Francisco 49ers",
+            "team_name_short": "San Francisco",
+            "id": "sf"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Green Bay",
+            "team_name": "Green Bay Packers",
+            "id": "gb"
+        },
+        "away": {
+            "team_name": "Detroit Lions",
+            "team_name_short": "Detroit",
+            "id": "det"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 4:30 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Kansas City",
+            "team_name": "Kansas City Chiefs",
+            "id": "kc"
+        },
+        "away": {
+            "team_name": "Dallas Cowboys",
+            "team_name_short": "Dallas",
+            "id": "dal"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Cincinnati",
+            "team_name": "Cincinnati Bengals",
+            "id": "cin"
+        },
+        "away": {
+            "team_name": "Baltimore Ravens",
+            "team_name_short": "Baltimore",
+            "id": "bal"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 3:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "Chicago",
+            "team_name": "Chicago Bears",
+            "id": "chi"
+        },
+        "away": {
+            "team_name": "Philadelphia Eagles",
+            "team_name_short": "Philadelphia",
+            "id": "phi"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "San Francisco",
+            "team_name": "San Francisco 49ers",
+            "id": "sf"
+        },
+        "away": {
+            "team_name": "Cleveland Browns",
+            "team_name_short": "Cleveland",
+            "id": "cle"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Jacksonville",
+            "team_name": "Jacksonville Jaguars",
+            "id": "jax"
+        },
+        "away": {
+            "team_name": "Tennessee Titans",
+            "team_name_short": "Tennessee",
+            "id": "ten"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Houston",
+            "team_name": "Houston Texans",
+            "id": "hou"
+        },
+        "away": {
+            "team_name": "Indianapolis Colts",
+            "team_name_short": "Indianapolis",
+            "id": "ind"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "New Orleans",
+            "team_name": "New Orleans Saints",
+            "id": "no"
+        },
+        "away": {
+            "team_name": "Miami Dolphins",
+            "team_name_short": "Miami",
+            "id": "mia"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Atlanta",
+            "team_name": "Atlanta Falcons",
+            "id": "atl"
+        },
+        "away": {
+            "team_name": "New York Jets",
+            "team_name_short": "New York",
+            "id": "nyj"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Arizona",
+            "team_name": "Arizona Cardinals",
+            "id": "ari"
+        },
+        "away": {
+            "team_name": "Tampa Bay Buccaneers",
+            "team_name_short": "Tampa Bay",
+            "id": "tb"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Rams",
+            "id": "lar"
+        },
+        "away": {
+            "team_name": "Carolina Panthers",
+            "team_name_short": "Carolina",
+            "id": "car"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Minnesota",
+            "team_name": "Minnesota Vikings",
+            "id": "min"
+        },
+        "away": {
+            "team_name": "Seattle Seahawks",
+            "team_name_short": "Seattle",
+            "id": "sea"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Buffalo",
+            "team_name": "Buffalo Bills",
+            "id": "buf"
+        },
+        "away": {
+            "team_name": "Pittsburgh Steelers",
+            "team_name_short": "Pittsburgh",
+            "id": "pit"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Las Vegas",
+            "team_name": "Las Vegas Raiders",
+            "id": "lv"
+        },
+        "away": {
+            "team_name": "Los Angeles Chargers",
+            "team_name_short": "Los Angeles",
+            "id": "lac"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Denver",
+            "team_name": "Denver Broncos",
+            "id": "den"
+        },
+        "away": {
+            "team_name": "Washington Commanders",
+            "team_name_short": "Washington",
+            "id": "wsh"
+        }
+    },
+    {
+        "date": "Thursday, November 27, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ESPN",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Giants",
+            "id": "nyg"
+        },
+        "away": {
+            "team_name": "New England Patriots",
+            "team_name_short": "New England",
+            "id": "ne"
+        }
+    },
+    {
+        "date": "Thursday, December 4, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "Dallas",
+            "team_name": "Dallas Cowboys",
+            "id": "dal"
+        },
+        "away": {
+            "team_name": "Detroit Lions",
+            "team_name_short": "Detroit",
+            "id": "det"
+        }
+    },
+    {
+        "date": "Thursday, December 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Seattle",
+            "team_name": "Seattle Seahawks",
+            "id": "sea"
+        },
+        "away": {
+            "team_name": "Atlanta Falcons",
+            "team_name_short": "Atlanta",
+            "id": "atl"
+        }
+    },
+    {
+        "date": "Thursday, December 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Tennessee",
+            "team_name": "Tennessee Titans",
+            "id": "ten"
+        },
+        "away": {
+            "team_name": "Cleveland Browns",
+            "team_name_short": "Cleveland",
+            "id": "cle"
+        }
+    },
+    {
+        "date": "Thursday, December 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Chicago",
+            "team_name": "Chicago Bears",
+            "id": "chi"
+        },
+        "away": {
+            "team_name": "Green Bay Packers",
+            "team_name_short": "Green Bay",
+            "id": "gb"
+        }
+    },
+    {
+        "date": "Thursday, December 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Washington",
+            "team_name": "Washington Commanders",
+            "id": "wsh"
+        },
+        "away": {
+            "team_name": "Minnesota Vikings",
+            "team_name_short": "Minnesota",
+            "id": "min"
+        }
+    },
+    {
+        "date": "Thursday, December 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Miami",
+            "team_name": "Miami Dolphins",
+            "id": "mia"
+        },
+        "away": {
+            "team_name": "New York Jets",
+            "team_name_short": "New York",
+            "id": "nyj"
+        }
+    },
+    {
+        "date": "Thursday, December 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New Orleans",
+            "team_name": "New Orleans Saints",
+            "id": "no"
+        },
+        "away": {
+            "team_name": "Tampa Bay Buccaneers",
+            "team_name_short": "Tampa Bay",
+            "id": "tb"
+        }
+    },
+    {
+        "date": "Thursday, December 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Indianapolis",
+            "team_name": "Indianapolis Colts",
+            "id": "ind"
+        },
+        "away": {
+            "team_name": "Jacksonville Jaguars",
+            "team_name_short": "Jacksonville",
+            "id": "jax"
+        }
+    },
+    {
+        "date": "Thursday, December 4, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Pittsburgh",
+            "team_name": "Pittsburgh Steelers",
+            "id": "pit"
+        },
+        "away": {
+            "team_name": "Baltimore Ravens",
+            "team_name_short": "Baltimore",
+            "id": "bal"
+        }
+    },
+    {
+        "date": "Thursday, December 4, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Denver",
+            "team_name": "Denver Broncos",
+            "id": "den"
+        },
+        "away": {
+            "team_name": "Las Vegas Raiders",
+            "team_name_short": "Las Vegas",
+            "id": "lv"
+        }
+    },
+    {
+        "date": "Thursday, December 4, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Cincinnati",
+            "team_name": "Cincinnati Bengals",
+            "id": "cin"
+        },
+        "away": {
+            "team_name": "Buffalo Bills",
+            "team_name_short": "Buffalo",
+            "id": "buf"
+        }
+    },
+    {
+        "date": "Thursday, December 4, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Rams",
+            "id": "lar"
+        },
+        "away": {
+            "team_name": "Arizona Cardinals",
+            "team_name_short": "Arizona",
+            "id": "ari"
+        }
+    },
+    {
+        "date": "Thursday, December 4, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Houston",
+            "team_name": "Houston Texans",
+            "id": "hou"
+        },
+        "away": {
+            "team_name": "Kansas City Chiefs",
+            "team_name_short": "Kansas City",
+            "id": "kc"
+        }
+    },
+    {
+        "date": "Thursday, December 4, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ABC",
+        "home": {
+            "team_name_short": "Philadelphia",
+            "team_name": "Philadelphia Eagles",
+            "id": "phi"
+        },
+        "away": {
+            "team_name": "Los Angeles Chargers",
+            "team_name_short": "Los Angeles",
+            "id": "lac"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "Atlanta",
+            "team_name": "Atlanta Falcons",
+            "id": "atl"
+        },
+        "away": {
+            "team_name": "Tampa Bay Buccaneers",
+            "team_name_short": "Tampa Bay",
+            "id": "tb"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Cleveland",
+            "team_name": "Cleveland Browns",
+            "id": "cle"
+        },
+        "away": {
+            "team_name": "Chicago Bears",
+            "team_name_short": "Chicago",
+            "id": "chi"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Baltimore",
+            "team_name": "Baltimore Ravens",
+            "id": "bal"
+        },
+        "away": {
+            "team_name": "Cincinnati Bengals",
+            "team_name_short": "Cincinnati",
+            "id": "cin"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Chargers",
+            "id": "lac"
+        },
+        "away": {
+            "team_name": "Kansas City Chiefs",
+            "team_name_short": "Kansas City",
+            "id": "kc"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Buffalo",
+            "team_name": "Buffalo Bills",
+            "id": "buf"
+        },
+        "away": {
+            "team_name": "New England Patriots",
+            "team_name_short": "New England",
+            "id": "ne"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Washington",
+            "team_name": "Washington Commanders",
+            "id": "wsh"
+        },
+        "away": {
+            "team_name": "New York Giants",
+            "team_name_short": "New York",
+            "id": "nyg"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Las Vegas",
+            "team_name": "Las Vegas Raiders",
+            "id": "lv"
+        },
+        "away": {
+            "team_name": "Philadelphia Eagles",
+            "team_name_short": "Philadelphia",
+            "id": "phi"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Jets",
+            "id": "nyj"
+        },
+        "away": {
+            "team_name": "Jacksonville Jaguars",
+            "team_name_short": "Jacksonville",
+            "id": "jax"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Arizona",
+            "team_name": "Arizona Cardinals",
+            "id": "ari"
+        },
+        "away": {
+            "team_name": "Houston Texans",
+            "team_name_short": "Houston",
+            "id": "hou"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Green Bay",
+            "team_name": "Green Bay Packers",
+            "id": "gb"
+        },
+        "away": {
+            "team_name": "Denver Broncos",
+            "team_name_short": "Denver",
+            "id": "den"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Detroit",
+            "team_name": "Detroit Lions",
+            "id": "det"
+        },
+        "away": {
+            "team_name": "Los Angeles Rams",
+            "team_name_short": "Los Angeles",
+            "id": "lar"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Carolina",
+            "team_name": "Carolina Panthers",
+            "id": "car"
+        },
+        "away": {
+            "team_name": "New Orleans Saints",
+            "team_name_short": "New Orleans",
+            "id": "no"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Tennessee",
+            "team_name": "Tennessee Titans",
+            "id": "ten"
+        },
+        "away": {
+            "team_name": "San Francisco 49ers",
+            "team_name_short": "San Francisco",
+            "id": "sf"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Indianapolis",
+            "team_name": "Indianapolis Colts",
+            "id": "ind"
+        },
+        "away": {
+            "team_name": "Seattle Seahawks",
+            "team_name_short": "Seattle",
+            "id": "sea"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Minnesota",
+            "team_name": "Minnesota Vikings",
+            "id": "min"
+        },
+        "away": {
+            "team_name": "Dallas Cowboys",
+            "team_name_short": "Dallas",
+            "id": "dal"
+        }
+    },
+    {
+        "date": "Thursday, December 11, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ESPN",
+        "home": {
+            "team_name_short": "Miami",
+            "team_name": "Miami Dolphins",
+            "id": "mia"
+        },
+        "away": {
+            "team_name": "Pittsburgh Steelers",
+            "team_name_short": "Pittsburgh",
+            "id": "pit"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Rams",
+            "id": "lar"
+        },
+        "away": {
+            "team_name": "Seattle Seahawks",
+            "team_name_short": "Seattle",
+            "id": "sea"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 TBD (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Green Bay",
+            "team_name": "Green Bay Packers",
+            "id": "gb"
+        },
+        "away": {
+            "team_name": "Chicago Bears",
+            "team_name_short": "Chicago",
+            "id": "chi"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 TBD (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Philadelphia",
+            "team_name": "Philadelphia Eagles",
+            "id": "phi"
+        },
+        "away": {
+            "team_name": "Washington Commanders",
+            "team_name_short": "Washington",
+            "id": "wsh"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Buffalo",
+            "team_name": "Buffalo Bills",
+            "id": "buf"
+        },
+        "away": {
+            "team_name": "Cleveland Browns",
+            "team_name_short": "Cleveland",
+            "id": "cle"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Chargers",
+            "id": "lac"
+        },
+        "away": {
+            "team_name": "Dallas Cowboys",
+            "team_name_short": "Dallas",
+            "id": "dal"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Kansas City",
+            "team_name": "Kansas City Chiefs",
+            "id": "kc"
+        },
+        "away": {
+            "team_name": "Tennessee Titans",
+            "team_name_short": "Tennessee",
+            "id": "ten"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Jets",
+            "id": "nyj"
+        },
+        "away": {
+            "team_name": "New Orleans Saints",
+            "team_name_short": "New Orleans",
+            "id": "no"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Minnesota",
+            "team_name": "Minnesota Vikings",
+            "id": "min"
+        },
+        "away": {
+            "team_name": "New York Giants",
+            "team_name_short": "New York",
+            "id": "nyg"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Tampa Bay",
+            "team_name": "Tampa Bay Buccaneers",
+            "id": "tb"
+        },
+        "away": {
+            "team_name": "Carolina Panthers",
+            "team_name_short": "Carolina",
+            "id": "car"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New England",
+            "team_name": "New England Patriots",
+            "id": "ne"
+        },
+        "away": {
+            "team_name": "Baltimore Ravens",
+            "team_name_short": "Baltimore",
+            "id": "bal"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Jacksonville",
+            "team_name": "Jacksonville Jaguars",
+            "id": "jax"
+        },
+        "away": {
+            "team_name": "Denver Broncos",
+            "team_name_short": "Denver",
+            "id": "den"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 4:05 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Atlanta",
+            "team_name": "Atlanta Falcons",
+            "id": "atl"
+        },
+        "away": {
+            "team_name": "Arizona Cardinals",
+            "team_name_short": "Arizona",
+            "id": "ari"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Pittsburgh",
+            "team_name": "Pittsburgh Steelers",
+            "id": "pit"
+        },
+        "away": {
+            "team_name": "Detroit Lions",
+            "team_name_short": "Detroit",
+            "id": "det"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Las Vegas",
+            "team_name": "Las Vegas Raiders",
+            "id": "lv"
+        },
+        "away": {
+            "team_name": "Houston Texans",
+            "team_name_short": "Houston",
+            "id": "hou"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Cincinnati",
+            "team_name": "Cincinnati Bengals",
+            "id": "cin"
+        },
+        "away": {
+            "team_name": "Miami Dolphins",
+            "team_name_short": "Miami",
+            "id": "mia"
+        }
+    },
+    {
+        "date": "Thursday, December 18, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ESPN",
+        "home": {
+            "team_name_short": "San Francisco",
+            "team_name": "San Francisco 49ers",
+            "id": "sf"
+        },
+        "away": {
+            "team_name": "Indianapolis Colts",
+            "team_name_short": "Indianapolis",
+            "id": "ind"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Netflix",
+        "home": {
+            "team_name_short": "Dallas",
+            "team_name": "Dallas Cowboys",
+            "id": "dal"
+        },
+        "away": {
+            "team_name": "Washington Commanders",
+            "team_name_short": "Washington",
+            "id": "wsh"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 4:30 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Netflix",
+        "home": {
+            "team_name_short": "Detroit",
+            "team_name": "Detroit Lions",
+            "id": "det"
+        },
+        "away": {
+            "team_name": "Minnesota Vikings",
+            "team_name_short": "Minnesota",
+            "id": "min"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "Prime Video",
+        "home": {
+            "team_name_short": "Denver",
+            "team_name": "Denver Broncos",
+            "id": "den"
+        },
+        "away": {
+            "team_name": "Kansas City Chiefs",
+            "team_name_short": "Kansas City",
+            "id": "kc"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "Pittsburgh",
+            "team_name": "Pittsburgh Steelers",
+            "id": "pit"
+        },
+        "away": {
+            "team_name": "Cleveland Browns",
+            "team_name_short": "Cleveland",
+            "id": "cle"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New Orleans",
+            "team_name": "New Orleans Saints",
+            "id": "no"
+        },
+        "away": {
+            "team_name": "Tennessee Titans",
+            "team_name_short": "Tennessee",
+            "id": "ten"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Jacksonville",
+            "team_name": "Jacksonville Jaguars",
+            "id": "jax"
+        },
+        "away": {
+            "team_name": "Indianapolis Colts",
+            "team_name_short": "Indianapolis",
+            "id": "ind"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Tampa Bay",
+            "team_name": "Tampa Bay Buccaneers",
+            "id": "tb"
+        },
+        "away": {
+            "team_name": "Miami Dolphins",
+            "team_name_short": "Miami",
+            "id": "mia"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 1:00 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "CBS",
+        "home": {
+            "team_name_short": "New England",
+            "team_name": "New England Patriots",
+            "id": "ne"
+        },
+        "away": {
+            "team_name": "New York Jets",
+            "team_name_short": "New York",
+            "id": "nyj"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 4:25 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "FOX",
+        "home": {
+            "team_name_short": "Philadelphia",
+            "team_name": "Philadelphia Eagles",
+            "id": "phi"
+        },
+        "away": {
+            "team_name": "Buffalo Bills",
+            "team_name_short": "Buffalo",
+            "id": "buf"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 8:20 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "NBC",
+        "home": {
+            "team_name_short": "Chicago",
+            "team_name": "Chicago Bears",
+            "id": "chi"
+        },
+        "away": {
+            "team_name": "San Francisco 49ers",
+            "team_name_short": "San Francisco",
+            "id": "sf"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 8:15 PM (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "ESPN",
+        "home": {
+            "team_name_short": "Los Angeles",
+            "team_name": "Los Angeles Rams",
+            "id": "lar"
+        },
+        "away": {
+            "team_name": "Atlanta Falcons",
+            "team_name_short": "Atlanta",
+            "id": "atl"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 TBD (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "",
+        "home": {
+            "team_name_short": "Arizona",
+            "team_name": "Arizona Cardinals",
+            "id": "ari"
+        },
+        "away": {
+            "team_name": "Cincinnati Bengals",
+            "team_name_short": "Cincinnati",
+            "id": "cin"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 TBD (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "",
+        "home": {
+            "team_name_short": "Baltimore",
+            "team_name": "Baltimore Ravens",
+            "id": "bal"
+        },
+        "away": {
+            "team_name": "Green Bay Packers",
+            "team_name_short": "Green Bay",
+            "id": "gb"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 TBD (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "",
+        "home": {
+            "team_name_short": "New York",
+            "team_name": "New York Giants",
+            "id": "nyg"
+        },
+        "away": {
+            "team_name": "Las Vegas Raiders",
+            "team_name_short": "Las Vegas",
+            "id": "lv"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 TBD (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "",
+        "home": {
+            "team_name_short": "Houston",
+            "team_name": "Houston Texans",
+            "id": "hou"
+        },
+        "away": {
+            "team_name": "Los Angeles Chargers",
+            "team_name_short": "Los Angeles",
+            "id": "lac"
+        }
+    },
+    {
+        "date": "Thursday, December 25, 2025 TBD (EST)",
+        "league_name": "NFL",
+        "season": 2025,
+        "tv": "",
+        "home": {
+            "team_name_short": "Seattle",
+            "team_name": "Seattle Seahawks",
+            "id": "sea"
+        },
+        "away": {
+            "team_name": "Carolina Panthers",
+            "team_name_short": "Carolina",
+            "id": "car"
+        }
+    }
+]
