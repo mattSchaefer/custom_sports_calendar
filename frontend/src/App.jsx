@@ -48,7 +48,7 @@ function App() {
       <div className="section" id="section-1">
         <span className="header-container on-top">
           <span className="h1-container">
-            <h1 className="text-2xl font-bold main-header"> <i className="fa fa-thin fa-futbol"> </i>Sports Calendar Plus</h1>
+            <h1 className="text-2xl font-bold main-header"> {/*<i className="fa fa-thin fa-futbol"> </i>*/}Sports Calendar Plus</h1>
             <h1 className="sub-header">One single calendar, all your favorit games</h1>
           </span>
           <p className="header-paragraph">Smartly integrate all your sports into one calendar.</p>
