@@ -13,7 +13,8 @@ const P5Canvas = () => {
             p.setup = () => {
                 let container_wid = document.getElementById("root").getBoundingClientRect().width;
                 let container_hei = document.getElementById("root").getBoundingClientRect().height;
-                p.createCanvas(container_wid / 2, (document.getElementsByTagName("body")[0].clientHeight) - 50);
+                //p.createCanvas(container_wid / 2, (document.getElementsByTagName("body")[0].clientHeight) - 50);
+                p.createCanvas(500,500)
                 for(let i = 0; i</*p.width/50*/7; i++){
                     particles.push(new Particle());
                 }
@@ -21,7 +22,7 @@ const P5Canvas = () => {
             };
 
             p.draw = () => {
-                p.background("#0a0118");
+                p.background("#010618");
                 p.fill(255, 0, 0);
                 for(let i = 0;i<particles.length;i++) {
                     particles[i].createParticle();
@@ -33,8 +34,8 @@ const P5Canvas = () => {
                 // setting the co-ordinates, radius and the
                 // speed of a particle in both the co-ordinates axes.
                 constructor() {
-                    this.x = p.random(0,p.width);
-                    this.y = p.random(0,p.height);
+                    this.x = p.random(0, p.width / 2);
+                    this.y = p.random(0, p.height / 2);
                     this.r = p.random(1,4);
                     this.xSpeed = p.random(-.2,.2);
                     this.ySpeed = p.random(-.2,.2);
@@ -62,8 +63,8 @@ const P5Canvas = () => {
                 joinParticles(particles) {
                 particles.forEach(element =>{
                     let dis = p.dist(this.x,this.y,element.x,element.y);
-                    if(dis>512) {
-                        p.stroke('rgba(231, 202, 255, 0.47)');
+                    if(dis>p.width/10) {
+                        p.stroke('rgba(255, 202, 202, 0.47)');
                         p.line(this.x,this.y,element.x,element.y);
                     }
                 });

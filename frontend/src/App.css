@@ -1,3 +1,24 @@
+*{
+  font-family: "Titillium Web", sans-serif;
+}
+#get-started-btn{
+  /* background-image: linear-gradient(88deg,#e77878,#e7a278 31%,#e77878);
+  background-clip: border-box; */
+  background: red;
+  color: white;
+}
+button{
+  border-radius: 8px;
+  padding: 0.6em;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.header-btn{
+  height: 100%;
+}
 .section{
   padding: 2rem;
   width: 100vw;
@@ -26,6 +47,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
+  height: 3rem;
 }
 .main-header, .sub-header{
   font-family: "Titillium Web", sans-serif;
@@ -33,7 +55,7 @@
   margin-bottom: 0;
 }
 body{
-  background: #0a0118;
+  background: #010618;
   color: #fff;
 }
 h1{
@@ -54,16 +76,17 @@ h1{
   font-family: "Titillium Web", sans-serif;
   font-size: 1.5em;
   margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  color: #fff;
+  margin-bottom: 1em;
+  color: #c2c2c2;
   font-weight: 400;
  text-align: start;
 }
 .main-header{
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent;
   background-image: linear-gradient(88deg,#fff,#7a78e7 31%,#b678e7);
   background-image: linear-gradient(88deg,#e77878,#e7a278 31%,#e77878);
-  background-clip: text;
+  background-clip: text; */
+  color: red;
 }
 #root {
   width: 100vw;
