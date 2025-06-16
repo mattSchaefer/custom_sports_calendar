@@ -44,7 +44,7 @@ const P5Canvas = () => {
             // creation of a particle.
                 createParticle() {
                     p.noStroke();
-                    p.fill('rgba(217, 185, 243, 0.25)');
+                    p.fill('rgba(185, 229, 243, 0.25)');
                     p.circle(this.x,this.y,this.r);
                 }
             
@@ -64,7 +64,7 @@ const P5Canvas = () => {
                 particles.forEach(element =>{
                     let dis = p.dist(this.x,this.y,element.x,element.y);
                     if(dis>p.width/10) {
-                        p.stroke('rgba(255, 202, 202, 0.47)');
+                        p.stroke('rgba(94, 217, 255, 0.47)');
                         p.line(this.x,this.y,element.x,element.y);
                     }
                 });

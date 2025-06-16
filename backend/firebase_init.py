@@ -13,7 +13,7 @@ def get_firestore_client():
         if not encoded_creds:
             raise Exception("Firebase credentials not found in environment variables")
         decoded_creds = base64.b64decode(encoded_creds)
-        cred_dict = json.loads(decoded_creds)
+        cred_dict = json.loads(decoded_creds)#decoded_creds
         cred = credentials.Certificate(cred_dict)
         firebase_app = firebase_admin.initialize_app(cred)
         db = firestore.client()
