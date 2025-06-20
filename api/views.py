@@ -12,6 +12,7 @@ import re
 import requests
 import json
 from django.conf import settings
+from firebase_admin import credentials, auth, firestore
 api = NinjaAPI()
 
 
@@ -64,6 +65,33 @@ def save_user_data(request, data: UserData):
     try:
         save_or_update_user(data.dict())
         return JsonResponse({"status": "success"}, status=200)
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
+class RetUserData(Schema):
+    uid: str = ""
+@api.post("/get_user_data")
+def get_user_data(request, data: RetUserData):
+    if request.method == "OPTIONS":
+        response = HttpResponse()
+        response["Access-Control-Allow-Origin"] = "*"
+        response["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+        response["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+        return JsonResponse(response) 
+    try:
+        db = backend.firebase_init.get_firestore_client()
+        token = request.headers.get("Authorization", "").split("Bearer ")[-1]
+        if not token:
+            return JsonResponse({"error": "Unauthorized"}, status=401)
+        decoded_token = auth.verify_id_token(token)
+        if decoded_token.get("uid") != data.uid:
+            return JsonResponse({"error": "Unauthorized"}, status=401)
+        uid = decoded_token.get("uid")
+        user_ref = db.collection("users").document(uid)
+        snapshot = user_ref.get()
+        if snapshot.exists:
+            return JsonResponse(snapshot.to_dict(), status=200)
+        else:
+            return JsonResponse({"error": "User not found"}, status=404)
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
 @api.get("/hello")

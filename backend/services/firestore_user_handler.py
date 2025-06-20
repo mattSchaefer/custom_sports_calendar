@@ -18,6 +18,9 @@ def save_or_update_user(oauth_user):
         data["created_at"] = datetime.now().isoformat()
         data["roles"] = ["user"]
         user_ref.set(data)
+def get_user_from_id(id):
+    db = get_firestore_client()
+    
 def seed_games():
     print("Seeding games...")
     db = get_firestore_client()

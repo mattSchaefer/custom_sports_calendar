@@ -22,7 +22,7 @@ const P5Canvas = () => {
             };
 
             p.draw = () => {
-                p.background("#010618");
+                p.background("#fff");
                 p.fill(255, 0, 0);
                 for(let i = 0;i<particles.length;i++) {
                     particles[i].createParticle();
