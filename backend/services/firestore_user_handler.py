@@ -32,7 +32,6 @@ def save_or_update_user(oauth_user):
             data["added_teams"] = []
             data["favorite_leagues"] = []
             user_ref.set(data)
-        #return JsonResponse()#user_ref.dict()
         snapshot = user_ref.get()
         return JsonResponse(snapshot.to_dict())
     except Exception as e:
