@@ -106,7 +106,7 @@ footer{
 .about-header-small{
   margin-bottom: 0;
 }
-.about-small{font-size: 1rem;}
+.about-small{font-size: 1rem !important;}
 #about-us{
   border-top: 3px solid blue;
   border-top-left-radius: 10px;

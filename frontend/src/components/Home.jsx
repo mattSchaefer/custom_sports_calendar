@@ -99,7 +99,7 @@ function Home(){
             <div className="section" id="about-us">
                 <span className="about-verbiage">
                     <h1 id="about-header">Go Pro!</h1>
-                    <p className="about-paragraph">Configure your custom notifications, whether it's only for your favorite teams or all games in your calendar.
+                    <p className="about-paragraph">Configure your custom push notifications, whether it's only for your favorite teams or all games in your calendar.
                     </p>
                     <p className="about-paragraph">For only $5 per month, get notifications sent to your phone or email, and never look at an ad.</p>
                     <span>
