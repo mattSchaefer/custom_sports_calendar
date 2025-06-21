@@ -27,21 +27,21 @@ function Home(){
     return(
         <div className="homepage-sections text-center">
             <div className="section" id="section-1">
-            <span className="header-container on-top">
-                <span className="h1-container">
-                    <h1 className="text-2xl font-bold main-header">SportSync</h1>
-                    <h1 className="sub-header">All your favorite sports, one unified calendar</h1>
+                <span className="header-container on-top">
+                    <span className="h1-container">
+                        <h1 className="text-2xl font-bold main-header">SportSync<span className="inner-header">Schedule</span></h1>
+                        <h1 className="sub-header">All your favorite sports, one unified calendar</h1>
+                    </span>
+                    <p className="header-paragraph"><span className="bold">SportSync</span> is your all-in-one solution for staying on top of the games that matter most to you.</p>
+                    <span className="header-buttons">
+                        <button id="get-started-btn" className="header-btn"><i className="fa fa-arrow-right" />Learn More</button>
+                    </span>
+                    <div className="p-4">
+                    
+                    {/* <button className="header-btn" onClick={() => handleLogin(signInWithTwitter)}>Sign in with X (Twitter)</button> */}
+                    </div>
                 </span>
-                <p className="header-paragraph"><span className="bold">SportSync</span> is your all-in-one solution for staying on top of the games that matter most to you.</p>
-                <span className="header-buttons">
-                    <button id="get-started-btn" className="header-btn"><i className="fa fa-arrow-right" />Learn More</button>
-                </span>
-                <div className="p-4">
-                
-                {/* <button className="header-btn" onClick={() => handleLogin(signInWithTwitter)}>Sign in with X (Twitter)</button> */}
-                </div>
-            </span>
-            <P5Canvas />
+                <P5Canvas />
             </div>
             <div className="section" id="about-us">
                 <span className="about-image-container">
@@ -97,16 +97,22 @@ function Home(){
                 <p>Whether you're a casual fan or a die-hard supporter, <span className="bold-red">SportSync</span> helps you never miss a game, no matter how packed your sports world gets.</p>
             </div>
             <div className="section" id="about-us">
-                <span className="about-image-container">
-                    <img src={about_1} alt="About SportSync" className="about-image" />
-                </span>
                 <span className="about-verbiage">
                     <h1 id="about-header">Go Pro!</h1>
                     <p className="about-paragraph">Configure your custom notifications, whether it's only for your favorite teams or all games in your calendar.
                     </p>
                     <p className="about-paragraph">For only $5 per month, get notifications sent to your phone or email, and never look at an ad.</p>
+                    <span>
+                        <h3 className="about-header-small">Or, try for free!</h3>
+                        <p className="about-paragraph about-small">Once you sign up and configure your calendar, you can use SportSync on the web to track your favorite teams and leagues for free.
+                        </p>
+                    </span>
+                </span>
+                <span className="about-image-container">
+                    <img src={about_1} alt="About SportSync" className="about-image" />
                 </span>
             </div>
+            
         </div>
     )
 }

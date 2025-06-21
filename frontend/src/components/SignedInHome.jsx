@@ -1,0 +1,29 @@
+import { useState, useEffect, React } from 'react'
+import '../App.css'
+import P5Canvas from './P5Canvas.jsx'
+import { build_save_user_request } from '../factories/save_user_request_factory.js'
+import { useAuth } from '../contexts/auth_context.jsx'
+import about_1 from '../assets/about_1.png'
+import CalendarWidget from './CalendarWidget.jsx'
+
+const SignedInHome = () => {
+    const { user, loginWithGoogle, loginWithFacebook, loading, signOut } = useAuth();
+    console.log(user)
+    return(
+        <div className="signed-in-home-container">
+            <h3>Welcome back, {user.email}</h3>
+            <span className="outer-account-info-container">
+                <h4>Account Info</h4>
+                <div className="account-info-container">
+                    <span>phone: {user.phone}</span>
+                    <span>account type: {user.account_type || 'basic'}
+                        <button>upgrade!</button>
+                    </span>
+                </div>
+               
+            </span>
+            <CalendarWidget />
+        </div>
+    )
+}
+export default SignedInHome;

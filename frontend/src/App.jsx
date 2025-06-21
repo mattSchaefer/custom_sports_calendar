@@ -6,6 +6,8 @@ import { build_save_user_request } from './factories/save_user_request_factory.j
 import { AuthProvider } from './contexts/auth_context.jsx'
 import Home from './components/Home.jsx'
 import Header from './components/Header.jsx'
+import AppContainer from './components/AppContainer.jsx'
+import Footer from './components/Footer.jsx'
 function App() {
   //const { user, loginWithGoogle, loginWithFacebook, loading } = useAuth();
   const rq = {
@@ -49,7 +51,8 @@ function App() {
   return (
     <AuthProvider>
       <Header />
-      <Home />
+      <AppContainer />
+      <Footer />
     </AuthProvider>
   );
 }
