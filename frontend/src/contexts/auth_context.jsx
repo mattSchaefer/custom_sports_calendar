@@ -1,4 +1,5 @@
 import {signInWithGoogle, signInWithFacebook, logOut} from '../config/firebase/auth.js';
+import { build_save_user_request } from '../factories/save_user_request_factory.js'
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { createContext, useContext, useState, React, useEffect } from 'react';
 import { auth } from '../config/firebase/firebase.js';
@@ -18,7 +19,7 @@ export const AuthProvider = ({ children }) => {
     const loginWithFacebook = async () => {
         try {
             const result = await signInWithFacebook()
-            console.log(getDbUser(result.user))
+            //console.log(getDbUser(result.user))
             setUser(result.user);
         } catch (error) {
             console.error("Login failed:", error)
@@ -53,14 +54,36 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         try{
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            //sync with database user
+            console.log("auth state chnage...")
+            /*
             var user_obj = {...currentUser}
             getDbUser(currentUser)
             .then((db_user2) => {
                 if(db_user2.phone){
-                    user_obj.phone = db_user2.phone
+                    user_obj.db_phone = db_user2.phone
                 }
+                if(db_user2.email){
+                    user_obj.db_email = db_user2.email
+                }
+               
                 setUser(user_obj)
             });
+            */
+            const saveUserRequest = build_save_user_request(currentUser)
+            console.log(saveUserRequest)
+            fetch(saveUserRequest.url, saveUserRequest.options)
+                .then(response => {
+                    if(response.status == 200) 
+                        return response.json()
+                    else
+                        throw("not valid")
+                })
+                .then(data => {
+                    console.log("User data saved:", data)
+                    setUser(data)
+                })
+                .catch(error => console.error("Error saving user data:", error));
             setLoading(false);
         });
         return () => unsubscribe();

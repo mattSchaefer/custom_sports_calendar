@@ -51,9 +51,14 @@ def get_league_teams(request, data: LeagueTeams):
     
 class UserData(Schema):
     uid: str = ""
+    provider_email: str = ""
+    provider_phone: str = ""
+    provider: str = ""
+    provider_display_name: str = ""
     email: str = ""
     displayName: str = ""
     provider: str = ""
+    accessToken: str = ""
 @api.post("/save_user_data")
 def save_user_data(request, data: UserData):
     if request.method == "OPTIONS":
@@ -63,8 +68,8 @@ def save_user_data(request, data: UserData):
         response["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
         return JsonResponse(response) 
     try:
-        save_or_update_user(data.dict())
-        return JsonResponse({"status": "success"}, status=200)
+        updated = save_or_update_user(data.dict())
+        return updated
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
 class RetUserData(Schema):

@@ -35,7 +35,7 @@ const accountDropdown = () => {
                         <i className="fa fa-brands fa-google"></i>
                         Sign in with Google
                     </button>
-                    <button className="header-btn" onClick={() => handleLogin(signInWithFacebook)}>
+                    <button className="header-btn" onClick={() => loginWithFacebook()}>
                         <i className="fa fa-brands fa-facebook"></i>
                         Sign in with Facebook
                     </button>

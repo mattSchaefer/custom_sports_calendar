@@ -1,23 +1,43 @@
 from datetime import datetime
+from django.http import HttpResponse, JsonResponse
 from backend.firebase_init import get_firestore_client
-
+from django.conf import settings
+from firebase_admin import credentials, auth, firestore
 def save_or_update_user(oauth_user):
-    db = get_firestore_client()
-    user_ref = db.collection("users").document(oauth_user["uid"])
-    snapshot = user_ref.get()
-    data = {
-        "uid": oauth_user["uid"],
-        "email": oauth_user["email"],
-        "displayName": oauth_user["displayName"],
-        "provider": oauth_user["provider"],
-        "last_login": datetime.now().isoformat(),
-    }
-    if snapshot.exists:
-        user_ref.update(data)
-    else:
-        data["created_at"] = datetime.now().isoformat()
-        data["roles"] = ["user"]
-        user_ref.set(data)
+    try:
+        db = get_firestore_client()
+        token = oauth_user["accessToken"]#request.headers.get("Authorization", "").split("Bearer ")[-1]
+        if not token:
+            return JsonResponse({"error": "Unauthorized"}, status=401)
+        decoded_token = auth.verify_id_token(token)
+        if decoded_token.get("uid") != oauth_user["uid"]:
+            return JsonResponse({"error": "Unauthorized"}, status=401)
+        uid = decoded_token.get("uid")
+        user_ref = db.collection("users").document(oauth_user["uid"])
+        snapshot = user_ref.get()
+        data = {
+            "uid": oauth_user["uid"],
+            "provider_email": oauth_user["provider_email"], #oauth_user["email"],
+            "provider_phone": oauth_user["provider_phone"],
+            "provider_display_name": oauth_user["provider_display_name"], #oauth_user["displayName"],
+            "provider": oauth_user["provider"], #oauth_user["provider"],
+            "last_login": datetime.now().isoformat(),
+        }
+        if snapshot.exists:
+            user_ref.update(data)
+        else:
+            data["created_at"] = datetime.now().isoformat()
+            data["roles"] = ["user"]
+            data["favorite_teams"]=[]
+            data["added_teams"] = []
+            data["favorite_leagues"] = []
+            user_ref.set(data)
+        #return JsonResponse()#user_ref.dict()
+        snapshot = user_ref.get()
+        return JsonResponse(snapshot.to_dict())
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
+
 def get_user_from_id(id):
     db = get_firestore_client()
     
