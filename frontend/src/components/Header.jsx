@@ -10,11 +10,13 @@ const Header = () => {
     const { user, loginWithGoogle, loginWithFacebook, loading, logOut } = useAuth();
     return (
         <header className="header">
-            <img src={logo} alt="SportSync Logo" className="logo" />
-            <a href="#about" className="header-link">About</a>
-            <a href="#about" className="header-link">Leagues</a>
-            <a href="#about" className="header-link">Princing</a>
-            <a href="#contact" className="header-link">Contact</a>
+            <span className="header-left">
+                <img src={logo} alt="SportSync Logo" className="logo" />
+                <a href="#about" className="header-link">About</a>
+                <a href="#about" className="header-link">Leagues</a>
+                <a href="#about" className="header-link">Princing</a>
+                <a href="#contact" className="header-link">Contact</a>
+            </span>
             <AccountDropdown />
             
       

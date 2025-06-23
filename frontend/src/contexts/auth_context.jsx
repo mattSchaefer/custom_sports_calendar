@@ -7,6 +7,7 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true)
+    const [accessToken, setAccessToken] = useState(null);
     const loginWithGoogle = async () => {
         try {
             const result = await signInWithGoogle()
@@ -54,22 +55,7 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         try{
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            //sync with database user
-            console.log("auth state chnage...")
-            /*
-            var user_obj = {...currentUser}
-            getDbUser(currentUser)
-            .then((db_user2) => {
-                if(db_user2.phone){
-                    user_obj.db_phone = db_user2.phone
-                }
-                if(db_user2.email){
-                    user_obj.db_email = db_user2.email
-                }
-               
-                setUser(user_obj)
-            });
-            */
+            setAccessToken(currentUser.accessToken)
             const saveUserRequest = build_save_user_request(currentUser)
             console.log(saveUserRequest)
             fetch(saveUserRequest.url, saveUserRequest.options)
@@ -91,7 +77,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     return (
-        <AuthContext.Provider value={{ user, loginWithGoogle, loginWithFacebook, loading, logOut }}>
+        <AuthContext.Provider value={{ user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken }}>
             {children}
         </AuthContext.Provider>
     );

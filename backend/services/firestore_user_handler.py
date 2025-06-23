@@ -36,7 +36,59 @@ def save_or_update_user(oauth_user):
         return JsonResponse(snapshot.to_dict())
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
+    
+def update_user_favorite_or_added_teams_or_leagues(oauth_user):
+#@which can be "favorite_teams", "added_teams", or "favorite_leagues"
+    try:
+        token = oauth_user["accessToken"]#request.headers.get("Authorization", "").split("Bearer ")[-1]
+        if not token:
+            return JsonResponse({"error": "Unauthorized"}, status=401)
+        decoded_token = auth.verify_id_token(token)
+        if decoded_token.get("uid") != oauth_user["uid"]:
+            return JsonResponse({"error": "Unauthorized"}, status=401)
+        db = get_firestore_client()
+        user_ref = db.collection("users").document(oauth_user["uid"])
+        snapshot = user_ref.get()
+        if not snapshot.exists:
+            return JsonResponse({"error": "User not found"}, status=404)
+        user_data = snapshot.to_dict()
+        user_data[oauth_user.which] = oauth_user.teams_or_leagues
+        user_ref.update(user_data)
+        return JsonResponse({"message": "Favorite teams updated successfully"})
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
 
+def get_leagues():
+    db = get_firestore_client()
+    leagues_ref = db.collection("leagues")
+    docs = leagues_ref.stream()
+    leagues = []
+    for doc in docs:
+        league_data = doc.to_dict()
+        league_data["id"] = doc.id
+        leagues.append(league_data)
+    return leagues#JsonResponse(leagues, safe=False)
+def get_teams_from_league(league_id):
+    db = get_firestore_client()
+    teams_ref = db.collection("teams")
+    query = teams_ref.where("league_id", "==", league_id)
+    docs = query.stream()
+    teams = []
+    for doc in docs:
+        team_data = doc.to_dict()
+        team_data["id"] = doc.id
+        teams.append(team_data)
+    return JsonResponse(teams, safe=False)
+def get_all_teams():
+    db = get_firestore_client()
+    teams_ref = db.collection("teams")
+    docs = teams_ref.stream()
+    teams = []
+    for doc in docs:
+        team_data = doc.to_dict()
+        team_data["id"] = doc.id
+        teams.append(team_data)
+    return teams#JsonResponse(teams, safe=False)
 def get_user_from_id(id):
     db = get_firestore_client()
     

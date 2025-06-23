@@ -30,10 +30,18 @@ header{
   width: 100%;
   border-bottom: 2px solid blue;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 3rem;
 }
 footer{
   background: #fffdf4;
    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.notification-info-attributes{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
 }
 .header-btn{
   height: 100%;
@@ -41,10 +49,16 @@ footer{
 .header{
   display: flex;
   flex-direction: row;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
-  margin-top: -2rem;
   margin-left: -2rem;
+}
+.header-left{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
 }
 .homepage-sections{
   display: flex;
@@ -96,6 +110,13 @@ footer{
   justify-content: start;
   align-items: center;
   min-height: 50vh;
+}
+.dropdown{
+  min-width: 3rem;
+  padding: 2rem;
+  position: absolute;
+  top: -1rem;
+  right: 4rem;
 }
 #section1{
   /* background: #010618; */
@@ -239,8 +260,8 @@ h1{
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 4em;
+  padding: 0;
   will-change: filter;
   transition: filter 300ms;
   scale: .67;
