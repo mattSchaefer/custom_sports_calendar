@@ -34,7 +34,7 @@ const AccountFavorites = () => {
                 })
                 .then(data => {
                     console.log("teams data retrieved:", data)
-                    setLeagues(data.teams || []);
+                    setTeams(data.teams || []);
                 })
                 .catch(error => console.error("Error saving user data:", error));
         }
@@ -42,20 +42,71 @@ const AccountFavorites = () => {
     return(
         <div>
             <h4>Favorite Teams</h4>
-           
-            <h4>Favorite Leagues</h4>
-            <ul></ul>
-            <span>
-                <h5>Avaliable Leagues</h5>
-                <ul>
+            <div>
                     {
-                    leaugues.map((league, index) => (
-                        <li key={index}>{league.name}</li>
-                    ))
+                        user.favorite_teams && user.favorite_teams.length > 0 && user.favorite_teams.map((team, index) => (
+                            <span key={index} className="favorite-team">  
+                                
+                                {team.name}
+                            </span>
+                        ))
+                    }
+                    <button><i className="fa fa-plus" /></button>
+                </div>
+            <h4>Favorite Leagues</h4>
+            <div>
+                <div>
+                    {
+                        user.favorite_leagues && user.favorite_leagues.length > 0 && user.favorite_leagues.map((league, index) => (
+                            <span key={index} className="favorite-league">  
+                                {league.name}
+                            </span>
+                        ))
+                    }
+                </div>
+                <button><i className="fa fa-plus" /></button>
+            </div>
+            <div className="avaliable-leagues-container">
+                <h5>Avaliable Leagues</h5>
+                <div className="avaliable-leagues-inner">
+                    {
+                        leaugues.map((league, index) => (
+                            <div className="avaliable-league" key={index}>
+                                <span key={index}>{league.name}</span>
+                                <div className="league-teams">
+                                    {
+                                        !teams || teams.length ==  0 &&
+                                        <span className="no-teams">No teams available</span>
+                                    }
+                                    {
+                                        teams.map((team, teamIndex) => {
+                                            if (team.league === league.name) {
+                                                return (
+                                                    <span key={teamIndex} className="team-name">
+                                                        {team.name + " | " + team.league}
+                                                    </span>
+                                                );
+                                            }
+                                            return null;
+                                        })
+                                    }
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+                <span>
+                <h5>Avaliable Teams</h5>
+                <ul className="avaliable-teams">
+                    {
+                        teams.map((team, index) => (
+                            <li key={index}>{team.name + " | " + team.league} </li>
+                        ))
                     }
                 </ul>
             </span>
-            <h4>Other Teams</h4>
+            </div>
+            <h4>Synced Teams</h4>
             <ul></ul>
         </div>
     )
