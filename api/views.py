@@ -4,7 +4,7 @@ from ninja import NinjaAPI, Schema
 from backend.services.sports_data_api_handler import get_league_season, get_league_teams_meta
 from backend.services.utilities import serialize_firestore_data, clean_for_json
 import backend.firebase_init 
-from typing import List
+from typing import List, Dict, Any
 from pydantic import Field
 from ninja import NinjaAPI
 from backend.services.firestore_user_handler import save_or_update_user, update_user_favorite_or_added_teams_or_leagues, get_leagues, get_all_teams   
@@ -61,7 +61,7 @@ class UserData(Schema):
     displayName: str = ""
     provider: str = ""
     accessToken: str = ""
-    teams_or_leagues: List[str] = Field(default_factory=list)
+    teams_or_leagues: List[Dict[str, Any]] = Field(default_factory=list)#List[str] = Field(default_factory=list)
     which: str = ""  # "favorite_teams", "followed", or "followed"
 @api.post("/save_user_data")
 def save_user_data(request, data: UserData):

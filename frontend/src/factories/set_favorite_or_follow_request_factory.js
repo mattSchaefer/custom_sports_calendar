@@ -16,7 +16,7 @@ export const build_set_favorite_request = (user, accessToken, which, teams_or_le
                 uid: user.uid,
                 accessToken: accessToken,
                 which: which, // 'favorite_teams', 'following_teams', or 'following_leagues'
-                teams_or_leagues: stripped_ids//teams_or_leagues // array of team or league IDs
+                teams_or_leagues: teams_or_leagues//stripped_ids//teams_or_leagues // array of team or league IDs
             })
         }
     };
