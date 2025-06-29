@@ -3,13 +3,15 @@ import '../App.css'
 import P5Canvas from './P5Canvas.jsx'
 import { build_save_user_request } from '../factories/save_user_request_factory.js'
 import { useAuth } from '../contexts/auth_context.jsx'
+import {useUserFavoritesHook} from '../hooks/UserFavoritesHook.jsx'
 import about_1 from '../assets/about_1.png'
 import CalendarWidget from './CalendarWidget.jsx'
 import AccountDetails
  from './AccountDetails.jsx'
-const SignedInHome = () => {
-    const { user, loginWithGoogle, loginWithFacebook, loading, signOut } = useAuth();
-    console.log(user)
+const SignedInHome = ({}) => {
+    const { user, loginWithGoogle, loginWithFacebook, loading, signOut, accessToken, favorites, setFavorites, sync_favorites } = useAuth();
+    //const [favorites, setFavorites] = useUserFavoritesHook(user, accessToken);
+    //console.log(user)
     return(
         <div className="signed-in-home-container">
             <h3>Welcome back, {user.email}</h3>
@@ -23,8 +25,8 @@ const SignedInHome = () => {
                 </div>
                
             </span> */}
-            <AccountDetails />
-            <CalendarWidget />
+            <AccountDetails favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites} />
+            <CalendarWidget favorites={favorites} setFavorites={setFavorites}  />
         </div>
     )
 }

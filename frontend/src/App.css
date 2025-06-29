@@ -32,9 +32,37 @@ header{
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   height: 3rem;
 }
+.watchlist-header{
+  margin: 0;
+}
 footer{
   background: #fffdf4;
    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.fav-header{
+  margin-bottom: 0;
+}
+.dull{
+  color: #a1a0a0;
+  font-style: italic;
+}
+.empty-fav{
+  margin-left: 1rem;
+}
+.account-favorites-paragraph{
+  font-size: 1rem;
+  margin: 0;
+  margin-left: 1rem;
+  font-weight: 400;
+  text-align: start;
+}
+.favorite-teams-and-leagues{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+  width: 100%;
 }
 .avaliable-leagues-inner{
   display: flex;
@@ -119,6 +147,30 @@ footer{
   width: 100%;
   padding: 1rem;
 }
+.team-name-header{
+  margin: 0;
+}
+.add-and-fav-button-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.team-add, .team-favorite{
+  height: 1rem;
+  width: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.team-name{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+}
 .offering-card{
   display: flex;
   flex-direction: column;
@@ -151,6 +203,17 @@ footer{
 #about-header{
   /* text-align: end; */
 }
+.league-header-span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+}
+.league-name-header{
+  margin: 0;
+}
 .about-header-small{
   margin-bottom: 0;
 }
@@ -174,6 +237,17 @@ footer{
   justify-content: center;
   align-items: start;
   width: 100%;
+}
+.account-details-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  position: absolute;
+  right: 0;
+  border: 2px solid #bb0000;
+  padding: 0 1rem;
+  top: 3rem;
 }
 .about-paragraph, .about-verbiage{
   text-align: start;

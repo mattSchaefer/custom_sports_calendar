@@ -4,8 +4,8 @@ import P5Canvas from './P5Canvas.jsx'
 import { build_save_user_request } from '../factories/save_user_request_factory.js'
 import { useAuth } from '../contexts/auth_context.jsx'
 import about_1 from '../assets/about_1.png'
-function Home(){
-    const { user, loginWithGoogle, loginWithFacebook, loading, signOut } = useAuth();
+function Home({}){
+    const { user, loginWithGoogle, loginWithFacebook, loading, signOut, accessToken, favorites, setFavorites, sync_favorites } = useAuth();
     
     const handleLogin = async (method) => {
         try {

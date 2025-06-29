@@ -8,9 +8,9 @@ const AccountDetails = () => {
     const { user, loading, signOut, accessToken } = useAuth();
     const [accountType, setAccountType] = useState(user?.account_type || 'basic');
 
-    useEffect(() => {
-        console.log('User data account details:', user);
-    }, [user]);
+    // useEffect(() => {
+    //     console.log('User data account details:', user);
+    // }, [user]);
 
     const handleUpgrade = () => {
         // Logic to upgrade account type

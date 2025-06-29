@@ -29,8 +29,8 @@ def save_or_update_user(oauth_user):
             data["created_at"] = datetime.now().isoformat()
             data["roles"] = ["user"]
             data["favorite_teams"]=[]
-            data["added_teams"] = []
-            data["favorite_leagues"] = []
+            data["followed_teams"] = []
+            data["followed_leagues"] = []
             user_ref.set(data)
         snapshot = user_ref.get()
         return JsonResponse(snapshot.to_dict())
@@ -38,7 +38,8 @@ def save_or_update_user(oauth_user):
         return JsonResponse({"error": str(e)}, status=500)
     
 def update_user_favorite_or_added_teams_or_leagues(oauth_user):
-#@which can be "favorite_teams", "added_teams", or "favorite_leagues"
+#@which can be "favorite_teams", "followed_teams", or "followed_leagues"
+#@teams_or_leagues is a list of team or league IDs
     try:
         token = oauth_user["accessToken"]#request.headers.get("Authorization", "").split("Bearer ")[-1]
         if not token:
@@ -52,10 +53,13 @@ def update_user_favorite_or_added_teams_or_leagues(oauth_user):
         if not snapshot.exists:
             return JsonResponse({"error": "User not found"}, status=404)
         user_data = snapshot.to_dict()
-        user_data[oauth_user.which] = oauth_user.teams_or_leagues
+        user_data[oauth_user["which"]] = list(oauth_user["teams_or_leagues"])
         user_ref.update(user_data)
-        return JsonResponse({"message": "Favorite teams updated successfully"})
+        return JsonResponse({"message": list(user_data[oauth_user["which"]])})
     except Exception as e:
+        import traceback
+        print("Exception occurred:", str(e))
+        traceback.print_exc() 
         return JsonResponse({"error": str(e)}, status=500)
 
 def get_leagues():

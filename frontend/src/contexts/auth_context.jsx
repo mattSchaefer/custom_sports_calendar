@@ -1,18 +1,22 @@
 import {signInWithGoogle, signInWithFacebook, logOut} from '../config/firebase/auth.js';
 import { build_save_user_request } from '../factories/save_user_request_factory.js'
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { createContext, useContext, useState, React, useEffect } from 'react';
+import { createContext, useContext, useState, React, useEffect, useMemo } from 'react';
 import { auth } from '../config/firebase/firebase.js';
+import { useUserFavoritesHook } from '../hooks/UserFavoritesHook.jsx';
+
 const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
-    const [accessToken, setAccessToken] = useState(null);
+    const [accessToken, setAccessToken] = useState(null)
+    const [favorites, setFavorites, sync_favorites] = useUserFavoritesHook(user, accessToken);
+
     const loginWithGoogle = async () => {
         try {
             const result = await signInWithGoogle()
-            //console.log()
-            setUser(result.user)
+            console.log(result)
+            //setUser(() => result.user)
         } catch (error) {
             console.error("Login failed:", error)
         }
@@ -21,7 +25,8 @@ export const AuthProvider = ({ children }) => {
         try {
             const result = await signInWithFacebook()
             //console.log(getDbUser(result.user))
-            setUser(result.user);
+            //setUser(() => result.user);
+            console.log(result)
         } catch (error) {
             console.error("Login failed:", error)
         }
@@ -55,7 +60,8 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         try{
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            setAccessToken(currentUser.accessToken)
+            setAccessToken(() => currentUser.accessToken)
+            //sync with db and retrieve other user attrs
             const saveUserRequest = build_save_user_request(currentUser)
             console.log(saveUserRequest)
             fetch(saveUserRequest.url, saveUserRequest.options)
@@ -67,17 +73,44 @@ export const AuthProvider = ({ children }) => {
                 })
                 .then(data => {
                     console.log("User data saved:", data)
-                    setUser(data)
+                    setUser(() => data)
+                   
                 })
                 .catch(error => console.error("Error saving user data:", error));
-            setLoading(false);
+            setLoading(() => false);
         });
         return () => unsubscribe();
         }catch(e){return console.error("Error in useEffect:", e)}
     }, []);
-
+    useEffect(() => {
+        if(user){
+            console.log(user.followed_teams)
+            setFavorites(() => 
+                
+                 {
+                    return {
+                        favorite_teams: user.favorite_teams,
+                        followed_teams: user.followed_teams,
+                        followed_leagues: user.followed_leagues,
+                        on_load: true
+                    }
+                }
+            );
+        }
+    }, [user])
+    const authContextValue = useMemo(() => ({
+        user,
+        loginWithGoogle,
+        loginWithFacebook,
+        loading,
+        logOut,
+        accessToken,
+        favorites, 
+        setFavorites, 
+        sync_favorites
+    }), [user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites]);
     return (
-        <AuthContext.Provider value={{ user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken }}>
+        <AuthContext.Provider value={authContextValue}> {/*</AuthContext.Provider><AuthContext.Provider value={{ user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken }}>*/}
             {children}
         </AuthContext.Provider>
     );

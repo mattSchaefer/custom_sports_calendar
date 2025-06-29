@@ -62,7 +62,7 @@ class UserData(Schema):
     provider: str = ""
     accessToken: str = ""
     teams_or_leagues: List[str] = Field(default_factory=list)
-    which: str = ""  # "favorite_teams", "added_teams", or "favorite_leagues"
+    which: str = ""  # "favorite_teams", "followed", or "followed"
 @api.post("/save_user_data")
 def save_user_data(request, data: UserData):
     if request.method == "OPTIONS":
