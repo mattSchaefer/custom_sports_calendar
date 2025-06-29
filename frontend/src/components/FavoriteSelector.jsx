@@ -4,12 +4,22 @@ import '../App.css';
 import { useAuth } from '../contexts/auth_context.jsx';
 //@which is favorite_leagues, favorite_teams, or added_teams
 const FavoriteSelector = ({teams, league, index}) => {
-    const filtered_teams = teams
+    let filtered_teams = teams
+    let [filteredTeams, setFilteredTeams] = useState(teams)
+    useEffect(() => {if(filteredTeams.length == 0){setFilteredTeams(() => teams)}},[teams])
     const { user, loginWithGoogle, loginWithFacebook, loading, signOut, accessToken, favorites, setFavorites, sync_favorites } = useAuth();
-    const filter_by_term = (term) => {
-        return filtered_teams.filter((team) => team.name.toLowerCase().includes(term.toLowerCase()));
+    const filter_by_term = (e) => {
+        var term = e.target.value.toString()
+        setTimeout(() => {
+            if(term == "" || !term)
+                setFilteredTeams(() => teams)
+            filteredTeams = teams.filter((team) => team.name.toString().toLowerCase().includes(term.toString().toLowerCase()));
+            setFilteredTeams(() => filteredTeams)
+            console.log(filteredTeams)
+        },50)
+        console.log(term)
+        
     }
-    //const [favorites, setFavorites, sync_favorites] = useUserFavoritesHook();
     const toggleFollowTeam = (e, team) => {
         const is_in = favorites.followed_teams.filter((fav) => { return fav.id == team.id}).length > 0
         //console.log(is_in)
@@ -33,18 +43,80 @@ const FavoriteSelector = ({teams, league, index}) => {
             })
         }
     }
+    const toggleFavoriteTeam = (e, team) => {
+        const is_in = favorites.favorite_teams.filter((fav) => { return fav.id == team.id}).length > 0
+        //console.log(is_in)
+        if(!is_in){
+            //TODO: sync with server first?
+            setFavorites((prevFavorites) => {
+                return{
+                    ...prevFavorites,
+                    favorite_teams: [...(prevFavorites.favorite_teams || []), team],
+                    on_load: false
+                }
+            })
+        }
+        else{
+            setFavorites((prevFavorites) => {
+                return{
+                    ...prevFavorites,
+                    favorite_teams: [...(prevFavorites.favorite_teams || []).filter((team2) => { return team2.id !== team.id})],
+                    on_load: false
+                }
+            })
+        }
+    }
+    const toggleFollowLeague = (e, league) => {
+        const is_in = favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length > 0
+        //console.log(is_in)
+        if(!is_in){
+            //TODO: sync with server first?
+            setFavorites((prevFavorites) => {
+                return{
+                    ...prevFavorites,
+                    followed_leagues: [...(prevFavorites.followed_leagues || []), league],
+                    on_load: false
+                }
+            })
+        }
+        else{
+            setFavorites((prevFavorites) => {
+                return{
+                    ...prevFavorites,
+                    followed_leagues: [...(prevFavorites.followed_leagues || []).filter((league2) => { return league2.id !== league.id})],
+                    on_load: false
+                }
+            })
+        }
+    }
+    const [showInput, setShowInput] = useState(false)
     return (
         <div className="avaliable-league" key={index}>
             <span className="league-header-span">
                 <h5 className="league-name-header" key={index}>{league.name}</h5>
                 <span>
-                    <button><i className="fa fa-plus" /></button>
-                    <button><i className="fa fa-search" /></button>
+                    <button  onClick={(e) => toggleFollowLeague(e, league)}>
+                        {
+                            favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length > 0 &&
+                            <i className="fa fa-minus" />
+                        }
+                        {
+                            favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length == 0 &&
+                            <i className="fa fa-plus" />
+                        }
+                    </button>
+                    <button onClick={(e) => setShowInput((prev) => !prev)}>
+                        <i className="fa fa-search" />
+                    </button>
+                    {
+                        showInput &&
+                        <input className="favorite-selector-filter-input" onChange={(e) => filter_by_term(e)}/>
+                    }
                 </span>
             </span>
             <div className="league-teams">
                 {
-                    teams.map((team, teamIndex) => {
+                    filteredTeams.map((team, teamIndex) => {
                         return (
                             <span key={teamIndex} className="team-name">
                                 <h6 className="team-name-header">{team.name}</h6>
@@ -59,7 +131,7 @@ const FavoriteSelector = ({teams, league, index}) => {
                                             <i className="fa fa-plus" />
                                         }
                                     </button>
-                                   <button className="team-favorite"><i className="fa fa-star" /></button>
+                                   <button className="team-favorite" onClick={(e) => toggleFavoriteTeam(e, team)}><i className="fa fa-star" /></button>
                                     
                                 </span>
                             </span>

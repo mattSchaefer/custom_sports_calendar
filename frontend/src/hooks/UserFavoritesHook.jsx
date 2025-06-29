@@ -3,7 +3,9 @@ import { build_set_favorite_request } from '../factories/set_favorite_or_follow_
 import { useAuth } from '../contexts/auth_context.jsx';
 
 const useUserFavoritesHook = (user, accessToken) => {
-    const firstRenderFollowedTeams = useRef(true)
+    const firstRenderFollowedTeams = useRef(true)    
+    const firstRenderFavoriteTeams = useRef(true)
+    const firstRenderFollowedLeagues = useRef(true)
     const [favorites, setFavorites] = useState({
         favorite_teams: [],
         followed_teams: [],
@@ -23,31 +25,40 @@ const useUserFavoritesHook = (user, accessToken) => {
                 }
             })
             .then(data => {
-                console.log("Favorites updated successfully:", data);
-                // setFavorites(prevFavorites => ({
-                //     ...prevFavorites,
-                //     [which]: teams_or_leagues
-                // }));
+                console.log("Favorites updated successfully");
             })
             .catch(error => console.error("Error updating favorites:", error));
     }
-    useEffect(() => {
-        
-        if (!user) {
-            console.log('init set favorites access token ' + accessToken)
-            
-        }
-    }, [user]);
+    
     useEffect(() => {
         if(firstRenderFollowedTeams.current){
             firstRenderFollowedTeams.current = false
             return
         }
-        // console.log(favorites.on_load)
         if(!favorites.on_load)
             sync_favorites("followed_teams", favorites["followed_teams"] || [])
     
     },[favorites.followed_teams])
+    useEffect(() => {
+        if(firstRenderFollowedLeagues.current){
+            firstRenderFollowedLeagues.current = false
+            return
+        }
+        if(!favorites.on_load)
+            sync_favorites("followed_leagues", favorites["followed_leagues"] || [])
+    
+    },[favorites.followed_leagues])
+    useEffect(() => {
+        if(firstRenderFavoriteTeams.current){
+            firstRenderFavoriteTeams.current = false
+            return
+        }
+        // console.log(favorites.on_load)
+        if(!favorites.on_load)
+            sync_favorites("favorite_teams", favorites["favorite_teams"] || [])
+    
+    },[favorites.favorite_teams])
+
     return [favorites, setFavorites, sync_favorites];
 }
 export {useUserFavoritesHook}
