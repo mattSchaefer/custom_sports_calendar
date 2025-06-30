@@ -42,6 +42,20 @@ footer{
 .fav-header{
   margin-bottom: 0;
 }
+.user-favorite-attr-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  max-height: 6rem;
+  overflow: scroll;
+}
+.fav-select-header-and-toggle{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
 .dull{
   color: #a1a0a0;
   font-style: italic;
@@ -62,7 +76,13 @@ footer{
   justify-content: start;
   align-items: start;
   gap: 2rem;
-  width: 100%;
+  width: 66%;
+}
+.favorite-team{
+  padding: 0 .5rem;
+  margin-bottom: .25rem;
+  border: 2px solid #bb0000;
+  border-radius: 20px;
 }
 .avaliable-leagues-inner{
   display: flex;

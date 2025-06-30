@@ -3,7 +3,7 @@ import { useAuth } from '../contexts/auth_context.jsx'
 
 const CurrentFavoriteList = ({which, favorites, setFavorites}) => {
     return(
-        <div>
+        <div className="user-favorite-attr-list">
             {
                 favorites[which] && favorites[which].length > 0 && favorites[which].map((team, index) => (
                     <span key={index} className="favorite-team">  

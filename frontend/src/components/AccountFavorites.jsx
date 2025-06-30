@@ -10,12 +10,31 @@ import CurrentFavoriteList from './CurrentFavoriteList.jsx';
 const AccountFavorites = ({}) => { 
     const { user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites } = useAuth()
     const [leaugues, teams] = useLeaguesAndTeamsHook(user, accessToken);
+    const [selectorExpanded, setSelectorExpanded] = useState(false)
     //const [favorites, setFavorites, sync_favorites] = useUserFavoritesHook(user, accessToken)
     return(
         <div className="account-favorites">
-            <h3 className="watchlist-header">Calendar Configuration</h3>
-            <p className="account-favorites-paragraph">Follow entire leagues, or specific teams.</p>
-            <p className="account-favorites-paragraph">Teams you favorite are stand out amongst the rest of your schedule</p>
+            <div>
+                <span className="fav-select-header-and-toggle">
+                    <h3>Edit teams or leagues </h3>
+                    <button onClick={(e) => setSelectorExpanded(() => !selectorExpanded)}>
+                        {
+                            !selectorExpanded && 
+                            <span>
+                                <i className="fa fa-pencil" />
+                                {/* <i className="fa fa-chevron-down" /> */}
+                            </span>
+                        }
+                        {
+                            selectorExpanded && 
+                            <span>
+                                <i className="fa fa-pencil" />
+                                {/* <i className="fa fa-chevron-up" /> */}
+                            </span>
+                        }
+                    </button>
+                </span>
+            </div>
             <div className="favorite-teams-and-leagues">
                 <span className="favorite-teams">
                     <h4 className="fav-header">Favorite Teams</h4>
@@ -31,17 +50,19 @@ const AccountFavorites = ({}) => {
                 </span>
             </div>
             <div className="avaliable-leagues-container">
-                <h3>Avaliable Leagues</h3>
-                <div className="avaliable-leagues-inner">
-                    {
-                        leaugues.map((league, index) => (
-                            
-                            <FavoriteSelector league={league} teams={teams.filter((team) => team.league == league.name)} key={index} user={user} accessToken={accessToken} setFavorites={setFavorites} favorites={favorites} />
-                        ))
-                    }
-                </div>
+                {
+                    selectorExpanded &&
+                    <div className="avaliable-leagues-inner">
+                        {
+                            leaugues.map((league, index) => (
+                                
+                                <FavoriteSelector league={league} teams={teams.filter((team) => team.league == league.name)} key={index} user={user} accessToken={accessToken} setFavorites={setFavorites} favorites={favorites} />
+                            ))
+                        }
+                    </div>
+                }
             </div>
-            <h4>Synced Teams</h4>
+            <h1 className="watchlist-header">Schedule</h1>
             <ul></ul>
         </div>
     )
