@@ -1,4 +1,5 @@
 from datetime import datetime
+from dateutil import parser
 from django.http import HttpResponse, JsonResponse
 from backend.firebase_init import get_firestore_client
 from django.conf import settings
@@ -61,7 +62,69 @@ def update_user_favorite_or_added_teams_or_leagues(oauth_user):
         print("Exception occurred:", str(e))
         traceback.print_exc() 
         return JsonResponse({"error": str(e)}, status=500)
+def get_user_schedule(oauth_user):
+    try:
+        db = get_firestore_client()
+        token = oauth_user["accessToken"]#request.headers.get("Authorization", "").split("Bearer ")[-1]
+        if not token:
+            return JsonResponse({"error": "Unauthorized"}, status=401)
+        decoded_token = auth.verify_id_token(token)
+        if decoded_token.get("uid") != oauth_user["uid"]:
+            return JsonResponse({"error": "Unauthorized"}, status=401)
+        uid = decoded_token.get("uid")
+        
+        user_ref = db.collection("users").document(oauth_user["uid"])
+        snapshot = user_ref.get()
+        user_dict = snapshot.to_dict()
 
+        followed_leagues = user_dict.get("followed_leagues", [])
+        followed_teams = user_dict.get("followed_teams", [])
+        favorite_teams = user_dict.get("favorite_teams", [])
+        print(followed_leagues)
+        followed_league_ids = {d["id"] for d in followed_leagues}
+        teams_for_query = []
+        all_teams = followed_teams + favorite_teams
+        print(all_teams)
+        for team in all_teams:
+            if team["league_id"] not in followed_league_ids:
+                teams_for_query.append(team["id"])
+        for team in teams_for_query:
+            team_id = team #= team.to_dict()["id"]
+            away_games = db.collection("games").where("away_team_id", "==", team_id).stream()
+            home_games = db.collection("games").where("home_team_id", "==", team_id).stream()
+        league_games = db.collection("games").where("league_id", "in", followed_league_ids).stream()
+        # Combine and parse results
+        all_games = []
+
+        for doc in away_games:
+            game = doc.to_dict()
+            game["start"]  = parse_game_date(game["date"])
+            all_games.append(game)
+        for doc in home_games:
+            game = doc.to_dict()
+            game["start"]  = parse_game_date(game["date"])
+            all_games.append(game)
+        for doc in league_games:
+            game = doc.to_dict()
+            game["start"]  = parse_game_date(game["date"])
+            all_games.append(game)
+        return all_games
+    except Exception as e:
+        import traceback
+        print("Exception occurred:", str(e))
+        traceback.print_exc() 
+        return JsonResponse({"error": str(e)}, status=500)
+#TODO: add get schedule 1 month at a time, and 1 week at a time... accept "month start" or "week start"
+def parse_game_date(date_str):
+    parts = date_str.split("TBD")
+    if len(parts) > 1:
+        #return datetime.strptime(parts[0].strip(), "%A, %B %d, %Y")
+        #return parser.parse(parts[0].strip())
+        return parser.parse(parts[0].strip().rsplit("(", 1)[0].strip())
+    else:
+        #return datetime.strptime(date_str, "%A, %B %d, %Y %I:%M %p (%Z)")
+        cleaned = date_str.rsplit("(", 1)[0].strip()
+        return parser.parse(cleaned)
 def get_leagues():
     db = get_firestore_client()
     leagues_ref = db.collection("leagues")
@@ -92,9 +155,7 @@ def get_all_teams():
         team_data = doc.to_dict()
         team_data["id"] = doc.id
         teams.append(team_data)
-    return teams#JsonResponse(teams, safe=False)
-def get_user_from_id(id):
-    db = get_firestore_client()
+    return teams#JsonResponse(teams, safe=False)    
     
 def seed_games():
     print("Seeding games...")
@@ -138,8 +199,7 @@ def seed_games():
                 "away_team_id": f"{game['league_name']}_{game['away']['id']}",
                 "home_team_name": game["home"]["team_name"],
                 "away_team_name": game["away"]["team_name"],
-            })
-            
+            })            
 def delete_all_games():
     print("Deleting all games...")
     db = get_firestore_client()

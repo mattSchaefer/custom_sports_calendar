@@ -7,6 +7,11 @@
   background: #bb0000;
   color: white;
 }
+.calendarCell, .fc-event{max-height: 5rem; overflow: scroll;}
+.fc-daygrid-day-events{
+  max-height: 10rem;
+  overflow: scroll;
+}
 #what-we-offer{
   display: flex;
   flex-direction: column;
@@ -53,7 +58,7 @@ footer{
 .fav-select-header-and-toggle{
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: start;
   align-items: center;
 }
 .dull{

@@ -7,7 +7,7 @@ import backend.firebase_init
 from typing import List, Dict, Any
 from pydantic import Field
 from ninja import NinjaAPI
-from backend.services.firestore_user_handler import save_or_update_user, update_user_favorite_or_added_teams_or_leagues, get_leagues, get_all_teams   
+from backend.services.firestore_user_handler import save_or_update_user, update_user_favorite_or_added_teams_or_leagues, get_leagues, get_all_teams, get_user_schedule
 from django.http import HttpResponse, JsonResponse
 import os
 import re
@@ -87,6 +87,19 @@ def update_team_or_league_list(request, data: UserData):
     try:
         updated = update_user_favorite_or_added_teams_or_leagues(data.dict())
         return updated
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
+@api.post("/refresh_schedule")
+def refresh_user_schedule(request, data: UserData):
+    if request.method == "OPTIONS":
+        response = HttpResponse()
+        response["Access-Control-Allow-Origin"] = "*"
+        response["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+        response["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+        return JsonResponse(response) 
+    try:
+        games = get_user_schedule(data.dict())
+        return JsonResponse({"games": games}, status=200)
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
 class RetUserData(Schema):

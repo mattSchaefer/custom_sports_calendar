@@ -62,7 +62,6 @@ const AccountFavorites = ({}) => {
                     </div>
                 }
             </div>
-            <h1 className="watchlist-header">Schedule</h1>
             <ul></ul>
         </div>
     )

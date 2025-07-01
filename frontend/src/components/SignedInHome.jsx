@@ -9,7 +9,7 @@ import CalendarWidget from './CalendarWidget.jsx'
 import AccountDetails
  from './AccountDetails.jsx'
 const SignedInHome = ({}) => {
-    const { user, loginWithGoogle, loginWithFacebook, loading, signOut, accessToken, favorites, setFavorites, sync_favorites } = useAuth();
+    const { user, loginWithGoogle, loginWithFacebook, loading, signOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames } = useAuth();
     //const [favorites, setFavorites] = useUserFavoritesHook(user, accessToken);
     //console.log(user)
     return(
@@ -25,8 +25,8 @@ const SignedInHome = ({}) => {
                 </div>
                
             </span> */}
-            <AccountDetails favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites} />
-            <CalendarWidget favorites={favorites} setFavorites={setFavorites}  />
+            <AccountDetails favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites} games={games} setGames={setGames} />
+            <CalendarWidget favorites={favorites} setFavorites={setFavorites} games={games} setGames={setGames}  />
         </div>
     )
 }
