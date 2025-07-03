@@ -95,6 +95,24 @@ function Home({}){
                     </span>
                 </div>
                 <p>Whether you're a casual fan or a die-hard supporter, <span className="bold-red">SportSync</span> helps you never miss a game, no matter how packed your sports world gets.</p>
+                <h1>Supported Leagues</h1>
+                <div className="league-list-home">
+                    <div className="league-card">
+
+                    </div>
+                    <div className="league-card">
+
+                    </div>
+                    <div className="league-card">
+
+                    </div>
+                    <div className="league-card">
+
+                    </div>
+                    <div className="league-card">
+
+                    </div>
+                </div>
             </div>
             <div className="section" id="about-us">
                 <span className="about-verbiage">

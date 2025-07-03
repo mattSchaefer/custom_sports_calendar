@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from ninja import NinjaAPI, Schema
-from backend.services.sports_data_api_handler import get_league_season, get_league_teams_meta
+from backend.services.sports_data_api_handler import get_league_teams_meta
 from backend.services.utilities import serialize_firestore_data, clean_for_json
 import backend.firebase_init 
 from typing import List, Dict, Any
@@ -18,22 +18,22 @@ from firebase_admin import credentials, auth, firestore
 api = NinjaAPI()
 
 
-class EventSeason(Schema):
-    leagueId: str = "4424"
-    year: str = "2025"
-@api.post("/get_eventsseason")
-def get_eventsseason(request, data: EventSeason):
-    if request.method == "OPTIONS":
-        response = HttpResponse()
-        response["Access-Control-Allow-Origin"] = "*"
-        response["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
-        response["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
-        return JsonResponse(response) 
-    try:
-        content = get_league_season(data.leagueId, data.year)
-        return JsonResponse(content.json(), status=200)
-    except Exception as e:
-        return JsonResponse({"error": str(e)}, status=500)
+# class EventSeason(Schema):
+#     leagueId: str = "4424"
+#     year: str = "2025"
+# @api.post("/get_eventsseason")
+# def get_eventsseason(request, data: EventSeason):
+#     if request.method == "OPTIONS":
+#         response = HttpResponse()
+#         response["Access-Control-Allow-Origin"] = "*"
+#         response["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+#         response["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+#         return JsonResponse(response) 
+#     try:
+#         content = get_league_season(data.leagueId, data.year)
+#         return JsonResponse(content.json(), status=200)
+#     except Exception as e:
+#         return JsonResponse({"error": str(e)}, status=500)
     
 class LeagueTeams(Schema):
     leagueId: str = "4424"

@@ -59,6 +59,8 @@ export const AuthProvider = ({ children }) => {
     useEffect(() => {
         try{
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            if(!currentUser || !currentUser.accessToken)
+                throw "not signed in"
             setAccessToken(() => currentUser.accessToken)
             //sync with db and retrieve other user attrs
             const saveUserRequest = build_save_user_request(currentUser)

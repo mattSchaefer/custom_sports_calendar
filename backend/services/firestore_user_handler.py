@@ -92,22 +92,27 @@ def get_user_schedule(oauth_user):
             team_id = team #= team.to_dict()["id"]
             away_games = db.collection("games").where("away_team_id", "==", team_id).stream()
             home_games = db.collection("games").where("home_team_id", "==", team_id).stream()
-        league_games = db.collection("games").where("league_id", "in", followed_league_ids).stream()
+        league_games = None
+        if len(followed_league_ids):
+            league_games = db.collection("games").where("league_id", "in", followed_league_ids).stream()
         # Combine and parse results
         all_games = []
 
-        for doc in away_games:
-            game = doc.to_dict()
-            game["start"]  = parse_game_date(game["date"])
-            all_games.append(game)
-        for doc in home_games:
-            game = doc.to_dict()
-            game["start"]  = parse_game_date(game["date"])
-            all_games.append(game)
-        for doc in league_games:
-            game = doc.to_dict()
-            game["start"]  = parse_game_date(game["date"])
-            all_games.append(game)
+        if away_games:
+            for doc in away_games:
+                game = doc.to_dict()
+                game["start"]  = game["date"]#parse_game_date(game["date"])
+                all_games.append(game)
+        if home_games :
+            for doc in home_games:
+                game = doc.to_dict()
+                game["start"]  = game["date"]#parse_game_date(game["date"])
+                all_games.append(game)
+        if league_games:
+            for doc in league_games:
+                game = doc.to_dict()
+                game["start"]  = game["date"]#parse_game_date(game["date"])
+                all_games.append(game)
         return all_games
     except Exception as e:
         import traceback

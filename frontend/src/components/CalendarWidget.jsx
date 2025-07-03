@@ -11,6 +11,11 @@ const CalendarWidget = () => {
     const events = [
         { title: 'Meeting', start: new Date() }
     ]
+    const headerToolbar = {
+      left: 'prev,next',
+      center: 'title',
+      right: 'today,dayGridDay,dayGridWeek,dayGridMonth'
+    }
     const events2 = []
     console.log(games.length)
     for(var i =0; i < games.length; i++){
@@ -26,27 +31,29 @@ const CalendarWidget = () => {
     
     return(
         <div>
-            
             <div>
                 <AccountFavorites />
                 <h1 className="watchlist-header">Schedule</h1>
-                <FullCalendar
-                    plugins={[dayGridPlugin]}
-                    initialView='dayGridWeek'
-                    weekends={true}
-                    events={events2}
-                    eventContent={renderEventContent}
-                />
+                <div className="full-calendar-container">
+                  <FullCalendar
+                      plugins={[dayGridPlugin]}
+                      initialView='dayGridWeek'
+                      weekends={true}
+                      events={events2}
+                      eventContent={renderEventContent}
+                      headerToolbar={headerToolbar}
+                  />
+                </div>
             </div>
         </div>
     )
 }
 function renderEventContent(eventInfo) {
   return (
-    <>
+    <span>
       <b>{eventInfo.timeText}</b>
       <i>{eventInfo.event.title}</i>
-    </>
+    </span>
   )
 }
 export default CalendarWidget

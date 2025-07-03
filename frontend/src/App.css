@@ -30,10 +30,10 @@ button{
 header{
   position: fixed;
   top: 0;
-  background: #fffdf4 !important;
+  background: #010618 !important;
   z-index: 100000;
   width: 100%;
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid #bb0000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   height: 3rem;
 }
@@ -206,6 +206,25 @@ footer{
   height: 18rem;
   padding: 1rem;
 }
+.league-list-home{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 66%;
+}
+.league-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  border: 2px solid gray;
+  width: 15rem;
+  height: 6rem;
+  padding: 1rem;
+}
 .section{
   padding: 2rem;
   width: 100vw;
@@ -306,7 +325,7 @@ footer{
 }
 .header-link{
   font-weight: bold;
-  color: #050fff;
+  color: #b7b7b7;
   margin: 0 1rem;
 }
 .inner-header{

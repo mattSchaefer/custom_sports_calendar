@@ -18,7 +18,7 @@ const useLeaguesAndTeamsHook = (user, accessToken) => {
                         throw("not valid")
                 })
                 .then(data => {
-                    //console.log("league data retrieved:", data)
+                    console.log("league data retrieved:", data)
                     setLeagues(prev => data.leagues || []);
                 })
                 .catch(error => console.error("Error saving user data:", error));
@@ -31,7 +31,7 @@ const useLeaguesAndTeamsHook = (user, accessToken) => {
                         throw("not valid")
                 })
                 .then(data => {
-                    //console.log("teams data retrieved:", data)
+                    console.log("teams data retrieved:", data)
                     setTeams(prev => data.teams || []);
                 })
                 .catch(error => console.error("Error saving user data:", error));
