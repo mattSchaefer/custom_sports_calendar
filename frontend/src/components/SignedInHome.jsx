@@ -14,7 +14,7 @@ const SignedInHome = ({}) => {
     //console.log(user)
     return(
         <div className="signed-in-home-container">
-            <h3>Welcome back, {user.email}</h3>
+           
             {/* <span className="outer-account-info-container">
                 <h4>Account Info</h4>
                 <div className="account-info-container">

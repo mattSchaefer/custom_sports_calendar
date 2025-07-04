@@ -15,10 +15,7 @@ const accountDropdown = () => {
                     user &&
                     <i className="fa fa-user-circle" />
                 }
-                {
-                    !user &&
-                   <button>Sign in</button>
-                }
+                
             </div>
             {
                 user && dropdownShow &&
@@ -31,14 +28,17 @@ const accountDropdown = () => {
             {
                 !user &&
                 <div>
-                    <button className="header-btn" onClick={() => loginWithGoogle()}>{/*handleLogin(signInWithGoogle) */}
+                    <button className="header-btn button-85" onClick={() => loginWithGoogle()}>{/*handleLogin(signInWithGoogle) */}
                         <i className="fa fa-brands fa-google"></i>
                         Sign in with Google
                     </button>
-                    <button className="header-btn" onClick={() => loginWithFacebook()}>
+                    <button className="header-btn button-85" onClick={() => loginWithFacebook()}>
                         <i className="fa fa-brands fa-facebook"></i>
                         Sign in with Facebook
                     </button>
+                   
+                    
+
                 </div>
             }
         </div>

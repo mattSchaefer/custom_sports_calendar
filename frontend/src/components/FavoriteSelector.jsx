@@ -4,7 +4,7 @@ import '../App.css';
 import { useAuth } from '../contexts/auth_context.jsx';
 //@which is favorite_leagues, favorite_teams, or added_teams
 const FavoriteSelector = ({teams, league, index}) => {
-    let filtered_teams = teams
+    //let filtered_teams = teams
     let [filteredTeams, setFilteredTeams] = useState(teams)
     useEffect(() => {if(filteredTeams.length == 0){setFilteredTeams(() => teams)}},[teams])
     const { user, loginWithGoogle, loginWithFacebook, loading, signOut, accessToken, favorites, setFavorites, sync_favorites } = useAuth();
@@ -90,6 +90,7 @@ const FavoriteSelector = ({teams, league, index}) => {
         }
     }
     const [showInput, setShowInput] = useState(false)
+    console.log(filteredTeams)
     return (
         <div className="avaliable-league" key={index}>
             <span className="league-header-span">

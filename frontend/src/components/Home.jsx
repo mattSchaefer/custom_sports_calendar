@@ -94,23 +94,29 @@ function Home({}){
                         <button>sign up</button>
                     </span>
                 </div>
-                <p>Whether you're a casual fan or a die-hard supporter, <span className="bold-red">SportSync</span> helps you never miss a game, no matter how packed your sports world gets.</p>
-                <h1>Supported Leagues</h1>
-                <div className="league-list-home">
-                    <div className="league-card">
-
+                <p className="center-para">Whether you're a casual fan or a die-hard supporter, <span className="bold-red">SportSync</span> helps you never miss a game, no matter how packed your sports world gets.</p>
+                <hr />
+                <div className="supported-leagues-container">
+                    <div className="supported-leagues-header-para">
+                        <h1>Supported Leagues</h1>
+                        <p>We care about serving you the sports you care about.  If you're interested a league that's not listed here, please let us know!</p>
                     </div>
-                    <div className="league-card">
+                    <div className="league-list-home">
+                        <div className="league-card">
 
-                    </div>
-                    <div className="league-card">
+                        </div>
+                        <div className="league-card">
 
-                    </div>
-                    <div className="league-card">
+                        </div>
+                        <div className="league-card">
 
-                    </div>
-                    <div className="league-card">
+                        </div>
+                        <div className="league-card">
 
+                        </div>
+                        <div className="league-card">
+
+                        </div>
                     </div>
                 </div>
             </div>
