@@ -19,7 +19,7 @@ const AccountDetails = () => {
 
     return (
         <div className="account-details-container">
-            <div className="notification-info-container">
+            {/* <div className="notification-info-container">
                 <h4>Account Info</h4>
                 <div className="notification-info-attributes">
                     <span>Email: {user?.email}</span>
@@ -28,7 +28,7 @@ const AccountDetails = () => {
                         <button onClick={handleUpgrade} className="upgrade-button">Upgrade!</button>
                     </span>
                 </div>
-            </div>
+            </div> */}
             {/* <div className="favorites-container">
                 <h4>My Leagues & Teams</h4>
                 <div className="favorites-list">

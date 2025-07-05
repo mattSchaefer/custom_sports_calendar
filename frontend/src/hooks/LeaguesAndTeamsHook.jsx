@@ -22,21 +22,22 @@ const useLeaguesAndTeamsHook = (user, accessToken) => {
                     setLeagues(prev => data.leagues || []);
                 })
                 .catch(error => console.error("Error saving user data:", error));
-            var request_data2 = build_get_leagues_or_teams_request(user, 'teams', accessToken);
-            fetch(request_data2.url, request_data2.options)
-                .then(response2 => {
-                    if(response2.status == 200) 
-                        return response2.json()
-                    else
-                        throw("not valid")
-                })
-                .then(data => {
-                    console.log("teams data retrieved:", data)
-                    setTeams(prev => data.teams || []);
-                })
-                .catch(error => console.error("Error saving user data:", error));
+            //TODO: factor below request so that it is done only when a user goes to edit favorites
+            // var request_data2 = build_get_leagues_or_teams_request(user, 'teams', accessToken);
+            // fetch(request_data2.url, request_data2.options)
+            //     .then(response2 => {
+            //         if(response2.status == 200) 
+            //             return response2.json()
+            //         else
+            //             throw("not valid")
+            //     })
+            //     .then(data => {
+            //         console.log("teams data retrieved:", data)
+            //         setTeams(prev => data.teams || []);
+            //     })
+            //     .catch(error => console.error("Error saving user data:", error));
         }
     }, []);
-    return [leaugues, teams];
+    return [leaugues, teams, setLeagues, setTeams];
 }
 export default useLeaguesAndTeamsHook

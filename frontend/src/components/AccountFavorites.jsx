@@ -9,7 +9,7 @@ import FavoriteSelector from './FavoriteSelector.jsx';
 import CurrentFavoriteList from './CurrentFavoriteList.jsx';
 const AccountFavorites = ({}) => { 
     const { user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites } = useAuth()
-    const [leaugues, teams] = useLeaguesAndTeamsHook(user, accessToken);
+    //const [leauges, teams, setLeagues, setTeams] = useLeaguesAndTeamsHook(user, accessToken)
     const [selectorExpanded, setSelectorExpanded] = useState(false)
     //const [favorites, setFavorites, sync_favorites] = useUserFavoritesHook(user, accessToken)
     return(

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@fullcalendar/list": "^6.1.18",
     "firebase": "^11.9.1"
   }
 }

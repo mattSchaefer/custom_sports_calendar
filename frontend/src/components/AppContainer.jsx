@@ -9,7 +9,7 @@ import SignedInHome from './SignedInHome.jsx'
 const AppContainer = () => {
     const { user, loginWithGoogle, loginWithFacebook, loading, signOut } = useAuth();
     return(
-        <div>
+        <div className="app-container">
             {
                 user && 
                 <SignedInHome />
