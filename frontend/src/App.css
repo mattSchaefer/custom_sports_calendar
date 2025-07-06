@@ -71,6 +71,7 @@ footer{
 }
 .fav-header{
   margin-bottom: 0;
+  margin-top: 0;
 }
 .white-text{
   color: white;
@@ -117,9 +118,10 @@ footer{
 .favorite-teams-and-leagues{
   display: flex;
   flex-direction: row;
-  justify-content: end;
-  align-items: end;
+  justify-content: start;
+  align-items: start;
   gap: 2rem;
+  flex-wrap: wrap;
   
 }
 .favorite-team{
@@ -130,19 +132,56 @@ footer{
 }
 .avaliable-leagues-inner{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  padding: 3rem;
+}
+.favorite-selector-search-button{
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  margin-right: -5px;
+  width: 2rem;
+}
+.favorite-selector-search-input{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 1.75rem;
+  border: 1px solid gray;
 }
 .avaliable-league{
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  border: 2px solid gray;
+  border: 2px solid #bb00008f;
+  background: #F6F5F2;
   width: 15rem;
   height: 18rem;
   padding: 1rem;
   margin-right: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: rgba(27, 0, 100, 0.61) 0px 3px 8px;
+  border-radius: 10px;
+}
+.favorite-selector-header-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.avaliable-leagues-container{
+  position: absolute;
+  z-index: 1000000;
+  background: #F6F5F2;
+  width: 39%;
+  top: 11vh;
+  border: 2px solid #111;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .avaliable-teams{
   height: 10rem;
@@ -151,9 +190,10 @@ footer{
 .league-teams{
   display: flex;
   flex-direction: column;
-  height: 10rem;
+  height: 17rem;
   width: 100%;
-  overflow: scroll
+  overflow: scroll;
+  box-shadow: rgba(100, 0, 0, 0.11) 0px 3px 8px;
 }
 .full-calendar-container{
   width: 75%;
@@ -168,6 +208,7 @@ footer{
 .header-btn{
   height: 100%;
 }
+h4{margin-top: 0; margin-bottom: 0;}
 .header{
   display: flex;
   flex-direction: row;
@@ -231,12 +272,32 @@ footer{
   align-items: center;
   justify-content: center;
 }
+.close-list-editor{
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.edit-lists-verbiage{
+  
+  
+}
+.favorite-selector-maps-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.fa-close{
+  color: red;}
 .team-name{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 85%;
+  border-bottom: 1px solid lightgrey;
+  padding: 10px;
 }
 .offering-card{
   display: flex;
@@ -295,7 +356,7 @@ footer{
   align-items: center;
   justify-content: space-between;
   width: 100%;
-
+  border-bottom: 2px solid #5a5a9d
 }
 .league-name-header{
   margin: 0;
@@ -531,11 +592,12 @@ h1{
 }
 /* CSS */
 .button-85,.favorite-team {
-  padding: 0.6em 2em;
+  /* padding: 0.6em 2em; */
+  padding: 5px 10px;
   border: none;
   outline: none;
-  color: rgb(255, 255, 255);
-  background: #111;
+  color: #111;
+  border: 2px solid #111;
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -543,6 +605,7 @@ h1{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  font-weight: 600;
 }
 .button-85:before, .favorite-team:before{
   content: "";
@@ -602,7 +665,7 @@ h1{
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #222;
+  background: #F0EBE3;
   left: 0;
   top: 0;
   border-radius: 10px;

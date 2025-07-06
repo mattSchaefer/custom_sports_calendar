@@ -94,8 +94,8 @@ const FavoriteSelector = ({teams, league, index}) => {
     return (
         <div className="avaliable-league" key={index}>
             <span className="league-header-span">
-                <h5 className="league-name-header" key={index}>{league.name}</h5>
-                <span>
+                <h3 className="league-name-header" key={index}>{league.name}</h3>
+                <span className="favorite-selector-header-buttons">
                     <button  onClick={(e) => toggleFollowLeague(e, league)}>
                         {
                             favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length > 0 &&
@@ -106,7 +106,7 @@ const FavoriteSelector = ({teams, league, index}) => {
                             <i className="fa fa-plus" />
                         }
                     </button>
-                    <button onClick={(e) => setShowInput((prev) => !prev)}>
+                    <button onClick={(e) => setShowInput((prev) => !prev)} className="favorite-selector-search-button">
                         <i className="fa fa-search" />
                     </button>
                     {
@@ -120,7 +120,7 @@ const FavoriteSelector = ({teams, league, index}) => {
                     filteredTeams.map((team, teamIndex) => {
                         return (
                             <span key={teamIndex} className="team-name">
-                                <h6 className="team-name-header">{team.name}</h6>
+                                <h5 className="team-name-header">{team.name}</h5>
                                 <span className="add-and-fav-button-container">
                                     <button className="team-add" onClick={(e) => toggleFollowTeam(e, team)}>
                                         {

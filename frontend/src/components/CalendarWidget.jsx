@@ -18,12 +18,12 @@ const CalendarWidget = () => {
   const [selectorClean, setSelectorClean] = useState(true)
   const [leaugues, teams, setLeagues, setTeams] = useLeaguesAndTeamsHook(user, accessToken);
   const footerToolbar = {
-    left: 'prev,next',
+    left: 'dayGridDay,timeGridFourDay',
     center: "",
-    right: 'dayGridDay,timeGridFourDay,dayGridWeek,dayGridMonth'
+    right: 'dayGridWeek,dayGridMonth'
   }
   const headerToolbar = {
-    center: 'title',left: "prev,next", right: "today"
+    center: '',left: "title", right: "prev,next,today"
   }
   const fc_custom_views = {
     timeGridFourDay: {
@@ -87,11 +87,22 @@ const CalendarWidget = () => {
           {
             selectorExpanded &&
             <div className="avaliable-leagues-inner">
+              <span className="fav-select-header-and-toggle close-list-editor">
+                <button onClick={(e) => toggleSelectorExpanded()}>
+                  <i className="fa fa-close" />
+                </button>
+              </span>
+              <span className="edit-lists-verbiage">
+                <h4>Edit lists</h4>
+                <p>Use the controls below to manage your favorite and followed teams and leagues</p>
+              </span>
+              <div className="favorite-selector-maps-container">
                 {
-                    leaugues.map((league, index) => (  
-                      <FavoriteSelector league={league} teams={teams.filter((team) => team.league_id == league.id)} key={index} user={user} accessToken={accessToken} setFavorites={setFavorites} favorites={favorites} />
-                    ))
+                  leaugues.map((league, index) => (  
+                    <FavoriteSelector league={league} teams={teams.filter((team) => team.league_id == league.id)} key={index} user={user} accessToken={accessToken} setFavorites={setFavorites} favorites={favorites} />
+                  ))
                 }
+              </div>
             </div>
           }
         </div>
@@ -104,7 +115,6 @@ const CalendarWidget = () => {
               initialView='timeGridFourDay'
               nowIndicator={true}
               weekends={true}
-              // expandRows={true}
               footerToolbar={footerToolbar}
               eventDisplay="block"
               events={events}
