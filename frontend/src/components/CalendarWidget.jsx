@@ -12,6 +12,7 @@ import { build_get_leagues_or_teams_request } from '../factories/get_leagues_or_
 
 import AccountDetails from './AccountDetails.jsx'
 import AccountFavorites from './AccountFavorites.jsx'
+import CalendarEvent from './CalendarEvent.jsx'
 const CalendarWidget = () => {
   const { user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames  } = useAuth()
   const [selectorExpanded, setSelectorExpanded] = useState(false)
@@ -43,7 +44,8 @@ const CalendarWidget = () => {
     if(start)
       events.push({
         title: title,
-        start: start
+        start: start,
+        league: games[i].league_name
       })
   }
   const toggleSelectorExpanded = () => {
@@ -66,6 +68,7 @@ const CalendarWidget = () => {
     }
     setSelectorExpanded(() => !selectorExpanded)
   }
+  
   return(
     <div>
       <div className="editor-and-calendar">
@@ -122,8 +125,6 @@ const CalendarWidget = () => {
               eventOverlap={false}
               headerToolbar={headerToolbar}
               views={fc_custom_views}
-              themeSystem="bootstrap5"
-              scrollTime={scrollTime}
           />
         </div>
       </div>
@@ -131,11 +132,9 @@ const CalendarWidget = () => {
   )
 }
 function renderEventContent(eventInfo) {
+  
   return (
-    <span>
-      <b>{eventInfo.timeText}</b>
-      <i>{eventInfo.event.title}</i>
-    </span>
+    <CalendarEvent eventInfo={eventInfo} />
   )
 }
 export default CalendarWidget

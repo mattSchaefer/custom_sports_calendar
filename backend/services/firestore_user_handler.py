@@ -80,34 +80,31 @@ def get_user_schedule(oauth_user):
         followed_leagues = user_dict.get("followed_leagues", [])
         followed_teams = user_dict.get("followed_teams", [])
         favorite_teams = user_dict.get("favorite_teams", [])
-        print(followed_leagues)
         followed_league_ids = {d["id"] for d in followed_leagues}
         teams_for_query = []
+        all_games = []
         all_teams = followed_teams + favorite_teams
-        print(all_teams)
         for team in all_teams:
             if team["league_id"] not in followed_league_ids:
                 teams_for_query.append(team["id"])
+        away_games = []
         for team in teams_for_query:
             team_id = team #= team.to_dict()["id"]
             away_games = db.collection("games").where("away_team_id", "==", team_id).stream()
             home_games = db.collection("games").where("home_team_id", "==", team_id).stream()
+            if away_games:
+                for doc in away_games:
+                    game = doc.to_dict()
+                    game["start"]  = game["date"]#parse_game_date(game["date"])
+                    all_games.append(game)
+                if home_games :
+                    for doc in home_games:
+                        game = doc.to_dict()
+                        game["start"]  = game["date"]#parse_game_date(game["date"])
+                        all_games.append(game)
         league_games = None
         if len(followed_league_ids):
             league_games = db.collection("games").where("league_id", "in", followed_league_ids).stream()
-        # Combine and parse results
-        all_games = []
-
-        if away_games:
-            for doc in away_games:
-                game = doc.to_dict()
-                game["start"]  = game["date"]#parse_game_date(game["date"])
-                all_games.append(game)
-        if home_games :
-            for doc in home_games:
-                game = doc.to_dict()
-                game["start"]  = game["date"]#parse_game_date(game["date"])
-                all_games.append(game)
         if league_games:
             for doc in league_games:
                 game = doc.to_dict()
