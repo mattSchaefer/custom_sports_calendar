@@ -25,7 +25,7 @@ const Header = () => {
                 user && user.email &&
                 <span className="header-left">
                     <img src={logo} alt="SportSync Logo" className="logo" />
-                    <h4 class="white-text">Welcome back, {user.email}</h4>
+                    <h4 class="">Welcome back, {user.displayName}</h4>
                 </span>
             }
             <AccountDropdown />

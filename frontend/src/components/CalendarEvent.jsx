@@ -14,11 +14,36 @@ const CalendarEvent = ({eventInfo}) => {
     return(
         <span className="calendar-event">
             <span className="calendar-event-head">
-                <i classname="event-time">{eventInfo.timeText} | {eventInfo.event.extendedProps.league}</i>
+                <span className="left">
+                    {eventInfo.event.extendedProps.is_favorite && <i className="fa fa-star favorite-event-icon" />}
+                    <i classname="event-time">
+                        <span className={eventInfo.event.extendedProps.is_favorite ? "favorite-team-highlight event-time" : ""}>{eventInfo.timeText} </span>
+                        | {eventInfo.event.extendedProps.league}
+                    
+                    </i>
+                </span>
                 <i className={icon_class} />
             </span>
-            <hr />
-            <b className="event-title">{eventInfo.event.title}</b>
+            
+            {/* <b className="event-title">{eventInfo.event.title}</b> */}
+            <span className="event-title">
+                <span className={
+                    eventInfo.event.extendedProps.home_team.is_favorite ? "favorite-team-highlight event-team-span" :
+                    eventInfo.event.extendedProps.home_team.is_followed ? "followed-team-highlight event-team-span" : 
+                    "event-team-span"
+                    }>
+                    {eventInfo.event.extendedProps.home_team.name}
+                </span>
+                    {" vs. "} 
+                <span className={
+                    eventInfo.event.extendedProps.away_team.is_favorite ? "favorite-team-highlight event-team-span" :
+                    eventInfo.event.extendedProps.away_team.is_followed ? "followed-team-highlight event-team-span" : 
+                    "event-team-span"
+                    }
+                >
+                    {eventInfo.event.extendedProps.away_team.name}
+                </span>
+            </span>
             
         </span>
     )

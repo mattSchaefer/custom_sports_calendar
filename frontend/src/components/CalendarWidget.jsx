@@ -24,7 +24,7 @@ const CalendarWidget = () => {
     right: 'dayGridWeek,dayGridMonth'
   }
   const headerToolbar = {
-    center: '',left: "title", right: "prev,next,today"
+    center: 'title',left: "today", right: "prev,next"
   }
   const fc_custom_views = {
     timeGridFourDay: {
@@ -35,17 +35,41 @@ const CalendarWidget = () => {
       nowIndicator: true,
     }
   }
+  let isFavoriteTeam = (team_id) => {
+    const is_favorite = favorites.favorite_teams.filter((fav_team) => fav_team.id == team_id).length > 0
+    return is_favorite
+  }
+  let isFollowedTeam = (team_id) => {
+    const is_followed = favorites.followed_teams.filter((fav_team) => fav_team.id == team_id).length > 0
+    return is_followed
+  }
   const events = []
   var date = new Date()
   const scrollTime = date.toTimeString().split(' ')[0]
   for(var i =0; i < games.length; i++){
+    var this_game = games[i]
     var title = games[i].home_team_name.toString() + " vs. " + games[i].away_team_name.toString() 
     var start = new Date(games[i].start) || null
     if(start)
       events.push({
         title: title,
         start: start,
-        league: games[i].league_name
+        league: games[i].league_name,
+        home_team:
+          {
+            id: games[i].home_team_id,
+            name: games[i].home_team_name,
+            is_favorite: isFavoriteTeam(games[i].home_team_id),
+            is_followed: isFollowedTeam(games[i].home_team_id)
+          },
+        away_team:  
+          {
+            id: games[i].away_team_id,
+            name: games[i].away_team_name,
+            is_favorite: isFavoriteTeam(games[i].away_team_id),
+            is_followed: isFollowedTeam(games[i].away_team_id)
+          },
+        is_favorite: isFavoriteTeam(games[i].home_team_id) || isFavoriteTeam(games[i].away_team_id)
       })
   }
   const toggleSelectorExpanded = () => {
@@ -86,9 +110,9 @@ const CalendarWidget = () => {
 
         </div>
         <hr id='padded-hr'/>
-        <div className="avaliable-leagues-container">
-          {
-            selectorExpanded &&
+        {
+          selectorExpanded &&
+          <div className="avaliable-leagues-container">
             <div className="avaliable-leagues-inner">
               <span className="fav-select-header-and-toggle close-list-editor">
                 <button onClick={(e) => toggleSelectorExpanded()}>
@@ -107,8 +131,8 @@ const CalendarWidget = () => {
                 }
               </div>
             </div>
-          }
-        </div>
+          </div>
+        }
         <div className="full-calendar-container">
           <h1 className="watchlist-header">
             Schedule
@@ -125,6 +149,7 @@ const CalendarWidget = () => {
               eventOverlap={false}
               headerToolbar={headerToolbar}
               views={fc_custom_views}
+              stickyHeaderDates={true}
           />
         </div>
       </div>

@@ -58,29 +58,29 @@ export const AuthProvider = ({ children }) => {
     }
     useEffect(() => {
         try{
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            if(!currentUser || !currentUser.accessToken)
-                throw "not signed in"
-            setAccessToken(() => currentUser.accessToken)
-            //sync with db and retrieve other user attrs
-            const saveUserRequest = build_save_user_request(currentUser)
-            console.log(saveUserRequest)
-            fetch(saveUserRequest.url, saveUserRequest.options)
-                .then(response => {
-                    if(response.status == 200) 
-                        return response.json()
-                    else
-                        throw("not valid")
-                })
-                .then(data => {
-                    console.log("User data saved:", data)
-                    setUser(() => data)
-                   
-                })
-                .catch(error => console.error("Error saving user data:", error));
-            setLoading(() => false);
-        });
-        return () => unsubscribe();
+            const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+                if(!currentUser || !currentUser.accessToken)
+                    throw "not signed in"
+                setAccessToken(() => currentUser.accessToken)
+                //sync with db and retrieve other user attrs
+                const saveUserRequest = build_save_user_request(currentUser)
+                console.log(saveUserRequest)
+                fetch(saveUserRequest.url, saveUserRequest.options)
+                    .then(response => {
+                        if(response.status == 200) 
+                            return response.json()
+                        else
+                            throw("not valid")
+                    })
+                    .then(data => {
+                        console.log("User data saved:", data)
+                        setUser(() => data)
+                    
+                    })
+                    .catch(error => console.error("Error saving user data:", error));
+                setLoading(() => false);
+            });
+            return () => unsubscribe();
         }catch(e){return console.error("Error in useEffect:", e)}
     }, []);
     useEffect(() => {
