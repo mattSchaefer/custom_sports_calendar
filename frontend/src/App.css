@@ -65,6 +65,7 @@ header{
   align-items: center;
   width: 100%;
   padding: 5px;
+  flex-wrap: wrap;
 }
 .fc-h-event{
   color: transparent !important;
@@ -78,7 +79,8 @@ header{
   padding: 5px;
   border-top: 1px solid gray;
   /* background: #ffffe0; */
-  background: #f2ffe0;
+  /* background: #f2ffe0; */
+  background: #e1e1e1;
 } 
 .fc-footer-toolbar > .fc-toolbar-chunk > .fc-button-group{
   display: flex;
@@ -265,6 +267,13 @@ footer{
   width: 100%;
   overflow: scroll;
   box-shadow: rgba(100, 0, 0, 0.11) 0px 3px 8px;
+}
+.left{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .full-calendar-container{
   width: 75%;

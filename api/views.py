@@ -63,6 +63,8 @@ class UserData(Schema):
     accessToken: str = ""
     teams_or_leagues: List[Dict[str, Any]] = Field(default_factory=list)#List[str] = Field(default_factory=list)
     which: str = ""  # "favorite_teams", "followed", or "followed"
+    start: str = ""
+    end: str = ""
 @api.post("/save_user_data")
 def save_user_data(request, data: UserData):
     if request.method == "OPTIONS":
@@ -91,6 +93,19 @@ def update_team_or_league_list(request, data: UserData):
         return JsonResponse({"error": str(e)}, status=500)
 @api.post("/refresh_schedule")
 def refresh_user_schedule(request, data: UserData):
+    if request.method == "OPTIONS":
+        response = HttpResponse()
+        response["Access-Control-Allow-Origin"] = "*"
+        response["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+        response["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+        return JsonResponse(response) 
+    try:
+        games = get_user_schedule(data.dict())
+        return JsonResponse({"games": games}, status=200)
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
+@api.post("/get_user_schedule_range")
+def get_user_schedule_range(request, data: UserData):
     if request.method == "OPTIONS":
         response = HttpResponse()
         response["Access-Control-Allow-Origin"] = "*"

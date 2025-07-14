@@ -64,22 +64,22 @@ const useUserFavoritesHook = (user, accessToken) => {
         console.log(user)
         if(user){
             console.log("syncing schedule...")
-            const schedule_request_data = build_get_user_schedule_request(user, accessToken);
-                fetch(schedule_request_data.url, schedule_request_data.options)
-                .then(schedule_response => {
-                    if (schedule_response.status === 200) {
-                        return schedule_response.json();
-                    } else {
-                        throw schedule_response
-                    }
-                })
-                .then((json) => {
-                    console.log("retrieved schedule...: ")
-                    console.log(json)
-                    setGames((prev) => {
-                        return json.games
-                    })
-                })
+            // const schedule_request_data = build_get_user_schedule_request(user, accessToken);
+            //     fetch(schedule_request_data.url, schedule_request_data.options)
+            //     .then(schedule_response => {
+            //         if (schedule_response.status === 200) {
+            //             return schedule_response.json();
+            //         } else {
+            //             throw schedule_response
+            //         }
+            //     })
+            //     .then((json) => {
+            //         console.log("retrieved schedule...: ")
+            //         console.log(json)
+            //         setGames((prev) => {
+            //             return json.games
+            //         })
+            //     })
         }
     },[user])
     return [favorites, setFavorites, sync_favorites, games, setGames];

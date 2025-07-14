@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from dateutil import parser
 from django.http import HttpResponse, JsonResponse
 from backend.firebase_init import get_firestore_client
@@ -76,7 +76,8 @@ def get_user_schedule(oauth_user):
         user_ref = db.collection("users").document(oauth_user["uid"])
         snapshot = user_ref.get()
         user_dict = snapshot.to_dict()
-
+        start_date = datetime.fromisoformat(oauth_user["start"]).astimezone(timezone.utc)
+        end_date = datetime.fromisoformat(oauth_user["end"]).astimezone(timezone.utc)
         followed_leagues = user_dict.get("followed_leagues", [])
         followed_teams = user_dict.get("followed_teams", [])
         favorite_teams = user_dict.get("favorite_teams", [])
@@ -90,8 +91,8 @@ def get_user_schedule(oauth_user):
         away_games = []
         for team in teams_for_query:
             team_id = team #= team.to_dict()["id"]
-            away_games = db.collection("games").where("away_team_id", "==", team_id).stream()
-            home_games = db.collection("games").where("home_team_id", "==", team_id).stream()
+            away_games = db.collection("games").where("away_team_id", "==", team_id).where("date", ">=", start_date).where("date", "<=", end_date).stream()
+            home_games = db.collection("games").where("home_team_id", "==", team_id).where("date", ">=", start_date).where("date", "<=", end_date).stream()
             if away_games:
                 for doc in away_games:
                     game = doc.to_dict()
@@ -104,7 +105,7 @@ def get_user_schedule(oauth_user):
                         all_games.append(game)
         league_games = None
         if len(followed_league_ids):
-            league_games = db.collection("games").where("league_id", "in", followed_league_ids).stream()
+            league_games = db.collection("games").where("league_id", "in", followed_league_ids).where("date", ">=", start_date).where("date", "<=", end_date).stream()
         if league_games:
             for doc in league_games:
                 game = doc.to_dict()
