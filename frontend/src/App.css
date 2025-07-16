@@ -12,6 +12,14 @@
   color: white;
 }
 .calendarCell, .fc-event{max-height: 15rem; overflow: scroll;}
+.fc-event:hover{
+  background: #bb0000 !important;
+  color: white !important;
+  cursor: crosshair;
+  transform: scale(1.05);
+ 
+  transition: all .1s ease-in-out;
+}
 /* .fc-daygrid-day-events{
   max-height: 10rem;
   overflow: scroll;
@@ -97,6 +105,7 @@ header{
 }
 .fc-scrollgrid-sync-table {
   background: #6a6a6a;
+  height: 100%
 }
 
 .editor-and-calendar{
@@ -108,7 +117,9 @@ header{
   background: #111;
   color: #7a6a6a;
   margin-top: 3rem;
-  padding-top: 2rem;
+  padding-bottom: 15vh;
+  padding-top: 5vh;
+  height: 100vh;
 }
 footer{
   background: #fffdf4;
@@ -153,11 +164,16 @@ footer{
   font-weight: bold;
   
 }
+.toggle-fav-selector{
+  border: none !important;
+}
 .fav-select-header-and-toggle{
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 .fc-button:disabled{
   opacity: .5 !important;
@@ -165,6 +181,7 @@ footer{
 }
 .fc-scrollgrid,  .fc-scrollgrid-liquid{
   /* background: linear-gradient(to top, #ebbba7 0%, #c7e1f8 100%); */
+  height: 66vh;
 }
 .fc-day{
   border: 2px solid #111 !important;
@@ -212,10 +229,11 @@ footer{
   display: flex;
   flex-direction: row;
   justify-content: start;
-  align-items: start;
+  align-items: center;
   gap: 2rem;
-  flex-wrap: wrap;
-  
+  flex-wrap: nowrap;
+  width: 75vw;
+  overflow: scroll;  
 }
 .favorite-team{
   padding: 0 .5rem;
@@ -267,6 +285,13 @@ footer{
   justify-content: start;
   align-items: center;
 }
+.favorite-selector-modal-and-account-favorites{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
 .favorite-selector-modal-backdrop{
   position: absolute;
   top: 0;
@@ -317,6 +342,7 @@ footer{
 }
 .full-calendar-container{
   width: 75%;
+  height: 100%;
 }
 .notification-info-attributes{
   display: flex;
@@ -492,8 +518,11 @@ h4{margin-top: 0; margin-bottom: 0;}
   min-width: 3rem;
   padding: 2rem;
   position: absolute;
-  
+  color: #7a6a6a;
   right: 4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 #section1{
   /* background: #010618; */
@@ -591,7 +620,7 @@ hr{border-bottom: 1px solid grey; width: 85%;}
 }
 .signed-in-home-container{
   text-align: start;
-  min-height: 75vh;
+  min-height: 95vh;
 }
 .header-link:hover{
   color: #bb0000;
@@ -644,7 +673,7 @@ h1{
   font-weight: 400;
  text-align: start;
 }
-.fa-user-circle{color: #111;}
+.fa-user-circle{color: #7a6a6a;}
 .main-header{
   /* -webkit-text-fill-color: transparent;
   background-image: linear-gradient(88deg,#fff,#7a78e7 31%,#b678e7);
@@ -694,7 +723,10 @@ h1{
 .card {
   padding: 2em;
 }
-
+.current-team-list-ele{
+  line-height: 1.5;
+  min-width: fit-content;
+}
 .read-the-docs {
   color: #888;
 }
@@ -730,7 +762,7 @@ h1{
   background-color: rgb(5, 6, 45);
   padding: 16px 24px;
   border-radius: 6px;
-  width: 100%;
+  width: 100%; 
   height: 100%;
   transition: 300ms;
 }

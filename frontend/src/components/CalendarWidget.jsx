@@ -85,6 +85,7 @@ const CalendarWidget = () => {
         const events = transformGames(data.games || [])
         successCallback(events)
       } else {
+        console.log(res)
         failureCallback(res.statusText)
       }
     }catch(error){

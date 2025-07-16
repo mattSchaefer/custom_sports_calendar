@@ -26,9 +26,11 @@ const Header = () => {
                 user && user.email &&
                 <span className="header-left">
                     <img src={logo} alt="SportSync Logo" className="logo" />
-                    <FavoriteSelectorModal />
-                    <AccountFavorites />
-                    <h4 class="">Welcome back, {user.displayName}</h4>
+                    <div className="favorite-selector-modal-and-account-favorites">
+                        <FavoriteSelectorModal />
+                        <AccountFavorites />
+                    </div>
+                    {/* <h4 class="">Welcome back, {user.displayName}</h4> */}
                 </span>
             }
             <AccountDropdown />

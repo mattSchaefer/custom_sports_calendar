@@ -114,9 +114,17 @@ def get_user_schedule(oauth_user):
         return all_games
     except Exception as e:
         import traceback
-        print("Exception occurred:", str(e))
-        traceback.print_exc() 
-        return JsonResponse({"error": str(e)}, status=500)
+        exc_type, exc_value, exc_tb = sys.exc_info()
+        tb_str = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
+        return JsonResponse({
+            "error": str(e),
+            "exception_type": str(exc_type),
+            "traceback": tb_str
+        }, status=500)
+        #print("Exception occurred:", str(e))
+        #traceback.print_exc()
+        
+        #return JsonResponse({"error": str(e)}, status=500)
 #TODO: add get schedule 1 month at a time, and 1 week at a time... accept "month start" or "week start"
 def parse_game_date(date_str):
     parts = date_str.split("TBD")
