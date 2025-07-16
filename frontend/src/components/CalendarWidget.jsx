@@ -75,26 +75,6 @@ const CalendarWidget = () => {
     }
     return events
   }
-  const toggleSelectorExpanded = () => {
-    if(selectorClean){
-      setSelectorClean((prevValue) => false)
-      //get teams
-      var request_data2 = build_get_leagues_or_teams_request(user, 'teams', accessToken);
-      fetch(request_data2.url, request_data2.options)
-          .then(response2 => {
-              if(response2.status == 200) 
-                  return response2.json()
-              else
-                  throw("not valid")
-          })
-          .then(data => {
-              console.log("teams data retrieved:", data)
-              setTeams(prev => data.teams || []);
-          })
-          .catch(error => console.error("Error saving user data:", error));
-    }
-    setSelectorExpanded(() => !selectorExpanded)
-  }
   const dateChangeHandler = useCallback(async (fetchInfo, successCallback, failureCallback) => {
     setScheduleRequestLoading(true)
     try{
@@ -116,43 +96,6 @@ const CalendarWidget = () => {
   return(
     <div>
       <div className="editor-and-calendar">
-        <div className="schedule-header-account-favorites">  
-          <span className="schedule-and-edit">
-            <div>
-              <span className="fav-select-header-and-toggle">
-                <button onClick={(e) => toggleSelectorExpanded()}>
-                  <i className="fa fa-pencil" />
-                </button>
-              </span>
-            </div>  
-          </span>
-          <AccountFavorites />
-
-        </div>
-        <hr id='padded-hr'/>
-        {
-          selectorExpanded &&
-          <div className="avaliable-leagues-container">
-            <div className="avaliable-leagues-inner">
-              <span className="fav-select-header-and-toggle close-list-editor">
-                <button onClick={(e) => toggleSelectorExpanded()}>
-                  <i className="fa fa-close" />
-                </button>
-              </span>
-              <span className="edit-lists-verbiage">
-                <h4>Edit lists</h4>
-                <p>Use the controls below to manage your favorite and followed teams and leagues</p>
-              </span>
-              <div className="favorite-selector-maps-container">
-                {
-                  leaugues.map((league, index) => (  
-                    <FavoriteSelector league={league} teams={teams.filter((team) => team.league_id == league.id)} key={index} user={user} accessToken={accessToken} setFavorites={setFavorites} favorites={favorites} />
-                  ))
-                }
-              </div>
-            </div>
-          </div>
-        }
         <div className="full-calendar-container">
           <h1 className="watchlist-header">
             Schedule {scheudleRequestLoading && <span className="loading-spinner"><i className="fa fa-spinner fa-spin" /></span>} {scheudleRequestLoading}

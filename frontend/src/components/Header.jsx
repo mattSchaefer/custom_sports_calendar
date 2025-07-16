@@ -5,7 +5,8 @@ import { build_save_user_request } from '../factories/save_user_request_factory.
 import { useAuth } from '../contexts/auth_context.jsx'
 import logo from '../assets/dark_text_2.png'
 import AccountDropdown from './AccountDropdown.jsx'
-
+import AccountFavorites from './AccountFavorites.jsx'
+import FavoriteSelectorModal from './FavoriteSelectorModal.jsx'
 const Header = () => {
     const { user, loginWithGoogle, loginWithFacebook, loading, logOut } = useAuth();
     return (
@@ -25,6 +26,8 @@ const Header = () => {
                 user && user.email &&
                 <span className="header-left">
                     <img src={logo} alt="SportSync Logo" className="logo" />
+                    <FavoriteSelectorModal />
+                    <AccountFavorites />
                     <h4 class="">Welcome back, {user.displayName}</h4>
                 </span>
             }

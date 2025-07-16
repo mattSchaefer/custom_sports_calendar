@@ -6,9 +6,9 @@ const CurrentFavoriteList = ({which, favorites, setFavorites}) => {
         <div className="user-favorite-attr-list">
             {
                 favorites[which] && favorites[which].length > 0 && favorites[which].map((team, index) => (
-                    <span key={index} className="favorite-team">  
+                    <span key={index} className={which == 'favorite_teams' ? "favorite-team-highlight current-team-list-ele" : which == "followed_teams" ? "followed-team current-team-list-ele" : "followed-league current-team-list-ele"}>  {/**className="favorite-team" */}
                         
-                        {team.name}
+                        {team.name + ", "}
                     </span>
                 ))
             }
