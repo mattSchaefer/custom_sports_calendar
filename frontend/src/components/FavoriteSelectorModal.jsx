@@ -35,7 +35,7 @@ const FavoriteSelectorModal = () => {
             <div className="fav-select-header-and-toggle">
                 
                 <button className="toggle-fav-selector" onClick={() => toggleSelectorExpanded()}>
-                    <i className="fa fa-chevron-down" />
+                    <i className="fa fa-chevron-down" /> Edit Lists
                 </button>
             </div>
             {

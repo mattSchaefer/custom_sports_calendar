@@ -13,24 +13,24 @@ const AccountFavorites = ({}) => {
     const [selectorExpanded, setSelectorExpanded] = useState(false)
     //const [favorites, setFavorites, sync_favorites] = useUserFavoritesHook(user, accessToken)
     return(
-        <div className="account-favorites">
+        
             
-            <div className="favorite-teams-and-leagues">
-                <span className="favorite-teams">
-                    <h4 className="fav-header">Favorite Teams</h4>
-                    <CurrentFavoriteList which="favorite_teams" user={user} favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites} />
-                </span>
-                <span className="followed-teams">
-                    <h4 className="fav-header">Followed Teams</h4>
-                    <CurrentFavoriteList which="followed_teams" user={user} favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites}  />
-                </span>
-                <span className="followed-leagues">
-                    <h4 className="fav-header">Followed Leagues</h4>
-                    <CurrentFavoriteList which="followed_leagues" user={user} favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites}  />
-                </span>
-            </div>
-           
+        <div className="favorite-teams-and-leagues">
+            <span className="favorite-teams">
+                <h4 className="fav-header">Favorite Teams</h4>
+                <CurrentFavoriteList which="favorite_teams" user={user} favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites} />
+            </span>
+            <span className="followed-teams">
+                <h4 className="fav-header">Followed Teams</h4>
+                <CurrentFavoriteList which="followed_teams" user={user} favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites}  />
+            </span>
+            <span className="followed-leagues">
+                <h4 className="fav-header">Followed Leagues</h4>
+                <CurrentFavoriteList which="followed_leagues" user={user} favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites}  />
+            </span>
         </div>
+           
+        
     )
 }
 export default AccountFavorites
