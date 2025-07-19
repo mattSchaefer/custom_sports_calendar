@@ -96,7 +96,7 @@ const FavoriteSelector = ({teams, league, index}) => {
             <span className="league-header-span">
                 <h3 className="league-name-header" key={index}>{league.name}</h3>
                 <span className="favorite-selector-header-buttons">
-                    <button  onClick={(e) => toggleFollowLeague(e, league)}>
+                    <button  onClick={(e) => toggleFollowLeague(e, league)} className="favorite-selector-follow-league-button">
                         {
                             favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length > 0 &&
                             <i className="fa fa-minus" />
@@ -111,7 +111,8 @@ const FavoriteSelector = ({teams, league, index}) => {
                     </button>
                     {
                         showInput &&
-                        <input className="favorite-selector-filter-input" onChange={(e) => filter_by_term(e)}/>
+                        <input className="favorite-selector-filter-input" onChange={(e) => filter_by_term(e)} placeholder="filter by team name..." />
+                        // favorite-selector-filter-input
                     }
                 </span>
             </span>
@@ -119,8 +120,8 @@ const FavoriteSelector = ({teams, league, index}) => {
                 {
                     filteredTeams.map((team, teamIndex) => {
                         return (
-                            <span key={teamIndex} className="team-name">
-                                <h5 className="team-name-header">{team.name}</h5>
+                            <span key={teamIndex} className="team-name">{/*className='team-name'*/}
+                                <h5 className={favorites.favorite_teams.filter((fav) => { return fav.id == team.id}).length > 0 ? 'favorite-team-highlight team-name-header' : 'team-name-header' }>{team.name}</h5>
                                 <span className="add-and-fav-button-container">
                                     <button className="team-add" onClick={(e) => toggleFollowTeam(e, team)}>
                                         {
@@ -132,7 +133,7 @@ const FavoriteSelector = ({teams, league, index}) => {
                                             <i className="fa fa-plus" />
                                         }
                                     </button>
-                                   <button className="team-favorite" onClick={(e) => toggleFavoriteTeam(e, team)}><i className="fa fa-star" /></button>
+                                   <button className="team-favorite" onClick={(e) => toggleFavoriteTeam(e, team)}><i className={favorites.favorite_teams.filter((fav) => { return fav.id == team.id}).length > 0 ? 'favorite-team-highlight fa fa-star' : 'fa fa-star' } /></button>
                                     
                                 </span>
                             </span>

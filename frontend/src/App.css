@@ -106,6 +106,7 @@ header{
 .fc-scrollgrid-sync-table {
   background: #6a6a6a;
   /* height: 100% */
+  background: radial-gradient(circle,rgb(255, 214, 186) 0%, rgb(230, 134, 71) 100%)
 }
 .fc-view-harness{
   height: 66vh !important;
@@ -142,9 +143,10 @@ footer{
   justify-content: start;
   align-items: start;
   max-height: 6rem;
-  overflow: scroll;
-  gap: .5rem;
-  width: max-content;
+ 
+  flex-wrap: wrap;
+  gap: 0 5px;
+  margin-left: .25rem;
 }
 .fc-day-today{
   background: #67b8ff !important;
@@ -154,13 +156,43 @@ footer{
   flex-direction: column;
   align-items: start;
 }
-.toggle-fav-selector, .fc-button, .team-add, .team-favorite, .toggle-fav-selector{
+.toggle-fav-selector, .fc-button, .team-add, .team-favorite, .toggle-fav-selector, .favorite-selector-header-buttons button, .close-list-editor button{
   background: transparent !important;
   color: #6a6a6a !important;
   border: 1px solid #6a6a6a !important;
   
 }
-.toggle-fav-selector:hover, .fc-button:hover, .fc-button-active{
+.favorite-selector-filter-input{
+  width: -webkit-fill-available;
+  width: -moz-available;
+  background: transparent !important;
+  outline: none !important;
+  border-width: 0;
+  border-bottom-width: 2px;
+  border-image: linear-gradient(0.25turn, #5a5a9d, #bb00008f, #5a5a9d);
+  border-image-slice: 1;
+  color: #ff7e5f !important;
+  caret-color: #ff7e5f !important;
+  font-weight: 700;
+  font-style: italic;
+  margin-left: .5rem;
+}
+.input-gradient-border {
+  border: none;
+  border-bottom: 3px solid transparent;
+  background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+  background-position: bottom left;
+  padding: 8px 4px;
+  font-size: 16px;
+  outline: none;
+  background-clip: padding-box;
+}
+.input-gradient-border:focus:focus-visible {
+  background-image: linear-gradient(to right, #6a11cb, #2575fc);
+}
+.toggle-fav-selector:hover, .fc-button:hover, .fc-button-active, .favorite-selector-header-buttons button:hover, .close-list-editor button:hover{
   transition: all .2s;
   background: #6a6a6a !important;
   color: #111 !important;
@@ -169,6 +201,12 @@ footer{
 }
 .toggle-fav-selector{
   padding: 0.4em;
+  height: 2rem;
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 .fav-select-header-and-toggle{
   display: flex;
@@ -228,6 +266,16 @@ footer{
   font-weight: 400;
   text-align: start;
 }
+.scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.infinite-scroll {
+  display: flex;
+  width: fit-content;
+  animation: scroll-left 20s linear infinite;
+}
 .favorite-teams-and-leagues{
   display: flex;
   flex-direction: row;
@@ -236,7 +284,19 @@ footer{
   gap: 2rem;
   flex-wrap: nowrap;
   width: max-content;
-  overflow: scroll;  
+  overflow: scroll; 
+  /* display: inline-block; */flex-shrink: 0;
+  /* animation: scroll-left 5s linear infinite; */
+}
+@keyframes scroll-left {
+  0% {
+   
+    transform: translateX(10%);
+  }
+  100% {
+  
+    transform: translateX(-50%);
+  }
 }
 .favorite-team{
   padding: 0 .5rem;
@@ -249,6 +309,16 @@ footer{
   flex-direction: column;
   flex-wrap: wrap;
   padding: 3rem;
+  align-items: start;
+}
+.favorite-selector-current-favorites{
+  padding: 1rem;
+  border: 2px solid #5a5a9d;
+  border-radius: 10px;
+  width: 75%;
+  margin-bottom: 1rem;
+  box-shadow: #5a5a9d 0px 3px 8px;
+
 }
 .favorite-selector-search-button{
   height: 2rem;
@@ -260,10 +330,10 @@ footer{
   width: 2rem;
 }
 .favorite-selector-search-input{
-  border-top-right-radius: 10px;
+  /* border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   height: 1.75rem;
-  border: 1px solid gray;
+  border: 1px solid gray; */
 }
 .avaliable-league{
   display: flex;
@@ -272,12 +342,12 @@ footer{
   align-items: start;
   border: 2px solid #bb00008f;
   background: #F6F5F2;
-  width: 15rem;
+  width: 16rem;
   height: 18rem;
   padding: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  box-shadow: rgba(27, 0, 100, 0.61) 0px 3px 8px;
+  box-shadow: #bb00008f 0px 3px 8px;
   border-radius: 10px;
   background: #111;
   color: #7a6a6a;
@@ -286,6 +356,14 @@ footer{
   display: flex;
   flex-direction: row;
   justify-content: start;
+  align-items: center;
+  height: 2rem;
+}
+.favorite-selector-follow-league-button, .favorite-selector-search-button{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .favorite-selector-modal-and-account-favorites{
@@ -428,6 +506,7 @@ h4{margin-top: 0; margin-bottom: 0;}
 }
 .team-name-header{
   margin: 0;
+  text-align: start;
 }
 .add-and-fav-button-container{
   display: flex;
@@ -450,7 +529,7 @@ h4{margin-top: 0; margin-bottom: 0;}
 }
 .edit-lists-verbiage{
   
-  
+  text-align: start;
 }
 .favorite-selector-overlay{
   z-index: 10000;
@@ -464,8 +543,8 @@ h4{margin-top: 0; margin-bottom: 0;}
 .favorite-selector-maps-container{
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -773,6 +852,10 @@ h1{
   background: none;
 }
 @media (max-width: 768px) {
+  .favorite-selector-maps-container{
+    justify-content: center !important;
+    align-items: center !important;
+  }
   .fc-button {
     font-size: .75rem !important;
     
@@ -788,6 +871,20 @@ h1{
   }
   .fc-toolbar-title{
     font-size: 1.2rem !important;
+  }
+  .avaliable-leagues-inner{
+    padding: 10px !important;
+    align-items: center !important;
+  }
+  .avaliable-leagues-container{
+    position: initial !important;
+    width: 100vw !important;
+
+  }
+  .avaliable-league{
+    align-items: center !important;
+    width: 88% !important;
+    margin-right: 0 !important;
   }
 }
 @media (min-width: 768px) {
@@ -888,7 +985,17 @@ h1{
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
 }
-
+.infinite-scroll{
+  animation: scroll-intinite 10s linear infinite
+}
+@keyframes scroll-intinite {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 @keyframes glowing-button-85 {
   0% {
     background-position: 0 0;
