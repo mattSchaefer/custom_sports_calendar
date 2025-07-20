@@ -22,9 +22,7 @@ const FavoriteSelector = ({teams, league, index}) => {
     }
     const toggleFollowTeam = (e, team) => {
         const is_in = favorites.followed_teams.filter((fav) => { return fav.id == team.id}).length > 0
-        //console.log(is_in)
         if(!is_in){
-            //TODO: sync with server first?
             setFavorites((prevFavorites) => {
                 return{
                     ...prevFavorites,
@@ -45,9 +43,7 @@ const FavoriteSelector = ({teams, league, index}) => {
     }
     const toggleFavoriteTeam = (e, team) => {
         const is_in = favorites.favorite_teams.filter((fav) => { return fav.id == team.id}).length > 0
-        //console.log(is_in)
         if(!is_in){
-            //TODO: sync with server first?
             setFavorites((prevFavorites) => {
                 return{
                     ...prevFavorites,
@@ -68,9 +64,7 @@ const FavoriteSelector = ({teams, league, index}) => {
     }
     const toggleFollowLeague = (e, league) => {
         const is_in = favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length > 0
-        //console.log(is_in)
         if(!is_in){
-            //TODO: sync with server first?
             setFavorites((prevFavorites) => {
                 return{
                     ...prevFavorites,
@@ -134,7 +128,6 @@ const FavoriteSelector = ({teams, league, index}) => {
                                         }
                                     </button>
                                    <button className="team-favorite" onClick={(e) => toggleFavoriteTeam(e, team)}><i className={favorites.favorite_teams.filter((fav) => { return fav.id == team.id}).length > 0 ? 'favorite-team-highlight fa fa-star' : 'fa fa-star' } /></button>
-                                    
                                 </span>
                             </span>
                         )

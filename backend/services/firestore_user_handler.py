@@ -4,13 +4,25 @@ from django.http import HttpResponse, JsonResponse
 from backend.firebase_init import get_firestore_client
 from django.conf import settings
 from firebase_admin import credentials, auth, firestore
+from firebase_admin._auth_utils import InvalidIdTokenError
+import sys
 def save_or_update_user(oauth_user):
     try:
         db = get_firestore_client()
         token = oauth_user["accessToken"]#request.headers.get("Authorization", "").split("Bearer ")[-1]
         if not token:
             return JsonResponse({"error": "Unauthorized"}, status=401)
-        decoded_token = auth.verify_id_token(token)
+        try:
+            decoded_token = auth.verify_id_token(token)
+        except auth.InvalidIdTokenError:
+            return JsonResponse({"error": "Invalid token"}, status=401)
+        except Exception as e:
+            import traceback
+            exc_type, exc_value, exc_tb = sys.exc_info()
+            tb_str = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
+            print("Exception occurred firestore_user-handler:", str(e))
+            traceback.print_exc()
+            return JsonResponse({"error": str(e),}, status=500)
         if decoded_token.get("uid") != oauth_user["uid"]:
             return JsonResponse({"error": "Unauthorized"}, status=401)
         uid = decoded_token.get("uid")
@@ -36,8 +48,7 @@ def save_or_update_user(oauth_user):
         snapshot = user_ref.get()
         return JsonResponse(snapshot.to_dict())
     except Exception as e:
-        return JsonResponse({"error": str(e)}, status=500)
-    
+        return JsonResponse({"error": str(e)}, status=500)    
 def update_user_favorite_or_added_teams_or_leagues(oauth_user):
 #@which can be "favorite_teams", "followed_teams", or "followed_leagues"
 #@teams_or_leagues is a list of team or league IDs
@@ -45,7 +56,17 @@ def update_user_favorite_or_added_teams_or_leagues(oauth_user):
         token = oauth_user["accessToken"]#request.headers.get("Authorization", "").split("Bearer ")[-1]
         if not token:
             return JsonResponse({"error": "Unauthorized"}, status=401)
-        decoded_token = auth.verify_id_token(token)
+        try:
+            decoded_token = auth.verify_id_token(token)
+        except auth.InvalidIdTokenError:
+            return JsonResponse({"error": "Invalid token"}, status=401)
+        except Exception as e:
+            import traceback
+            exc_type, exc_value, exc_tb = sys.exc_info()
+            tb_str = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
+            print("Exception occurred firestore_user-handler:", str(e))
+            traceback.print_exc()
+            return JsonResponse({"error": str(e),}, status=500)
         if decoded_token.get("uid") != oauth_user["uid"]:
             return JsonResponse({"error": "Unauthorized"}, status=401)
         db = get_firestore_client()
@@ -67,10 +88,21 @@ def get_user_schedule(oauth_user):
         db = get_firestore_client()
         token = oauth_user["accessToken"]#request.headers.get("Authorization", "").split("Bearer ")[-1]
         if not token:
-            return JsonResponse({"error": "Unauthorized"}, status=401)
-        decoded_token = auth.verify_id_token(token)
+            return [], JsonResponse({"error": "Unauthorized"}, status=401)
+        try:
+            decoded_token = auth.verify_id_token(token)
+        except auth.InvalidIdTokenError:
+            return [], JsonResponse({"error": "Invalid token"}, status=401)
+        except Exception as e:
+            import traceback
+            exc_type, exc_value, exc_tb = sys.exc_info()
+            tb_str = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
+            print("Exception occurred firestore_user-handler:", str(e))
+            traceback.print_exc()
+            return [], {"error": str(e),}
         if decoded_token.get("uid") != oauth_user["uid"]:
-            return JsonResponse({"error": "Unauthorized"}, status=401)
+            return [], {"error": "Unauthorized"}
+        #decoded_token = validate_token(oauth_user, token)
         uid = decoded_token.get("uid")
         
         user_ref = db.collection("users").document(oauth_user["uid"])
@@ -112,20 +144,36 @@ def get_user_schedule(oauth_user):
                 game["start"]  = game["date"]#parse_game_date(game["date"])
                 all_games.append(game)
         return all_games
+    except (InvalidIdTokenError) as e:
+        return JsonResponse({"error": str(e)}, status=401)
     except Exception as e:
         import traceback
         exc_type, exc_value, exc_tb = sys.exc_info()
         tb_str = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
-        return JsonResponse({
-            "error": str(e),
-            "exception_type": str(exc_type),
-            "traceback": tb_str
-        }, status=500)
+        print("Exception occurred:", str(e))
+        traceback.print_exc()
+        return {"error": str(e),}
+        # return JsonResponse({
+        #     "error": str(e),
+        #     # "traceback": tb_str,  # uncomment for dev
+        # }, status=500)
         #print("Exception occurred:", str(e))
         #traceback.print_exc()
         
         #return JsonResponse({"error": str(e)}, status=500)
 #TODO: add get schedule 1 month at a time, and 1 week at a time... accept "month start" or "week start"
+def validate_token(oauth_user, token):
+    try:
+        decoded_token = auth.verify_id_token(token)
+        if decoded_token.get("uid") != oauth_user["uid"]:
+            raise InvalidIdTokenError("Invalid token for user")
+        return decoded_token
+    except InvalidIdTokenError as e:
+        print("Invalid token:", str(e))
+        raise e
+    except Exception as e:
+        print("Error validating token:", str(e))
+        raise e
 def parse_game_date(date_str):
     parts = date_str.split("TBD")
     if len(parts) > 1:

@@ -8,6 +8,7 @@ class ApiConfig(AppConfig):
     
     def ready(self):
         #import backend.fireabase_init
-        get_firestore_client()
+        #get_firestore_client()
         #seed_games()
         #deduplicate_games()
+        print("ApiConfig is ready. Firebase client initialized and games seeded if necessary.")

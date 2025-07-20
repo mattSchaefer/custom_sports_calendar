@@ -13,8 +13,10 @@ import os
 import re
 import requests
 import json
+import sys
 from django.conf import settings
 from firebase_admin import credentials, auth, firestore
+from firebase_admin._auth_utils import InvalidIdTokenError
 api = NinjaAPI()
 
 
@@ -75,6 +77,7 @@ def save_user_data(request, data: UserData):
         return JsonResponse(response) 
     try:
         updated = save_or_update_user(data.dict())
+        print("User data saved or updated:", updated)
         return updated
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
@@ -88,6 +91,7 @@ def update_team_or_league_list(request, data: UserData):
         return JsonResponse(response) 
     try:
         updated = update_user_favorite_or_added_teams_or_leagues(data.dict())
+        print("User data saved or updated:", updated)
         return updated
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
@@ -114,9 +118,25 @@ def get_user_schedule_range(request, data: UserData):
         return JsonResponse(response) 
     try:
         games = get_user_schedule(data.dict())
+        print("Games retrieved:", games[1])
+        if isinstance(games, tuple):
+            games, error = games
+            if error:
+                return error
+        
         return JsonResponse({"games": games}, status=200)
+    
+
     except Exception as e:
-        return JsonResponse({"error": str(e)}, status=500)
+        import traceback
+        exc_type, exc_value, exc_tb = sys.exc_info()
+        tb_str = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
+        print("Exception occurred views...:", str(e))
+        traceback.print_exc()
+        return JsonResponse({
+            "error": str(e),
+            # "traceback": tb_str  # Uncomment for debugging only
+        }, status=500)
 class RetUserData(Schema):
     uid: str = ""
 @api.post("/get_user_data")
@@ -143,7 +163,15 @@ def get_user_data(request, data: RetUserData):
         else:
             return JsonResponse({"error": "User not found"}, status=404)
     except Exception as e:
-        return JsonResponse({"error": str(e)}, status=500)
+        import traceback
+        exc_type, exc_value, exc_tb = sys.exc_info()
+        tb_str = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
+        return JsonResponse({
+            "error": str(e),
+            # "exception_type": str(exc_type),
+            # "traceback": tb_str
+        }, status=500)
+        #return JsonResponse({"error": str(e)}, status=500)
 class LeaguesOrTeamsRequest(Schema):
     uid: str = ""
     accessToken: str = ""

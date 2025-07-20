@@ -86,6 +86,10 @@ const CalendarWidget = () => {
         successCallback(events)
       } else {
         console.log(res)
+        if(res.status == 401) {
+          alert("session expired- please refresh the page to log in again.")
+          failureCallback("Unauthorized access. Please log in again.")
+        }
         failureCallback(res.statusText)
       }
     }catch(error){

@@ -23,6 +23,9 @@ const useUserFavoritesHook = (user, accessToken) => {
                 if (response.status === 200) {
                     return response.json();
                 } else {
+                    if(response.status == 401) {
+                        alert("session expired- please refresh the page to log in again.")
+                    }
                     throw response
                 }
             })
