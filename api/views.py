@@ -118,7 +118,7 @@ def get_user_schedule_range(request, data: UserData):
         return JsonResponse(response) 
     try:
         games = get_user_schedule(data.dict())
-        print("Games retrieved:", games[1])
+        #print("Games retrieved:", games[1])
         if isinstance(games, tuple):
             games, error = games
             if error:

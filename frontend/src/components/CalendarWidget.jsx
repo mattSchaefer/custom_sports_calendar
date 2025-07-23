@@ -19,22 +19,75 @@ const CalendarWidget = () => {
   const [selectorClean, setSelectorClean] = useState(true)
   const [scheudleRequestLoading, setScheduleRequestLoading] = useState(false)
   const [leaugues, teams, setLeagues, setTeams] = useLeaguesAndTeamsHook(user, accessToken);
+  
+  const headerToolbar = {
+    center: 'title',left: "today", right: "prev,next"
+  }
+  // const fc_custom_views = {
+  //   timeGridFourDay: {
+  //     type: 'dayGrid',
+  //     duration: { days: 4 },
+  //     slotEventOverlap: true,
+  //     allDaySlot: false,
+  //     nowIndicator: true,
+  //     buttonText: '4 Day',
+  //   }
+    
+  // }
+  // const fc_mobile_views = {
+  //   timeGridThreeDay: {
+  //     type: 'dayGrid',
+  //     duration: { days: 3 },
+  //     slotEventOverlap: true,
+  //     allDaySlot: false,
+  //     nowIndicator: true,
+  //     buttonText: '3 Day',
+  //   },
+  //   timeGridTwoDay: {
+  //     type: 'dayGrid',
+  //     duration: { days: 2 },
+  //     slotEventOverlap: true,
+  //     allDaySlot: false,
+  //     nowIndicator: true,
+  //     buttonText: '2 Day',
+  //   }
+  // }
+  const is_mobile = window.innerWidth < 768
+  const fc_custom_views = {
+    timeGridThreeDay: {
+      type: 'dayGrid',
+      duration: { days: 3 },
+      slotEventOverlap: true,
+      allDaySlot: false,
+      nowIndicator: true,
+      buttonText: '3 Day',
+      },
+      timeGridTwoDay: {
+        type: 'dayGrid',
+        duration: { days: 2 },
+        slotEventOverlap: true,
+        allDaySlot: false,
+        nowIndicator: true,
+        buttonText: '2 Day',
+      },
+      timeGridFourDay: {
+        type: 'dayGrid',
+        duration: { days: 4 },
+        slotEventOverlap: true,
+        allDaySlot: false,
+        nowIndicator: true,
+        buttonText: '4 Day',
+      }
+  }
   const footerToolbar = {
     left: 'dayGridDay,timeGridFourDay',
     center: "",
     right: 'dayGridWeek,dayGridMonth'
   }
-  const headerToolbar = {
-    center: 'title',left: "today", right: "prev,next"
-  }
-  const fc_custom_views = {
-    timeGridFourDay: {
-      type: 'dayGrid',
-      duration: { days: 4 },
-      slotEventOverlap: true,
-      allDaySlot: false,
-      nowIndicator: true,
-    }
+  const mobileFooterToolbar = {
+    left: 'dayGridDay,timeGridTwoDay',
+    center: "",
+    right: 'timeGridThreeDay,timeGridFourDay'
   }
   let isFavoriteTeam = (team_id) => {
     const is_favorite = favorites.favorite_teams.filter((fav_team) => fav_team.id == team_id).length > 0
@@ -110,7 +163,7 @@ const CalendarWidget = () => {
               initialView='timeGridFourDay'
               nowIndicator={true}
               weekends={true}
-              footerToolbar={footerToolbar}
+              footerToolbar={is_mobile ? mobileFooterToolbar : footerToolbar}
               eventDisplay="block"
               events={dateChangeHandler}
               eventContent={renderEventContent}

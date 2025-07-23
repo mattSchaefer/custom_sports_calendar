@@ -4,6 +4,9 @@ import P5Canvas from './P5Canvas.jsx'
 import { build_save_user_request } from '../factories/save_user_request_factory.js'
 import { useAuth } from '../contexts/auth_context.jsx'
 import about_1 from '../assets/about_1.png'
+import calendar_image from '../assets/calendar_month_example.png'
+import cal_month_cropped from '../assets/cal_month_cropped.png'
+import favorite_selector_1 from '../assets/favorite_selector_1.png'
 function Home({}){
     const { user, loginWithGoogle, loginWithFacebook, loading, signOut, accessToken, favorites, setFavorites, sync_favorites } = useAuth();
     
@@ -44,15 +47,24 @@ function Home({}){
                 <P5Canvas />
             </div>
             <div className="section" id="about-us">
-                <span className="about-image-container">
-                    <img src={about_1} alt="About SportSync" className="about-image" />
-                </span>
+                
                 <span className="about-verbiage">
                     <h1 id="about-header">Why SportSync?</h1>
-                    <p className="about-paragraph">Tired of jumping between apps, websites, and schedules just to keep track of your favorite teams? 
-                    </p>
-                    <p className="about-paragraph">With SportSync, you can build a personalized sports calendar that combines games from multiple leagues and teams into one clean, unified view.</p>
+                    <span className="about-para-and-img">
+                        <span className="about-image-container">
+                            <img src={favorite_selector_1} alt="About SportSync" className="about-image" />
+                        </span>
+                        <p className="about-paragraph">Tired of jumping between apps, websites, schedules, and google searches, just to keep track of your favorite teams? 
+                        </p>
+                    </span>
+                    <span className="about-para-and-img">
+                        <p className="about-paragraph">With SportSync, you can build a personalized sports calendar that combines games from multiple leagues and teams into one clean, unified view!</p>
+                        <span className="about-image-container">
+                            <img src={cal_month_cropped} alt="About SportSync" className="about-image" />
+                        </span>
+                    </span>
                 </span>
+                
             </div>
             <div className="section" id="what-we-offer">
                 <h1>Key Features </h1>
@@ -122,7 +134,7 @@ function Home({}){
             </div>
             <div className="section" id="about-us">
                 <span className="about-verbiage">
-                    <h1 id="about-header">Go Pro!</h1>
+                    <h1 id="about-header">Go Pro- coming soon!</h1>
                     <p className="about-paragraph">Configure your custom push notifications, whether it's only for your favorite teams or all games in your calendar.
                     </p>
                     <p className="about-paragraph">For only $5 per month, get notifications sent to your phone or email, and never look at an ad.</p>
@@ -133,7 +145,7 @@ function Home({}){
                     </span>
                 </span>
                 <span className="about-image-container">
-                    <img src={about_1} alt="About SportSync" className="about-image" />
+                    <img src={favorite_selector_1} alt="About SportSync" className="about-image" />
                 </span>
             </div>
             
