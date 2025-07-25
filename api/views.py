@@ -7,7 +7,7 @@ import backend.firebase_init
 from typing import List, Dict, Any
 from pydantic import Field
 from ninja import NinjaAPI
-from backend.services.firestore_user_handler import save_or_update_user, update_user_favorite_or_added_teams_or_leagues, get_leagues, get_all_teams, get_user_schedule
+from backend.services.firestore_user_handler import save_or_update_user, update_user_favorite_or_added_teams_or_leagues, get_leagues, get_all_teams, get_user_schedule, delete_user
 from django.http import HttpResponse, JsonResponse
 import os
 import re
@@ -67,6 +67,20 @@ class UserData(Schema):
     which: str = ""  # "favorite_teams", "followed", or "followed"
     start: str = ""
     end: str = ""
+@api.post("/delete_user_record")
+def delete_user_record(request, data: UserData):
+    if request.method == "OPTIONS":
+        response = HttpResponse()
+        response["Access-Control-Allow-Origin"] = "*"
+        response["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+        response["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+        return JsonResponse(response) 
+    try:
+        updated = delete_user(data.dict())
+        print("User deleted:", updated)
+        return updated
+    except Exception as e:
+        return JsonResponse({"error": str(e)}, status=500)
 @api.post("/save_user_data")
 def save_user_data(request, data: UserData):
     if request.method == "OPTIONS":

@@ -6,6 +6,46 @@ from django.conf import settings
 from firebase_admin import credentials, auth, firestore
 from firebase_admin._auth_utils import InvalidIdTokenError
 import sys
+def delete_user(oauth_user):
+    try:
+        db = get_firestore_client()
+        token = oauth_user["accessToken"]#request.headers.get("Authorization", "").split("Bearer ")[-1]
+        if not token:
+            return JsonResponse({"error": "Unauthorized"}, status=401)
+        try:
+            decoded_token = auth.verify_id_token(token)
+        except auth.InvalidIdTokenError:
+            return JsonResponse({"error": "Invalid token"}, status=401)
+        except Exception as e:
+            import traceback
+            exc_type, exc_value, exc_tb = sys.exc_info()
+            tb_str = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
+            print("Exception occurred firestore_user-handler:", str(e))
+            traceback.print_exc()
+            return JsonResponse({"error": str(e),}, status=500)
+        if decoded_token.get("uid") != oauth_user["uid"]:
+            return JsonResponse({"error": "Unauthorized"}, status=401)
+        uid = decoded_token.get("uid")
+        #user_ref = db.collection("users").document(oauth_user["uid"])
+        # Delete Firestore user document
+        user_doc_ref = db.collection("users").document(uid)
+        # Optional: delete all subcollections
+        def delete_subcollections(doc_ref):
+            collections = doc_ref.collections()
+            for collection in collections:
+                docs = collection.stream()
+                for doc in docs:
+                    doc.reference.delete()
+        delete_subcollections(user_doc_ref)
+        user_doc_ref.delete()
+        print(f"Deleted Firestore user data for UID: {uid}")
+        # Delete the user from Firebase Authentication
+        auth.delete_user(uid)
+        print(f"Deleted Firebase Auth user: {uid}")
+        return JsonResponse({"message": "user deleted"}, status=200)
+    except Exception as e:
+        print(f"Error deleting user {uid}: {e}")
+        return False
 def save_or_update_user(oauth_user):
     try:
         db = get_firestore_client()
