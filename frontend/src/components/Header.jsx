@@ -8,12 +8,13 @@ import AccountDropdown from './AccountDropdown.jsx'
 import AccountFavorites from './AccountFavorites.jsx'
 import FavoriteSelectorModal from './FavoriteSelectorModal.jsx'
 const Header = () => {
-    const { user, loginWithGoogle, loginWithFacebook, loading, logOut } = useAuth();
+    const { user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames  } = useAuth();
+    
     return (
         <header className="header">
             
             {
-                (!user || !user.email) &&
+                (!user || !user.provider_email) &&
                 <span className="header-left">
                     <img src={logo} alt="SportSync Logo" className="logo" />
                     <a href="#about" className="header-link">About</a>
@@ -23,7 +24,7 @@ const Header = () => {
                 </span>
             }
             {
-                user && user.email &&
+                user && user.provider_email &&
                 <span className="header-left">
                     <img src={logo} alt="SportSync Logo" className="logo" />
                     <div className="favorite-selector-modal-and-account-favorites">
@@ -34,8 +35,6 @@ const Header = () => {
                 </span>
             }
             <AccountDropdown />
-            
-      
         </header>
     );
 }

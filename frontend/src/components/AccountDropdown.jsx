@@ -31,19 +31,31 @@ const accountDropdown = () => {
     }
     return (
         <div className="dropdown">  
-            <div className="dropdown-toggle" id="account-dropdown-toggle" onClick={toggleDropdownShow}>
-                {
-                    user &&
-                    <i className="fa fa-user-circle" />
-                }
-            </div>
+            {
+                 user &&
+                <button className="dropdown-toggle" id="account-dropdown-toggle" onClick={toggleDropdownShow}>
+                
+                   
+                    <span>
+                        <i className="fa fa-chevron-down" />
+                        <i className="fa fa-user-circle" />
+                    </span>
+                
+            </button>
+            }
             {
                 user && dropdownShow &&
-                <div>
-                    <p className="text-2xl font-bold">{user && user.email && (<span>{user.email}</span>)}</p>
-                    <a href="#about" className="header-link">Upgrade account</a>
-                    <button onClick={() => deleteAccount()}><i className="fa fa-warning" />delete account</button>
-                    <button onClick={ ()=>logOut()}>sign out<i className="fa fa-sign-out" /></button>
+                <div className="dropdown-content">
+                    <span className="account-dropdown-text">
+                        <p className="account-attr"><b>provider</b>: {user && user.provider && (<span>{user.provider}</span>)}</p>
+                        <p className="account-attr"><b>username</b>: {user && user.provider_display_name && (<span>{user.provider_display_name}</span>)}</p>
+                        <p className="account-attr"><b>email</b>: {user && user.provider_email && (<span>{user.provider_email}</span>)}</p>
+                    </span>
+                    <hr />
+                    {/* <a href="#about" className="header-link">Upgrade account</a> */}
+                    <button onClick={ ()=>logOut()} className="signout-button account-dropdown-button">sign out<i className="fa fa-sign-out" /></button>
+                    <button onClick={() => deleteAccount()} className="delete-account-button account-dropdown-button"><i className="fa fa-warning" />delete account</button>
+                    
                 </div>
             }
             {
