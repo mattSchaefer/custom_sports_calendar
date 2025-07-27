@@ -89,51 +89,79 @@ const FavoriteSelector = ({teams, league, index}) => {
         <div className="avaliable-league" key={index}>
             <span className="league-header-span">
                 <h3 className="league-name-header" key={index}>{league.name}</h3>
-                <span className="favorite-selector-header-buttons">
-                    <button  onClick={(e) => toggleFollowLeague(e, league)} className="favorite-selector-follow-league-button">
-                        {
-                            favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length > 0 &&
-                            <i className="fa fa-minus" />
-                        }
-                        {
-                            favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length == 0 &&
-                            <i className="fa fa-plus" />
-                        }
-                    </button>
-                    <button onClick={(e) => setShowInput((prev) => !prev)} className="favorite-selector-search-button">
-                        <i className="fa fa-search" />
-                    </button>
-                    {
-                        showInput &&
-                        <input className="favorite-selector-filter-input" onChange={(e) => filter_by_term(e)} placeholder="filter by team name..." />
-                        // favorite-selector-filter-input
-                    }
-                </span>
-            </span>
-            <div className="league-teams">
                 {
-                    filteredTeams.map((team, teamIndex) => {
-                        return (
-                            <span key={teamIndex} className="team-name">{/*className='team-name'*/}
-                                <h5 className={favorites.favorite_teams.filter((fav) => { return fav.id == team.id}).length > 0 ? 'favorite-team-highlight team-name-header' : 'team-name-header' }>{team.name}</h5>
-                                <span className="add-and-fav-button-container">
-                                    <button className="team-add" onClick={(e) => toggleFollowTeam(e, team)}>
-                                        {
-                                            favorites.followed_teams.filter((fav) => { return fav.id == team.id}).length > 0 &&
-                                            <i className="fa fa-minus" />
-                                        }
-                                        {
-                                            favorites.followed_teams.filter((fav) => { return fav.id == team.id}).length == 0 &&
-                                            <i className="fa fa-plus" />
-                                        }
-                                    </button>
-                                   <button className="team-favorite" onClick={(e) => toggleFavoriteTeam(e, team)}><i className={favorites.favorite_teams.filter((fav) => { return fav.id == team.id}).length > 0 ? 'favorite-team-highlight fa fa-star' : 'fa fa-star' } /></button>
-                                </span>
-                            </span>
-                        )
-                    })
+                    teams.length > 0 &&
+                    <span className="favorite-selector-header-buttons">
+                        { 
+                            league.id !== "NCAAF"
+                            &&
+                            <button  onClick={(e) => toggleFollowLeague(e, league)} className="favorite-selector-follow-league-button">
+                                {
+                                    favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length > 0 && league.id !== "NCAAF" &&
+                                    <i className="fa fa-minus" />
+                                }
+                                {
+                                    favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length == 0 && league.id !== "NCAAF" &&
+                                    <i className="fa fa-plus" />
+                                }
+                            </button>
+                        }
+                        
+                        
+                        <button onClick={(e) => setShowInput((prev) => !prev)} className="favorite-selector-search-button">
+                            <i className="fa fa-search" />
+                        </button>
+                        
+                        {
+                            showInput &&
+                            <input className="favorite-selector-filter-input" onChange={(e) => filter_by_term(e)} placeholder="filter by team name..." />
+                            // favorite-selector-filter-input
+                        }
+                    </span>
                 }
-            </div>
+            </span>
+            {
+                //teams.length > 0 &&
+                <div className="league-teams">
+                    {
+                        teams.length == 0 &&
+                        <span className="no-teams-found big-toggle-follow-button-container">
+                            <button  onClick={(e) => toggleFollowLeague(e, league)} className="favorite-selector-follow-league-button big-toggle-follow-league">
+                                {
+                                    favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length > 0 && league.id !== "NCAAF" &&
+                                    <i className="fa fa-minus" />
+                                }
+                                {
+                                    favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length == 0 && league.id !== "NCAAF" &&
+                                    <i className="fa fa-plus" />
+                                }
+                            </button>
+                        </span>
+                    }
+                    {
+                        filteredTeams.map((team, teamIndex) => {
+                            return (
+                                <span key={teamIndex} className="team-name">{/*className='team-name'*/}
+                                    <h5 className={favorites.favorite_teams.filter((fav) => { return fav.id == team.id}).length > 0 ? 'favorite-team-highlight team-name-header' : 'team-name-header' }>{team.name}</h5>
+                                    <span className="add-and-fav-button-container">
+                                        <button className="team-add" onClick={(e) => toggleFollowTeam(e, team)}>
+                                            {
+                                                favorites.followed_teams.filter((fav) => { return fav.id == team.id}).length > 0 &&
+                                                <i className="fa fa-minus" />
+                                            }
+                                            {
+                                                favorites.followed_teams.filter((fav) => { return fav.id == team.id}).length == 0 &&
+                                                <i className="fa fa-plus" />
+                                            }
+                                        </button>
+                                    <button className="team-favorite" onClick={(e) => toggleFavoriteTeam(e, team)}><i className={favorites.favorite_teams.filter((fav) => { return fav.id == team.id}).length > 0 ? 'favorite-team-highlight fa fa-star' : 'fa fa-star' } /></button>
+                                    </span>
+                                </span>
+                            )
+                        })
+                    }
+                </div>
+            }
         </div>
     );
 }

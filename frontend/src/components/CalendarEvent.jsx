@@ -57,37 +57,42 @@ const CalendarEvent = ({eventInfo}) => {
                 </span>
                 <i className={icon_class} />
             </span>
-            
-            {/* <b className="event-title">{eventInfo.event.title}</b> */}
-            <span className="event-title">
-                <span className={
-                    eventInfo.event.extendedProps.home_team.is_favorite ? "favorite-team-highlight event-team-span" :
-                    eventInfo.event.extendedProps.home_team.is_followed ? "followed-team-highlight event-team-span" : 
-                    "event-team-span"
-                    }>
-                    
-                    {eventInfo.event.extendedProps.home_team.name}
-                    { eventInfo.event.extendedProps.home_team.is_favorite || eventInfo.event.extendedProps.home_team.is_followed ?
-                        <img className="team-logo" src={get_team_image(eventInfo.event.extendedProps.home_team.id)}  />
-                        : <></>
-                    }
+             
+            {
+                (eventInfo.event.extendedProps.league == "NASCAR" || eventInfo.event.extendedProps.league == "F1" || eventInfo.event.extendedProps.league == "UFC") &&
+                <span className="event-title">{eventInfo.event.title}</span>
+            }
+            {
+                eventInfo.event.extendedProps.league !== "NASCAR" && eventInfo.event.extendedProps.league !== "F1" && eventInfo.event.extendedProps.league !== "UFC" &&
+                <span className="event-title">
+                    <span className={
+                        eventInfo.event.extendedProps.home_team.is_favorite ? "favorite-team-highlight event-team-span" :
+                        eventInfo.event.extendedProps.home_team.is_followed ? "followed-team-highlight event-team-span" : 
+                        "event-team-span"
+                        }>
+                        
+                        {eventInfo.event.extendedProps.home_team.name}
+                        { eventInfo.event.extendedProps.home_team.is_favorite || eventInfo.event.extendedProps.home_team.is_followed ?
+                            <img className="team-logo" src={get_team_image(eventInfo.event.extendedProps.home_team.id)}  />
+                            : <></>
+                        }
+                    </span>
+                        {" vs. "} 
+                    <span className={
+                        eventInfo.event.extendedProps.away_team.is_favorite ? "favorite-team-highlight event-team-span" :
+                        eventInfo.event.extendedProps.away_team.is_followed ? "followed-team-highlight event-team-span" : 
+                        "event-team-span"
+                        }
+                    >
+                        
+                        {eventInfo.event.extendedProps.away_team.name}
+                        { eventInfo.event.extendedProps.away_team.is_favorite || eventInfo.event.extendedProps.away_team.is_followed ?
+                            <img className="team-logo" src={get_team_image(eventInfo.event.extendedProps.away_team.id)}  />
+                            : <></>
+                        }
+                    </span>
                 </span>
-                    {" vs. "} 
-                <span className={
-                    eventInfo.event.extendedProps.away_team.is_favorite ? "favorite-team-highlight event-team-span" :
-                    eventInfo.event.extendedProps.away_team.is_followed ? "followed-team-highlight event-team-span" : 
-                    "event-team-span"
-                    }
-                >
-                    
-                    {eventInfo.event.extendedProps.away_team.name}
-                    { eventInfo.event.extendedProps.away_team.is_favorite || eventInfo.event.extendedProps.away_team.is_followed ?
-                        <img className="team-logo" src={get_team_image(eventInfo.event.extendedProps.away_team.id)}  />
-                        : <></>
-                    }
-                </span>
-            </span>
-            
+            }
             
         </span>
     )

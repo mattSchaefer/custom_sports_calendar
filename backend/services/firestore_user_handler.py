@@ -6,6 +6,8 @@ from django.conf import settings
 from firebase_admin import credentials, auth, firestore
 from firebase_admin._auth_utils import InvalidIdTokenError
 import sys
+
+    
 def delete_user(oauth_user):
     try:
         db = get_firestore_client()
@@ -182,7 +184,14 @@ def get_user_schedule(oauth_user):
             for doc in league_games:
                 game = doc.to_dict()
                 game["start"]  = game["date"]#parse_game_date(game["date"])
-                all_games.append(game)
+                if game["league_id"] == "NCAAF_10" or game["league_id"] == "NCAAF_25":
+                    if game["home_team_id"] in teams_for_query or game["away_team_id"] in teams_for_query:
+                        print("skipping game for NCAAF_10 or NCAAF_25")
+                        continue
+                    else:
+                        all_games.append(game)
+                else:
+                    all_games.append(game)
         return all_games
     except (InvalidIdTokenError) as e:
         return JsonResponse({"error": str(e)}, status=401)

@@ -35,7 +35,7 @@ function Home({}){
                         <h1 className="text-2xl font-bold main-header">SportSync<span className="inner-header">Schedule</span></h1>
                         <h1 className="sub-header">All your favorite sports, one unified calendar</h1>
                     </span>
-                    <p className="header-paragraph"><span className="bold">SportSync</span> is your all-in-one solution for staying on top of the games that matter most to you.</p>
+                    <p className="header-paragraph"><span className="bold">SportSync</span> is your one-stop-shop for staying on top of the games that matter most to you.</p>
                     <span className="header-buttons">
                         <button id="get-started-btn" className="header-btn"><i className="fa fa-arrow-right" />Learn More</button>
                     </span>

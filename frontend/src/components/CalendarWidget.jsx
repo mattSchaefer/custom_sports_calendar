@@ -60,7 +60,7 @@ const CalendarWidget = () => {
       slotEventOverlap: true,
       allDaySlot: false,
       nowIndicator: true,
-      buttonText: '3 Day',
+      buttonText: '3 day',
       },
       timeGridTwoDay: {
         type: 'dayGrid',
@@ -68,7 +68,7 @@ const CalendarWidget = () => {
         slotEventOverlap: true,
         allDaySlot: false,
         nowIndicator: true,
-        buttonText: '2 Day',
+        buttonText: '2 day',
       },
       timeGridFourDay: {
         type: 'dayGrid',
@@ -76,18 +76,18 @@ const CalendarWidget = () => {
         slotEventOverlap: true,
         allDaySlot: false,
         nowIndicator: true,
-        buttonText: '4 Day',
+        buttonText: '4 day',
       }
   }
   const footerToolbar = {
-    left: 'dayGridDay,timeGridFourDay',
+    left: 'dayGridDay,timeGridTwoDay,timeGridThreeDay,timeGridFourDay,dayGridWeek,dayGridMonth',
     center: "",
-    right: 'dayGridWeek,dayGridMonth'
+    right: ''
   }
   const mobileFooterToolbar = {
-    left: 'dayGridDay,timeGridTwoDay',
+    left: 'dayGridDay,timeGridTwoDay,timeGridThreeDay,timeGridFourDay',
     center: "",
-    right: 'timeGridThreeDay,timeGridFourDay'
+    right: ''
   }
   let isFavoriteTeam = (team_id) => {
     const is_favorite = favorites.favorite_teams.filter((fav_team) => fav_team.id == team_id).length > 0
@@ -101,9 +101,19 @@ const CalendarWidget = () => {
     const events = []
     for(var i =0; i < games.length; i++){
       var this_game = games[i]
-      var title = games[i].home_team_name.toString() + " vs. " + games[i].away_team_name.toString() 
-      var start = new Date(games[i].start) || null
-      if(start){
+      console.log(games[i].start.split("T")[1])
+      var time = games[i].start.split("T")[1]
+      var date_time
+      if(time == "00:00:00Z"){
+        date_time = games[i].start.split("T")[0]
+        
+      }
+      else
+        date_time = games[i].start
+      var start = new Date(date_time) || null
+      var team_event = games[i].home_team_id !== null
+      if(start && team_event){
+        var title = games[i].home_team_name.toString() + " vs. " + games[i].away_team_name.toString() 
         events.push({
           title: title,
           start: start,
@@ -124,6 +134,27 @@ const CalendarWidget = () => {
             },
           is_favorite: isFavoriteTeam(games[i].home_team_id) || isFavoriteTeam(games[i].away_team_id)
         })
+      }else if(start && !team_event){
+        var title = games[i].strEvent
+        events.push({
+          title: title,
+          start: start,
+          league: games[i].league_name,
+          home_team: {
+            id: null,
+            name: null,
+            is_favorite: false,
+            is_followed: false
+          },
+          away_team: {
+            id: null,
+            name: null,
+            is_favorite: false,
+            is_followed: false
+          },
+          is_favorite: false,
+          all_day: games[i].start.split("T")[1] == "00:00:00Z"
+        })
       }
     }
     return events
@@ -135,7 +166,10 @@ const CalendarWidget = () => {
       const res = await fetch(request_data.url, request_data.options)
       if(res.status == 200) {
         const data = await res.json()
+        console.log(data.games)
         const events = transformGames(data.games || [])
+        console.log("transformed events: ")
+        console.log(events)
         successCallback(events)
       } else {
         console.log(res)

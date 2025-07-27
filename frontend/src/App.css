@@ -100,6 +100,7 @@ header{
   justify-content: start;
   align-items: start;
   gap: 5px;
+  flex-wrap: wrap;
 }
 .event-team-span{
   display: flex;
@@ -179,7 +180,7 @@ footer{
   flex-direction: column;
   align-items: start;
 }
-.toggle-fav-selector, .fc-button, .team-add, .team-favorite, .toggle-fav-selector, .favorite-selector-header-buttons button, .close-list-editor button, .dropdown-toggle, .signout-button{
+.toggle-fav-selector, .fc-button, .team-add, .team-favorite, .toggle-fav-selector, .favorite-selector-header-buttons button, .close-list-editor button, .dropdown-toggle, .signout-button, .favorite-selector-follow-league-button{
   background: transparent !important;
   color: #6a6a6a !important;
   border: 1px solid #6a6a6a !important;
@@ -227,7 +228,7 @@ footer{
   align-self: center;
   margin-bottom: 2rem;
 }
-.toggle-fav-selector:hover, .fc-button:hover, .fc-button-active, .favorite-selector-header-buttons button:hover, .close-list-editor button:hover, .dropdown-toggle:hover, .signout-button:hover{
+.favorite-selector-follow-league-button:hover, .favorite-selector-follow-league-button:focus, .toggle-fav-selector:hover, .fc-button:hover, .fc-button-active, .favorite-selector-header-buttons button:hover, .close-list-editor button:hover, .dropdown-toggle:hover, .signout-button:hover{
   transition: all .2s;
   background: #6a6a6a !important;
   color: #111 !important;
@@ -449,6 +450,11 @@ footer{
   width: 100%;
   overflow: scroll;
   box-shadow: rgba(100, 0, 0, 0.11) 0px 3px 8px;
+  align-items: center;
+  justify-content: center;
+}
+.big-toggle-follow-league{
+  scale: 3;
 }
 .left{
   display: flex;
@@ -593,6 +599,7 @@ h4{margin-top: 0; margin-bottom: 0;}
   align-items: center;
   border-bottom: 1px solid lightgrey;
   padding: 10px;
+  width: 85%;
 }
 .offering-card{
   display: flex;
@@ -682,7 +689,7 @@ h4{margin-top: 0; margin-bottom: 0;}
   flex-direction: row;
   justify-content: flex-end;
   align-self: flex-end;
-
+  margin-right: .25rem;
 }
 #section1{
   /* background: #010618; */
@@ -940,7 +947,7 @@ h1{
   }
   .fc-button {
     font-size: .75rem !important;
-    
+    height: 4rem !important;
   }
   .fc-footer-toolbar{
     top: 6% !important;
