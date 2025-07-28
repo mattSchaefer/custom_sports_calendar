@@ -6,7 +6,16 @@ import { useAuth } from '../contexts/auth_context.jsx';
 const FavoriteSelector = ({teams, league, index}) => {
     //let filtered_teams = teams
     let [filteredTeams, setFilteredTeams] = useState(teams)
+    const [showInput, setShowInput] = useState(false)
     useEffect(() => {if(filteredTeams.length == 0){setFilteredTeams(() => teams)}},[teams])
+    useEffect(() => {
+        if(showInput){
+            setTimeout(() => {
+                const input = document.querySelector('#filter-input-' + league.id.replaceAll(' ', '-'));
+                if(input) input.focus();
+            }, 100);
+        }
+    }, [showInput])
     const { user, loginWithGoogle, loginWithFacebook, loading, signOut, accessToken, favorites, setFavorites, sync_favorites } = useAuth();
     const filter_by_term = (e) => {
         var term = e.target.value.toString()
@@ -83,7 +92,7 @@ const FavoriteSelector = ({teams, league, index}) => {
             })
         }
     }
-    const [showInput, setShowInput] = useState(false)
+    
     console.log(filteredTeams)
     return (
         <div className="avaliable-league" key={index}>
@@ -114,7 +123,7 @@ const FavoriteSelector = ({teams, league, index}) => {
                         
                         {
                             showInput &&
-                            <input className="favorite-selector-filter-input" onChange={(e) => filter_by_term(e)} placeholder="filter by team name..." />
+                            <input className="favorite-selector-filter-input" id={"filter-input-" + league.id.replaceAll(' ', '-')} onChange={(e) => filter_by_term(e)} placeholder="filter by team name..." />
                             // favorite-selector-filter-input
                         }
                     </span>

@@ -7,6 +7,8 @@ import about_1 from '../assets/about_1.png'
 import calendar_image from '../assets/calendar_month_example.png'
 import cal_month_cropped from '../assets/cal_month_cropped.png'
 import favorite_selector_1 from '../assets/favorite_selector_1.png'
+import logo from '../assets/sportsynclogov1.svg'
+
 function Home({}){
     const { user, loginWithGoogle, loginWithFacebook, loading, signOut, accessToken, favorites, setFavorites, sync_favorites } = useAuth();
     
@@ -32,9 +34,12 @@ function Home({}){
             <div className="section" id="section-1">
                 <span className="header-container on-top">
                     <span className="h1-container">
-                        <h1 className="text-2xl font-bold main-header">SportSync<span className="inner-header">Schedule</span></h1>
-                        <h1 className="sub-header">All your favorite sports, one unified calendar</h1>
+                        {/* <h1 className="text-2xl font-bold main-header">SportSync<span className="inner-header">Schedule</span></h1>
+                        <h1 className="sub-header">All your favorite sports, one unified calendar</h1> */}
+                        <img src={logo} alt="SportSync Logo" className="logo-homepage" />
+                        {/* <img src={cal_month_cropped} className="logo-homepage" id="home-background-op"/> */}
                     </span>
+                    <h1 className="sub-header">All your favorite sports, one unified calendar</h1>
                     <p className="header-paragraph"><span className="bold">SportSync</span> is your one-stop-shop for staying on top of the games that matter most to you.</p>
                     <span className="header-buttons">
                         <button id="get-started-btn" className="header-btn"><i className="fa fa-arrow-right" />Learn More</button>

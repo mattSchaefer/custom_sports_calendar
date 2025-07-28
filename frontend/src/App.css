@@ -8,17 +8,17 @@
 #get-started-btn{
   /* background-image: linear-gradient(88deg,#e77878,#e7a278 31%,#e77878);
   background-clip: border-box; */
-  background: #bb0000;
-  color: white;
+  background: #ff914d;
+  color: #fffdf4 ;
 }
 .calendarCell, .fc-event{max-height: 15rem; overflow: scroll;}
 .fc-event:hover{
-  background: #bb0000 !important;
-  color: white !important;
-  cursor: crosshair;
+  background: #ff914d !important;
+  color: #fffdf4 !important;
+  /* cursor: crosshair;
   transform: scale(1.05);
  
-  transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out; */
 }
 /* .fc-daygrid-day-events{
   max-height: 10rem;
@@ -51,7 +51,7 @@ header{
 
   z-index: 100000;
   width: 100%;
-  border-bottom: 2px solid #bb0000;
+  border-bottom: 2px solid #009fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   height: 3.5rem;
   
@@ -134,12 +134,20 @@ header{
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  background: #111;
+  background: #f6f5f2;
   color: #7a6a6a;
   margin-top: 3rem;
   padding-bottom: 15vh;
   padding-top: 5vh;
   min-height: 100vh;
+}
+.unauth-home-login-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 1rem;
 }
 footer{
   background: #fffdf4;
@@ -152,7 +160,7 @@ footer{
   color: #6a6a6a;
 }
 .white-text{
-  color: white;
+  color: #fffdf4;
 }
 .user-favorite-attr-list{
   display: flex;
@@ -166,7 +174,8 @@ footer{
   margin-left: .25rem;
 }
 .fc-day-today{
-  background: #67b8ffa8 !important;
+  /*background: #67b8ffa8 !important;*/
+  background: #009fff !important;
 }
 .about-para-and-img{
   display: flex;
@@ -175,16 +184,22 @@ footer{
   align-items: center;
   gap: 1rem;
 }
+.logo-homepage{
+  width: 38rem;
+  height: auto;
+  margin-bottom: 1rem;
+}
 .favorite-teams, .followed-teams, .followed-leagues{
   display: flex;
   flex-direction: column;
   align-items: start;
 }
-.toggle-fav-selector, .fc-button, .team-add, .team-favorite, .toggle-fav-selector, .favorite-selector-header-buttons button, .close-list-editor button, .dropdown-toggle, .signout-button, .favorite-selector-follow-league-button{
+.toggle-fav-selector, .fc-button, .team-add, .team-favorite, .toggle-fav-selector, .favorite-selector-header-buttons button, .close-list-editor button, .dropdown-toggle, .signout-button, .favorite-selector-follow-league-button, .team-add, .team-favorite{
   background: transparent !important;
-  color: #6a6a6a !important;
-  border: 1px solid #6a6a6a !important;
-  
+  /* color: #6a6a6a !important;
+  border: 1px solid #6a6a6a !important; */
+  border: 1px solid #009fff !important;
+  color: #009fff !important;
 }
 .favorite-selector-filter-input{
   width: -webkit-fill-available;
@@ -193,10 +208,11 @@ footer{
   outline: none !important;
   border-width: 0;
   border-bottom-width: 2px;
-  border-image: linear-gradient(0.25turn, #5a5a9d, #bb00008f, #5a5a9d);
+  /* border-image: linear-gradient(0.25turn, #5a5a9d, #bb00008f, #5a5a9d); */
   border-image-slice: 1;
   color: #ff7e5f !important;
   caret-color: #ff7e5f !important;
+  border-bottom-color: #ff7e5f8a;
   font-weight: 700;
   font-style: italic;
   margin-left: .5rem;
@@ -228,10 +244,11 @@ footer{
   align-self: center;
   margin-bottom: 2rem;
 }
-.favorite-selector-follow-league-button:hover, .favorite-selector-follow-league-button:focus, .toggle-fav-selector:hover, .fc-button:hover, .fc-button-active, .favorite-selector-header-buttons button:hover, .close-list-editor button:hover, .dropdown-toggle:hover, .signout-button:hover{
+.favorite-selector-follow-league-button:hover, .favorite-selector-follow-league-button:focus, .toggle-fav-selector:hover, .fc-button:hover, .fc-button-active, .favorite-selector-header-buttons button:hover, .close-list-editor button:hover, .dropdown-toggle:hover, .signout-button:hover, .team-add:hover, .team-favorite:hover{
   transition: all .2s;
-  background: #6a6a6a !important;
-  color: #111 !important;
+  /* background: #6a6a6a !important; */
+  color: #feb47b !important;
+  background: #009fff !important;
   font-weight: bold;
   
 }
@@ -350,11 +367,11 @@ footer{
 }
 .favorite-selector-current-favorites{
   padding: 1rem;
-  border: 2px solid #5a5a9d;
+  border: 2px solid #67b8ffa8;
   border-radius: 10px;
   width: 75%;
   margin-bottom: 1rem;
-  box-shadow: #5a5a9d 0px 3px 8px;
+  box-shadow: #67b8ffa8 0px 3px 8px;
 
 }
 .favorite-selector-search-button{
@@ -377,17 +394,24 @@ footer{
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  border: 2px solid #bb00008f;
-  background: #F6F5F2;
+  border: 2px solid #ff914d;
+  /* background: #F6F5F2; */
   width: 16rem;
   height: 18rem;
   padding: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  box-shadow: #bb00008f 0px 3px 8px;
+  box-shadow: #ff914d 0px 3px 8px;
   border-radius: 10px;
-  background: #111;
-  color: #7a6a6a;
+  /* background: #111;
+  color: #7a6a6a; */
+  background: #fffdf4;
+  border-radius: 10px;
+  /* border-top-color: rgb(17, 17, 17);
+  border-top-color: #fffdf4; */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.39) !important;
+  display: flex;
+  flex-direction: column;
 }
 .favorite-selector-header-buttons{
   display: flex;
@@ -395,6 +419,7 @@ footer{
   justify-content: start;
   align-items: center;
   height: 2rem;
+  gap: .25rem;
 }
 .favorite-selector-follow-league-button, .favorite-selector-search-button{
   height: 100%;
@@ -425,19 +450,26 @@ footer{
 .avaliable-leagues-container{
   position: absolute;
   z-index: 1000000;
-  background: #F6F5F2;
+  /* background: #F6F5F2; */
   width: 66vw;
   top: 11vh;
   left: 17vw;
-  border: 2px solid #111;
+  /* border: 2px solid #111; */
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   height: 50rem;
   overflow: scroll;
   
-  background: #111;
-  color: #7a6a6a;
+  /* background: #111;
+  color: #7a6a6a; */
+  background: #fffdf4;
+  border-radius: 10px;
+  border-top-color: rgb(17, 17, 17);
+  border-top-color: #fffdf4;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.39) !important;
+  display: flex;
+  flex-direction: column;
 }
 .avaliable-teams{
   height: 10rem;
@@ -450,11 +482,20 @@ footer{
   width: 100%;
   overflow: scroll;
   box-shadow: rgba(100, 0, 0, 0.11) 0px 3px 8px;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
 }
 .big-toggle-follow-league{
   scale: 3;
+  height: auto;
+}
+.big-toggle-follow-button-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 .left{
   display: flex;
@@ -476,6 +517,8 @@ footer{
 }
 .header-btn{
   height: 100%;
+  border: 2px solid #009fff;
+  padding: .2rem;
 }
 h4{margin-top: 0; margin-bottom: 0;}
 .header{
@@ -555,10 +598,11 @@ h4{margin-top: 0; margin-bottom: 0;}
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: .2rem;
 }
 .team-add, .team-favorite{
-  height: 1rem;
-  width: 1rem;
+  height: 2rem;
+  width: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -632,7 +676,7 @@ h4{margin-top: 0; margin-bottom: 0;}
 }
 .section{
   padding: 2rem;
-  width: 100vw;
+  width: 95vw;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -699,11 +743,12 @@ h4{margin-top: 0; margin-bottom: 0;}
 }
 .league-header-span{
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 2px solid #5a5a9d
+  border-bottom: 2px solid #009fff;
+  padding-bottom: .5rem;
 }
 .league-name-header{
   margin: 0;
@@ -713,9 +758,7 @@ h4{margin-top: 0; margin-bottom: 0;}
 }
 .about-small{font-size: 1rem !important;}
 #about-us{
-  border-top: 3px solid blue;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 3px;
+  border-top: 3px solid #009fff;
   min-width: 50%;
   width: fit-content;
   background: #111;
@@ -761,7 +804,7 @@ hr{border-bottom: 1px solid grey; width: 85%;}
   margin-bottom: 1em;
   padding-left: 1rem;
   color: #c2c2c2;
-  color: #eee;
+  color: #fffdf4;
   font-weight: 400;
   text-align: start;
 }
@@ -790,7 +833,7 @@ hr{border-bottom: 1px solid grey; width: 85%;}
   min-height: 95vh;
 }
 .header-link:hover{
-  color: #bb0000;
+  color: #ff914d;
   text-decoration: underline;
   transition: all .2s;
 }
@@ -810,18 +853,19 @@ hr{border-bottom: 1px solid grey; width: 85%;}
 }
 .sub-header{
   font-style: italic;
+  color: #009fff;
 }
 body{
   background: #010618;
-  color: #eee;
+  color: #fffdf4;
   /* background: #f5f5f5; */
 }
 h1{
   letter-spacing: -3px;
 }
 .header-container{
-  position: absolute;
-  top: 25%;
+  /* position: absolute;
+  top: 25%; */
   
   z-index: 10000;
   width: 100vw;
@@ -862,11 +906,9 @@ h1{
 }
 
 .logo {
-  height: 4em;
+  height: 4.5rem;
   padding: 0;
-  will-change: filter;
-  transition: filter 300ms;
-  scale: .67;
+  margin-left: -.75rem
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -1011,6 +1053,24 @@ h1{
     font-weight: bold;
 
 }
+.login-button-highlight{
+  
+    background: linear-gradient(
+        to right,
+        #ff914d 20%,
+        #ff914d 30%,
+        #00affa 70%,
+        #ff914d 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+    font-weight: bold;
+
+}
 @keyframes textShine {
     0% {
         background-position: 0% 50%;
@@ -1037,6 +1097,18 @@ h1{
   touch-action: manipulation;
   font-weight: 600;
   margin-right: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.login-button-inner-span{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 .button-85:before{
   content: "";
@@ -1052,7 +1124,7 @@ h1{
     #ff00c8,
     #ff0000
   ); */
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     #ff0000,
     #002bff,
@@ -1063,6 +1135,18 @@ h1{
     #ff0000,
     #002bff,
     #ff0000
+  ); */
+  background: linear-gradient(
+    45deg,
+    #ff914d,
+    #009fff,
+    #ff914d,
+    #009fff,
+    #ff914d,
+    #009fff,
+    #ff914d,
+    #009fff,
+    #ff914d
   );
   position: absolute;
   top: -2px;
@@ -1070,12 +1154,13 @@ h1{
   background-size: 400%;
   z-index: -1;
   filter: blur(5px);
-  -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
+  -webkit-filter: blur(1px);
+  width: calc(100% + 1px);
+  height: calc(100% + 1px);
   animation: glowing-button-85 20s linear infinite;
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
+  
 }
 .infinite-scroll{
   animation: scroll-intinite 10s linear infinite

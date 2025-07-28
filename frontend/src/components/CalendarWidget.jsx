@@ -114,26 +114,31 @@ const CalendarWidget = () => {
       var team_event = games[i].home_team_id !== null
       if(start && team_event){
         var title = games[i].home_team_name.toString() + " vs. " + games[i].away_team_name.toString() 
-        events.push({
-          title: title,
-          start: start,
-          league: games[i].league_name,
-          home_team:
-            {
-              id: games[i].home_team_id,
-              name: games[i].home_team_name,
-              is_favorite: isFavoriteTeam(games[i].home_team_id),
-              is_followed: isFollowedTeam(games[i].home_team_id)
-            },
-          away_team:  
-            {
-              id: games[i].away_team_id,
-              name: games[i].away_team_name,
-              is_favorite: isFavoriteTeam(games[i].away_team_id),
-              is_followed: isFollowedTeam(games[i].away_team_id)
-            },
-          is_favorite: isFavoriteTeam(games[i].home_team_id) || isFavoriteTeam(games[i].away_team_id)
-        })
+        var team_already_in_for_this_time = events.filter((event) => {
+          return event.start.getTime() == start.getTime() && (event.home_team.id == games[i].home_team_id || event.away_team.id == games[i].away_team_id)
+        }).length > 0
+        if(!team_already_in_for_this_time){
+          events.push({
+            title: title,
+            start: start,
+            league: games[i].league_name,
+            home_team:
+              {
+                id: games[i].home_team_id,
+                name: games[i].home_team_name,
+                is_favorite: isFavoriteTeam(games[i].home_team_id),
+                is_followed: isFollowedTeam(games[i].home_team_id)
+              },
+            away_team:  
+              {
+                id: games[i].away_team_id,
+                name: games[i].away_team_name,
+                is_favorite: isFavoriteTeam(games[i].away_team_id),
+                is_followed: isFollowedTeam(games[i].away_team_id)
+              },
+            is_favorite: isFavoriteTeam(games[i].home_team_id) || isFavoriteTeam(games[i].away_team_id)
+          })
+        }
       }else if(start && !team_event){
         var title = games[i].strEvent
         events.push({
