@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
     const [accessToken, setAccessToken] = useState(null)
-    const [favorites, setFavorites, sync_favorites, games, setGames] = useUserFavoritesHook(user, accessToken);
+    const [favorites, setFavorites, sync_favorites, games, setGames, cfbRankings, setCfbRankings] = useUserFavoritesHook(user, accessToken);
     const loginWithGoogle = async () => {
         try {
             const result = await signInWithGoogle()
@@ -112,8 +112,8 @@ export const AuthProvider = ({ children }) => {
         setFavorites, 
         sync_favorites,
         games,
-        setGames
-    }), [user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames]);
+        setGames, cfbRankings, setCfbRankings
+    }), [user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames, cfbRankings, setCfbRankings]);
     return (
         <AuthContext.Provider value={authContextValue}> {/*</AuthContext.Provider><AuthContext.Provider value={{ user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken }}>*/}
             {children}

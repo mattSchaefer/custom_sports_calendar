@@ -14,7 +14,7 @@ import AccountDetails from './AccountDetails.jsx'
 import AccountFavorites from './AccountFavorites.jsx'
 import CalendarEvent from './CalendarEvent.jsx'
 const CalendarWidget = () => {
-  const { user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames  } = useAuth()
+  const { user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames, cfbRankings, setCfbRankings  } = useAuth()
   const [selectorExpanded, setSelectorExpanded] = useState(false)
   const [selectorClean, setSelectorClean] = useState(true)
   const [scheudleRequestLoading, setScheduleRequestLoading] = useState(false)

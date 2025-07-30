@@ -1,14 +1,17 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { build_get_leagues_or_teams_request } from '../factories/get_leagues_or_teams_request_factory.js';
+import { get_cfb_rankings_request } from '../factories/get_cfb_rankings_request_factory.js';
 
 const useLeaguesAndTeamsHook = (user, accessToken) => {
     const [leaugues, setLeagues] = useState([]);
     const [teams, setTeams] = useState([]);
+    const [cfbRankings, setCfbRankings] = useState([])
     useEffect(() => {
         //console.log('User data account favorites:', user);
         var request_data = build_get_leagues_or_teams_request(user, 'leagues', accessToken);
         //console.log("Request data:", request_data);
+        //var rankings_request = get_cfb_rankings_request(user, accessToken)
         if (user) {
             fetch(request_data.url, request_data.options)
                 .then(response => {
@@ -22,6 +25,17 @@ const useLeaguesAndTeamsHook = (user, accessToken) => {
                     setLeagues(prev => data.leagues || []);
                 })
                 .catch(error => console.error("Error saving user data:", error));
+            // fetch(rankings_request.url, rankings_request.options)
+            //     .then(response => {
+            //         if(response.status == 200){
+            //             return response.json()
+            //         }
+            //     })
+            //     .then(data => {
+            //         console.log("rankings: " + data)
+            //         console.log(data)
+            //         setCfbRankings(() => data)
+            //     })   
             //TODO: factor below request so that it is done only when a user goes to edit favorites
             // var request_data2 = build_get_leagues_or_teams_request(user, 'teams', accessToken);
             // fetch(request_data2.url, request_data2.options)

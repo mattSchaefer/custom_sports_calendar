@@ -16,7 +16,7 @@ const FavoriteSelector = ({teams, league, index}) => {
             }, 100);
         }
     }, [showInput])
-    const { user, loginWithGoogle, loginWithFacebook, loading, signOut, accessToken, favorites, setFavorites, sync_favorites } = useAuth();
+    const { user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames, cfbRankings, setCfbRankings } = useAuth();
     const filter_by_term = (e) => {
         var term = e.target.value.toString()
         setTimeout(() => {
@@ -151,7 +151,16 @@ const FavoriteSelector = ({teams, league, index}) => {
                         filteredTeams.map((team, teamIndex) => {
                             return (
                                 <span key={teamIndex} className="team-name">{/*className='team-name'*/}
-                                    <h5 className={favorites.favorite_teams.filter((fav) => { return fav.id == team.id}).length > 0 ? 'favorite-team-highlight team-name-header' : 'team-name-header' }>{team.name}</h5>
+                                    <h5 className={favorites.favorite_teams.filter((fav) => { return fav.id == team.id}).length > 0 ? 'favorite-team-highlight team-name-header' : 'team-name-header' }>
+                                        
+                                        {team.name} 
+                                        {
+                                           team.rank &&
+                                           <span className="rank">
+                                                {team.rank}
+                                           </span>
+                                        }
+                                    </h5>
                                     <span className="add-and-fav-button-container">
                                         <button className="team-add" onClick={(e) => toggleFollowTeam(e, team)}>
                                             {

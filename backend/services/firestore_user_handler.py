@@ -264,7 +264,19 @@ def get_all_teams():
         team_data["id"] = doc.id
         teams.append(team_data)
     return teams#JsonResponse(teams, safe=False)    
-    
+def get_current_cfb_ranks():
+    #
+    db = get_firestore_client()
+    teams_ref = db.collection("teams")
+    query = teams_ref.where("rank", "!=", None)
+    docs = query.stream()
+    teams = []
+    for doc in docs:
+        team_data = doc.to_dict()
+        if team_data["rank"] != "":
+            team_data["id"] = doc.id
+            teams.append(team_data)
+    return teams
 def seed_games():
     print("Seeding games...")
     db = get_firestore_client()

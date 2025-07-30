@@ -2,7 +2,7 @@ import {useEffect, useState, useRef} from 'react'
 import { build_set_favorite_request } from '../factories/set_favorite_or_follow_request_factory';
 import { build_get_user_schedule_request } from '../factories/get_user_schedule_request_factory';
 import { useAuth } from '../contexts/auth_context.jsx';
-
+import { get_cfb_rankings_request } from '../factories/get_cfb_rankings_request_factory.js';
 const useUserFavoritesHook = (user, accessToken) => {
     const firstRenderFollowedTeams = useRef(true)    
     const firstRenderFavoriteTeams = useRef(true)
@@ -13,6 +13,7 @@ const useUserFavoritesHook = (user, accessToken) => {
         followed_leagues: [],
         on_load: true
     });
+    const [cfbRankings, setCfbRankings] = useState([])
     const [games, setGames] = useState([])
     const sync_favorites = (which, teams_or_leagues) => {
         if (!user || !accessToken) return;
@@ -65,8 +66,22 @@ const useUserFavoritesHook = (user, accessToken) => {
     },[favorites.favorite_teams])
     useEffect(() => {
         console.log(user)
+        
         if(user){
-            console.log("syncing schedule...")
+            console.log("setting rankings...")
+            const rankings_request = get_cfb_rankings_request(user, accessToken)
+            fetch(rankings_request.url, rankings_request.options)
+                .then(response => {
+                    if(response.status == 200){
+                        return response.json()
+                    }
+                })
+                .then(data => {
+                    console.log("rankings: " + data)
+                    console.log(data["rankings"])
+                    setCfbRankings((prev) => {return data["rankings"]})
+                })   
+           
             // const schedule_request_data = build_get_user_schedule_request(user, accessToken);
             //     fetch(schedule_request_data.url, schedule_request_data.options)
             //     .then(schedule_response => {
@@ -85,6 +100,6 @@ const useUserFavoritesHook = (user, accessToken) => {
             //     })
         }
     },[user])
-    return [favorites, setFavorites, sync_favorites, games, setGames];
+    return [favorites, setFavorites, sync_favorites, games, setGames, cfbRankings, setCfbRankings];
 }
 export {useUserFavoritesHook}

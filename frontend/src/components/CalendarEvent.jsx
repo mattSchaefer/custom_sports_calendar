@@ -12,13 +12,13 @@ const CalendarEvent = ({eventInfo}) => {
         F1: "racing"
     }
     const icon_class = `fa fa-${league_name_sport_map[eventInfo.event.extendedProps.league]}`
-    const { user, loginWithGoogle, loginWithFacebook, loading, signOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames } = useAuth();
+    const { user, loginWithGoogle, loginWithFacebook, loading, signOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames, cfbRankings, setCfbRankings } = useAuth();
     const get_team_image = (team_id) => {
-        console.log("getting team image for team id: ", team_id)
+       // console.log("getting team image for team id: ", team_id)
         let url = ""
-        console.log("favorites: ", favorites)
+        //console.log("favorites: ", favorites)
         for(let i = 0; i < Object.entries(favorites).length; i++){
-            console.log("checking category: ", i)
+            //console.log("checking category: ", i)
             //var cat = favorites[i]
             var cat = Object.entries(favorites)[i][1]
             console.log(cat)
@@ -72,6 +72,9 @@ const CalendarEvent = ({eventInfo}) => {
                         }>
                         
                         {eventInfo.event.extendedProps.home_team.name}
+                        {
+                            cfbRankings && <span className="rank">{cfbRankings.filter(r => r.id == eventInfo.event.extendedProps.home_team.id).map(r => r.rank)}</span>
+                        } 
                         { eventInfo.event.extendedProps.home_team.is_favorite || eventInfo.event.extendedProps.home_team.is_followed ?
                             <img className="team-logo" src={get_team_image(eventInfo.event.extendedProps.home_team.id)}  />
                             : <></>
@@ -86,6 +89,9 @@ const CalendarEvent = ({eventInfo}) => {
                     >
                         
                         {eventInfo.event.extendedProps.away_team.name}
+                        {
+                            cfbRankings && <span className="rank">{cfbRankings.filter(r => r.id == eventInfo.event.extendedProps.away_team.id).map(r => r.rank)}</span>
+                        }
                         { eventInfo.event.extendedProps.away_team.is_favorite || eventInfo.event.extendedProps.away_team.is_followed ?
                             <img className="team-logo" src={get_team_image(eventInfo.event.extendedProps.away_team.id)}  />
                             : <></>

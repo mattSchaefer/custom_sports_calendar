@@ -7,7 +7,7 @@ import backend.firebase_init
 from typing import List, Dict, Any
 from pydantic import Field
 from ninja import NinjaAPI
-from backend.services.firestore_user_handler import save_or_update_user, update_user_favorite_or_added_teams_or_leagues, get_leagues, get_all_teams, get_user_schedule, delete_user
+from backend.services.firestore_user_handler import save_or_update_user, update_user_favorite_or_added_teams_or_leagues, get_leagues, get_all_teams, get_user_schedule, delete_user, get_current_cfb_ranks
 from django.http import HttpResponse, JsonResponse
 import os
 import re
@@ -17,6 +17,7 @@ import sys
 from django.conf import settings
 from firebase_admin import credentials, auth, firestore
 from firebase_admin._auth_utils import InvalidIdTokenError
+from google.api_core.exceptions import InternalServerError, GoogleAPICallError
 api = NinjaAPI()
 
 
@@ -212,6 +213,26 @@ def get_leagues_or_teams(request, data: LeaguesOrTeamsRequest):
         else:
             return JsonResponse({"error": "Invalid request"}, status=400)
         return JsonResponse(ret_obj, status=200)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return JsonResponse({"error": str(e)}, status=500)
+@api.post("get_cfb_rankings")
+def get_cfb_rankings(request, data: LeaguesOrTeamsRequest):
+    if request.method == "OPTIONS":
+        response = HttpResponse()
+        response["Access-Control-Allow-Origin"] = "*"
+        response["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+        response["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+        return JsonResponse(response) 
+    try:
+        ret_data = []
+        ret_obj = {}
+        rankings = get_current_cfb_ranks()
+        ret_obj = {'rankings': rankings}
+        return JsonResponse(ret_obj, status=200)
+    except InternalServerError as e:
+        return JsonResponse({"error": str(e)}, status=500)
     except Exception as e:
         import traceback
         traceback.print_exc()

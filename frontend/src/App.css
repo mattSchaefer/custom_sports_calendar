@@ -688,10 +688,10 @@ h4{margin-top: 0; margin-bottom: 0;}
   /* padding: 2rem; */
   position: absolute;
   color: #7a6a6a;
-  right: 4rem;
+  left: 0;
   position: absolute;
-  right: 0;
-  top: .5rem;
+  margin-top: 3px;
+  top: 3.5rem;
   background: #fffdf4;
   border-radius: 10px;
     border-top-color: rgb(17, 17, 17);
@@ -721,6 +721,11 @@ h4{margin-top: 0; margin-bottom: 0;}
   margin-top: 0;
   margin-bottom: 0;
 }
+.rank{
+  font-size: .6rem;
+  position: relative;
+  top: 3px;
+}
 .dropdown-content{
   display: flex;
   flex-direction: column;
@@ -732,8 +737,7 @@ h4{margin-top: 0; margin-bottom: 0;}
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-self: flex-end;
-  margin-right: .25rem;
+  align-self: start;
 }
 #section1{
   /* background: #010618; */

@@ -6,7 +6,7 @@ import { build_get_leagues_or_teams_request } from '../factories/get_leagues_or_
 import FavoriteSelector from './FavoriteSelector.jsx'
 import CurrentFavoriteList from './CurrentFavoriteList.jsx'
 const FavoriteSelectorModal = () => {
-    const { user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames  } = useAuth()
+    const { user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames, cfbRankings, setCfbRankings  } = useAuth()
     const [selectorExpanded, setSelectorExpanded] = useState(false)
     const [selectorClean, setSelectorClean] = useState(true)
     const [scheudleRequestLoading, setScheduleRequestLoading] = useState(false)
@@ -57,15 +57,15 @@ const FavoriteSelectorModal = () => {
                         <span className="favorite-selector-current-favorites">
                             <span className="favorite-teams">
                                 <h4 className="fav-header">Favorite Teams</h4>
-                                <CurrentFavoriteList which="favorite_teams" user={user} favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites} />
+                                <CurrentFavoriteList which="favorite_teams" user={user} favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites} cfbRankings={cfbRankings} />
                             </span>
                             <span className="followed-teams">
                                 <h4 className="fav-header">Followed Teams</h4>
-                                <CurrentFavoriteList which="followed_teams" user={user} favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites}  />
+                                <CurrentFavoriteList which="followed_teams" user={user} favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites} cfbRankings={cfbRankings}  />
                             </span>
                             <span className="followed-leagues">
                                 <h4 className="fav-header">Followed Leagues</h4>
-                                <CurrentFavoriteList which="followed_leagues" user={user} favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites}  />
+                                <CurrentFavoriteList which="followed_leagues" user={user} favorites={favorites} setFavorites={setFavorites} sync_favorites={sync_favorites} cfbRankings ={[]}/>
                             </span>
                         </span>
                         <div className="favorite-selector-maps-container">
