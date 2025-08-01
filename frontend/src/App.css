@@ -134,7 +134,7 @@ header{
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  background: #f6f5f2;
+  background: #009fff29;
   color: #7a6a6a;
   margin-top: 3rem;
   padding-bottom: 15vh;
@@ -364,6 +364,7 @@ footer{
   flex-wrap: wrap;
   padding: 3rem;
   align-items: start;
+  background: #009fff29;
 }
 .favorite-selector-current-favorites{
   padding: 1rem;
@@ -372,7 +373,7 @@ footer{
   width: 75%;
   margin-bottom: 1rem;
   box-shadow: #67b8ffa8 0px 3px 8px;
-
+  background: #fffdf4;
 }
 .favorite-selector-search-button{
   height: 2rem;
@@ -540,6 +541,7 @@ h4{margin-top: 0; margin-bottom: 0;}
   flex-direction: column;
   justify-content: start;
   align-items: start;
+  background: #009fff29;
 }
 .about-image-container{
   
@@ -688,7 +690,7 @@ h4{margin-top: 0; margin-bottom: 0;}
   /* padding: 2rem; */
   position: absolute;
   color: #7a6a6a;
-  left: 0;
+  right: 0;
   position: absolute;
   margin-top: 3px;
   top: 3.5rem;
@@ -737,7 +739,7 @@ h4{margin-top: 0; margin-bottom: 0;}
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-self: start;
+  align-self: end;
 }
 #section1{
   /* background: #010618; */
@@ -983,6 +985,62 @@ h1{
   background: none;
 }
 @media (max-width: 768px) {
+  .h1-container{align-items: center;}
+  #about-us{
+    max-width: 100%;
+  }
+  .header-buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    height: 3rem;
+  }
+  #p5canvascontainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  canvas{scale: .7;}
+  .unauth-home-login-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: 100%;
+    margin-right: 0;
+  }
+  .header-left{
+    gap: .5rem;
+  }
+  .header-link{
+    margin: 0 .5rem;
+  }
+  .about-para-and-img{
+    flex-direction: column;
+  }
+  .header-paragraph{
+    padding: 3rem;
+  }
+
+  .section{
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    min-height: 50vh;
+    width: 100%;
+  }
+  .about-image {
+    width: 19rem;
+  }
   .team-logo{
     width: 3rem !important;
     top: 4rem !important;
@@ -1004,6 +1062,7 @@ h1{
     position: relative;
     top: -2rem;
   }
+  .header{width: 100vw;}
   .fc-toolbar-title{
     font-size: 1.2rem !important;
   }
@@ -1023,6 +1082,12 @@ h1{
   }
   .full-calendar-container{
     width: 90% !important;
+  }
+  .logo-homepage{
+    width: 28rem;
+    height: auto;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
   }
 }
 @media (min-width: 768px) {
@@ -1167,7 +1232,7 @@ h1{
   
 }
 .infinite-scroll{
-  animation: scroll-intinite 10s linear infinite
+  animation: scroll-intinite 20s linear infinite
 }
 @keyframes scroll-intinite {
   0% {

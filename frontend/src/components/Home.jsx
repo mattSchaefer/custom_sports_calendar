@@ -137,7 +137,7 @@ function Home({}){
                     </div>
                 </div>
             </div>
-            <div className="section" id="about-us">
+            {/* <div className="section" id="about-us">
                 <span className="about-verbiage">
                     <h1 id="about-header">Go Pro- coming soon!</h1>
                     <p className="about-paragraph">Configure your custom push notifications, whether it's only for your favorite teams or all games in your calendar.
@@ -152,7 +152,7 @@ function Home({}){
                 <span className="about-image-container">
                     <img src={favorite_selector_1} alt="About SportSync" className="about-image" />
                 </span>
-            </div>
+            </div> */}
             
         </div>
     )
