@@ -14,7 +14,7 @@ const P5Canvas = () => {
                 let container_wid = document.getElementById("root").getBoundingClientRect().width;
                 let container_hei = document.getElementById("root").getBoundingClientRect().height;
                 //p.createCanvas(container_wid / 2, (document.getElementsByTagName("body")[0].clientHeight) - 50);
-                p.createCanvas(500,500)
+                p.createCanvas(250,250)
                 for(let i = 0; i</*p.width/50*/7; i++){
                     particles.push(new Particle());
                 }

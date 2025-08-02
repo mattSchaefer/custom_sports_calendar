@@ -12,7 +12,7 @@ const useLeaguesAndTeamsHook = (user, accessToken) => {
         var request_data = build_get_leagues_or_teams_request(user, 'leagues', accessToken);
         //console.log("Request data:", request_data);
         //var rankings_request = get_cfb_rankings_request(user, accessToken)
-        if (user) {
+        //if (user) {
             fetch(request_data.url, request_data.options)
                 .then(response => {
                     if(response.status == 200) 
@@ -50,7 +50,7 @@ const useLeaguesAndTeamsHook = (user, accessToken) => {
             //         setTeams(prev => data.teams || []);
             //     })
             //     .catch(error => console.error("Error saving user data:", error));
-        }
+        //}
     }, []);
     return [leaugues, teams, setLeagues, setTeams];
 }

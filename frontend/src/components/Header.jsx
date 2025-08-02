@@ -12,7 +12,7 @@ const Header = () => {
     const { user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames  } = useAuth();
     
     return (
-        <header className="header">
+        <header className="header fade-in-on-scroll">
             
             {
                 (!user || !user.provider_email) &&

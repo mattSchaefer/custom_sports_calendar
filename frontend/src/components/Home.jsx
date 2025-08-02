@@ -7,28 +7,55 @@ import about_1 from '../assets/about_1.png'
 import calendar_image from '../assets/calendar_month_example.png'
 import cal_month_cropped from '../assets/cal_month_cropped.png'
 import favorite_selector_1 from '../assets/favorite_selector_1.png'
+import favorite_selector_screenshot from '../assets/favorite_selector_screenshot.png'
+import current_favorite_list from '../assets/current_favorite_list_screenshot.png'
+import curr_fav_list_2 from '../assets/curr_fav_list_2.png'
+import cal_4_day_1 from '../assets/cal_4_day_1.png'
 import logo from '../assets/sportsynclogov1.svg'
-
+import useLeaguesAndTeamsHook from '../hooks/LeaguesAndTeamsHook.jsx'
 function Home({}){
     const { user, loginWithGoogle, loginWithFacebook, loading, signOut, accessToken, favorites, setFavorites, sync_favorites } = useAuth();
-    
+    const [leagues] = useLeaguesAndTeamsHook(null, null)
+    console.log(leagues)
+
     const handleLogin = async (method) => {
         try {
-        const result = await method();
-        const user = result.user;
-        console.log("Signed in user:", user);
-        console.log("saving user data...")
-        const saveUserRequest = build_save_user_request(user);
-        fetch(saveUserRequest.url, saveUserRequest.options)
-            .then(response => response.json())
-            .then(data => console.log("User data saved:", data))
-            .catch(error => console.error("Error saving user data:", error));
-        
+            const result = await method();
+            const user = result.user;
+            console.log("Signed in user:", user);
+            console.log("saving user data...")
+            const saveUserRequest = build_save_user_request(user);
+            fetch(saveUserRequest.url, saveUserRequest.options)
+                .then(response => response.json())
+                .then(data => console.log("User data saved:", data))
+                .catch(error => console.error("Error saving user data:", error));
+            
         } catch (error) {
-        console.error("OAuth Error:", error.message);
+            console.error("OAuth Error:", error.message);
         }
     };
-    
+    useEffect(() => {
+        const cards = document.querySelectorAll(".offering-card, .league-card, .fade-in-on-scroll");
+        console.log(cards)
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                    entry.target.classList.add("in-view");
+                    }
+                });
+            },
+            {
+            threshold: 0.2,
+            }
+    );
+
+    cards.forEach((card) => observer.observe(card));
+
+    return () => {
+        cards.forEach((card) => observer.unobserve(card));
+    };
+    }, [leagues]);
     return(
         <div className="homepage-sections text-center">
             <div className="section" id="section-1">
@@ -36,12 +63,12 @@ function Home({}){
                     <span className="h1-container">
                         {/* <h1 className="text-2xl font-bold main-header">SportSync<span className="inner-header">Schedule</span></h1>
                         <h1 className="sub-header">All your favorite sports, one unified calendar</h1> */}
-                        <img src={logo} alt="SportSync Logo" className="logo-homepage" />
+                        <img src={logo} alt="SportSync Logo" className="logo-homepage fade-in-on-scroll" />
                         {/* <img src={cal_month_cropped} className="logo-homepage" id="home-background-op"/> */}
                     </span>
-                    <h1 className="sub-header">All your favorite sports, one unified calendar</h1>
-                    <p className="header-paragraph"><span className="bold">SportSync</span> is your one-stop-shop for staying on top of the games that matter most to you.</p>
-                    <span className="header-buttons">
+                    <h1 className="sub-header fade-in-on-scroll">All your favorite sports, one unified calendar</h1>
+                    <p className="header-paragraph fade-in-on-scroll"><span className="bold">SportSync</span> is your one-stop-shop for staying on top of the games that matter most to you.</p>
+                    <span className="header-buttons fade-in-on-scroll">
                         <button id="get-started-btn" className="header-btn"><i className="fa fa-arrow-right" />Learn More</button>
                     </span>
                     <div className="p-4">
@@ -57,15 +84,16 @@ function Home({}){
                     <h1 id="about-header">Why SportSync?</h1>
                     <span className="about-para-and-img">
                         <span className="about-image-container">
-                            <img src={favorite_selector_1} alt="About SportSync" className="about-image" />
+                            <img src={favorite_selector_screenshot} alt="About SportSync" className="about-image fade-in-on-scroll" />
                         </span>
-                        <p className="about-paragraph">Tired of jumping between apps, websites, schedules, and google searches, just to keep track of your favorite teams? 
+                        <p className="about-paragraph fade-in-on-scroll">Tired of jumping between apps, websites, schedules, and google searches, just to keep track of your favorite teams? 
                         </p>
                     </span>
                     <span className="about-para-and-img">
-                        <p className="about-paragraph">With SportSync, you can build a personalized sports calendar that combines games from multiple leagues and teams into one clean, unified view!</p>
+                        <p className="about-paragraph fade-in-on-scroll">With SportSync, you can build a personalized sports calendar that combines games from multiple leagues and teams into one clean, unified view!</p>
                         <span className="about-image-container">
-                            <img src={cal_month_cropped} alt="About SportSync" className="about-image" />
+                            <img src={curr_fav_list_2} alt="About SportSync" className="about-image fade-in-on-scroll" />
+                            <img src={cal_4_day_1} alt="About SportSync" className="about-image fade-in-on-scroll" />
                         </span>
                     </span>
                 </span>
@@ -75,38 +103,46 @@ function Home({}){
                 <h1>Key Features </h1>
                 <div className="offerings-container">
                     <span className="offering-card">
-                        <span className="offering-card-icon-container"><i className="fa fa-server"></i></span>
-                        <h2 className="offering-card-header">Custom, Unified Calendar</h2>
+                        
+                        <h2 className="offering-card-header">Plan Ahead with Ease</h2>
+                        <i className="fa fa-calendar offering-card-icon default-offering-icon fade-in-on-scroll"></i>
                         <p>
-                            Follow teams across leagues and see all upcoming games in one place.
+                            Simple, easy to use calendar lets you see everything at once.
                         </p>
                     </span>
                     <span className="offering-card">
-                        <span className="offering-card-icon-container"><i className="fa fa-server"></i></span>
                         <h2 className="offering-card-header">Favorites Highlighted</h2>
+                        
+                        <i className="fa fa-star offering-card-icon favorite-team-highlight fade-in-on-scroll"></i>
                         <p>
-                            Pin your favorite teams for quick visibility and enhanced styling.
+                            Pin your favorite teams for quick visibility.
                         </p>
                     </span>
                     <span className="offering-card">
-                        <span className="offering-card-icon-container"><i className="fa fa-server"></i></span>
+                        
                         <h2 className="offering-card-header">Multi-League Support</h2>
+                        <span className="icon-row">
+                            <i className="fa fa-futbol offering-card-icon fade-in-on-scroll"></i>
+                            <i className="fa fa-football-ball offering-card-icon fade-in-on-scroll"></i>
+                        </span>
                         <p>
                             Mix and match from different sports and leagues to build your perfect calendar.
                         </p>
                     </span>
-                    <span className="offering-card">
-                        <span className="offering-card-icon-container"><i className="fa fa-server"></i></span>
-                        <h2 className="offering-card-header">Ad-Free + Game Reminders (Pro Only)</h2>
+                     <span className="offering-card">
+                        
+                        <h2 className="offering-card-header">Pro version coming soon!</h2>
+                        <i className="fa fa-envelope offering-card-icon default-offering-icon fade-in-on-scroll"></i>
                         <p>
-                           Upgrade to receive text or email reminders on game days — and enjoy an ad-free experience.
+                           Soon you can receive daily notifications via text or email, and enjoy an ad-free experience.
                         </p>
-                    </span>
+                    </span> 
                     <span className="offering-card">
-                        <span className="offering-card-icon-container"><i className="fa fa-server"></i></span>
+                        
                         <h2 className="offering-card-header">Quick and Easy</h2>
+                          <i className="fa fa-check offering-card-icon default-offering-icon fade-in-on-scroll"></i>
                         <p>
-                           Sign in using Google or Facebook now!
+                           Sign in using Google or Facebook now with one click!
                         </p>
                         <button>sign up</button>
                     </span>
@@ -119,7 +155,7 @@ function Home({}){
                         <p>We care about serving you the sports you care about.  If you're interested a league that's not listed here, please let us know!</p>
                     </div>
                     <div className="league-list-home">
-                        <div className="league-card">
+                        {/* <div className="league-card">
 
                         </div>
                         <div className="league-card">
@@ -133,7 +169,14 @@ function Home({}){
                         </div>
                         <div className="league-card">
 
-                        </div>
+                        </div> */}
+                        {
+                            leagues.map((league) => {
+                                return (<div className="league-card">
+                                    {league.name}
+                                </div>)
+                            })
+                        }
                     </div>
                 </div>
             </div>

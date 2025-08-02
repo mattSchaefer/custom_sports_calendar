@@ -61,13 +61,13 @@ const accountDropdown = () => {
             {
                 !user &&
                 <div className="unauth-home-login-container">
-                    <button className="header-btn " onClick={() => loginWithGoogle()}>{/*handleLogin(signInWithGoogle) */}
+                    <button className="header-btn fade-in-on-scroll " onClick={() => loginWithGoogle()}>{/*handleLogin(signInWithGoogle) */}
                         <span className="login-button-highlight login-button-inner-span">
                             <i className="fa fa-brands fa-google"></i>
                             Sign in with Google
                         </span>
                     </button>
-                    <button className="header-btn" onClick={() => loginWithFacebook()}>
+                    <button className="header-btn fade-in-on-scroll" onClick={() => loginWithFacebook()}>
                         <span className="login-button-highlight login-button-inner-span">
                             <i className="fa fa-brands fa-facebook"></i>
                             Sign in with Facebook

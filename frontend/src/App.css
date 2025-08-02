@@ -24,6 +24,62 @@
   max-height: 10rem;
   overflow: scroll;
 } */
+ .offering-card, .league-card {
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  backface-visibility: hidden;
+}
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* When in view */
+.offering-card.in-view {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+.offering-card:nth-child(1).in-view {
+  transition-delay: 0.2s;
+}
+.offering-card:nth-child(2).in-view {
+  transition-delay: 0.3s;
+}
+.offering-card:nth-child(3).in-view {
+  transition-delay: 0.4s;
+}
+.offering-card:nth-child(4).in-view {
+  transition-delay: 0.6s;
+}
+.offering-card:nth-child(5).in-view {
+  transition-delay: 0.7s;
+}
+
+.league-card.in-view {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+.league-card:nth-child(1).in-view {
+  transition-delay: 0.2s;
+}
+.league-card:nth-child(2).in-view {
+  transition-delay: 0.3s;
+}
+.league-card:nth-child(3).in-view {
+  transition-delay: 0.4s;
+}
+.league-card:nth-child(4).in-view {
+  transition-delay: 0.6s;
+}
+.league-card:nth-child(5).in-view {
+  transition-delay: 0.7s;
+}
 #what-we-offer{
   display: flex;
   flex-direction: column;
@@ -31,6 +87,7 @@
   align-items: start;
   margin-bottom: 2rem;
   color: #111;
+  padding: 1rem !important;
 }
 button{
   border-radius: 8px;
@@ -358,6 +415,14 @@ footer{
   border: 2px solid #bb0000;
   border-radius: 20px;
 }
+.about-image-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+
+}
 .avaliable-leagues-inner{
   display: flex;
   flex-direction: column;
@@ -579,7 +644,9 @@ h4{margin-top: 0; margin-bottom: 0;}
 }
 .offering-card-header{
   text-align: start;
-  
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 1.5rem;
+  margin-top: 0;
 }
 .offerings-container{
   display: flex;
@@ -647,15 +714,19 @@ h4{margin-top: 0; margin-bottom: 0;}
   padding: 10px;
   width: 85%;
 }
-.offering-card{
+.offering-card, .league-card{
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: space-between;
+  align-items: center;
   border: 2px solid gray;
   width: 15rem;
   height: 18rem;
   padding: 1rem;
+  background: #fffdf4;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.39) !important;
+
 }
 .league-list-home{
   display: flex;
@@ -666,7 +737,7 @@ h4{margin-top: 0; margin-bottom: 0;}
   gap: 2rem;
   width: 100%;
 }
-.league-card{
+/* .league-card{
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -675,10 +746,10 @@ h4{margin-top: 0; margin-bottom: 0;}
   width: 15rem;
   height: 6rem;
   padding: 1rem;
-}
+} */
 .section{
   padding: 2rem;
-  width: 95vw;
+  width: 97.5vw;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -769,7 +840,7 @@ h4{margin-top: 0; margin-bottom: 0;}
   width: fit-content;
   background: #111;
   color: #fff !important;
-  align-self: center;
+  width: 97.5vw;
 }
 hr{border-bottom: 1px solid grey; width: 85%;}  
 .about-verbiage{
@@ -781,10 +852,11 @@ hr{border-bottom: 1px solid grey; width: 85%;}
 .supported-leagues-container{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   width: 100%;
 }
+.supported-leagues-header-para{text-align: start;}
 .account-info-container{
   display: flex;
   flex-direction: column;
@@ -803,12 +875,15 @@ hr{border-bottom: 1px solid grey; width: 85%;}
   padding: 0 1rem;
   top: 3rem;
 }
+.about-paragraph{
+  width: 33%;
+  font-size: 1.5rem;
+}
 .about-paragraph, .about-verbiage{
   text-align: start;
-  font-size: 1.5em;
   margin-top: 0.5em;
   margin-bottom: 1em;
-  padding-left: 1rem;
+  
   color: #c2c2c2;
   color: #fffdf4;
   font-weight: 400;
@@ -816,6 +891,7 @@ hr{border-bottom: 1px solid grey; width: 85%;}
 }
 .about-image{
   width: 30rem;
+  border-radius: 10px;
 }
 .h1-container{
   display: flex;
@@ -945,6 +1021,9 @@ h1{
 .read-the-docs {
   color: #888;
 }
+.offering-card-icon{
+  font-size: 6rem;
+}
 /* CSS */
 .button-64 {
   align-items: center;
@@ -985,9 +1064,26 @@ h1{
   background: none;
 }
 @media (max-width: 768px) {
+  .offerings-container{
+    width: auto !important;
+    padding: 1rem !important;
+    justify-content: center !important;
+  }
+  .section{width: auto !important;}
+  html{overflow-x: hidden;}
   .h1-container{align-items: center;}
   #about-us{
     max-width: 100%;
+    padding: 1rem !important;
+    font-size: 1.5rem;
+
+  }
+  .about-image-container{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
   }
   .header-buttons{
     width: 100%;
@@ -1056,6 +1152,7 @@ h1{
   .fc-footer-toolbar{
     top: 6% !important;
   }
+  .about-paragraph{text-align: center;width: 97%;}
   .watchlist-header{
     font-size: 2rem;
     margin-top: 3rem;
@@ -1084,7 +1181,7 @@ h1{
     width: 90% !important;
   }
   .logo-homepage{
-    width: 28rem;
+    width: 45rem;
     height: auto;
     margin-bottom: 1rem;
     margin-top: 2rem;
