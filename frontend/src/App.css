@@ -25,6 +25,11 @@
   max-height: 10rem;
   overflow: scroll;
 } */
+ html, body {
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; hides the extra scroll */
+}
  .offering-card, .league-card {
   opacity: 0;
   transform: rotateY(90deg);
@@ -84,11 +89,11 @@
 #what-we-offer{
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 2rem;
   color: #111;
-  padding: 1rem !important;
+  /* padding: 1rem !important; */
 }
 button{
   border-radius: 8px;
@@ -100,15 +105,14 @@ button{
   transition: all 0.25s;
 }
 header{
-  position: fixed;
-  top: 0;
+  /* position: fixed;
+  top: 0; */
   /* background: #111 !important;
   color: #fffdf4 !important; */
   color: #fffdf4 !important;
   background: #111 !important;
 
   z-index: 100000;
-  width: 100%;
   border-bottom: 2px solid #009fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   height: 3.5rem;
@@ -245,6 +249,7 @@ footer{
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
+  padding: 1rem;
 }
 .logo-homepage{
   width: 38rem;
@@ -669,11 +674,10 @@ h4{margin-top: 0; margin-bottom: 0;}
 .offerings-container{
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  width: 100%;
   padding: 1rem;
 }
 .team-name-header{
@@ -738,7 +742,7 @@ h4{margin-top: 0; margin-bottom: 0;}
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 28rem;
+  width: 44%;
   height: 21rem;
   background: #111111b5;
   color: #fffdf4;
@@ -768,8 +772,10 @@ h4{margin-top: 0; margin-bottom: 0;}
   padding: 1rem;
 } */
 .section{
-  padding: 2rem;
-  width: 97.5vw;
+  /* padding: 2rem;
+  padding-right: 0; */
+  padding: 0;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -779,19 +785,20 @@ h4{margin-top: 0; margin-bottom: 0;}
 }
 .dropdown{
   min-width: 3rem;
-  /* padding: 2rem; */
   position: absolute;
   color: #7a6a6a;
-  right: 0;
+  right: 5px;
   position: absolute;
   margin-top: 3px;
-  top: 3.5rem;
+  top: 3.3rem;
   border-radius: 10px;
-    border-top-color: rgb(17, 17, 17);
+  border-top-color: rgb(17, 17, 17);
   border-top-color: #fffdf4;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.39) !important;
+  box-shadow: 0 33px 36px rgba(0, 0, 0, 0.39) !important;
   display: flex;
   flex-direction: column;
+  background: #111;
+  border: 2px solid #009fff;
 }
 .delete-account-button{
   align-self: end;
@@ -860,11 +867,12 @@ h4{margin-top: 0; margin-bottom: 0;}
   width: fit-content;
   background: #111;
   color: #fff !important;
-  width: 97.5vw;
+  width: 100vw;
 }
 hr{border-bottom: 1px solid grey; width: 85%;}  
 .about-verbiage{
   width: 100%;
+  padding: 3rem;
 }
 .center-para{
   width: 100%;
@@ -872,8 +880,8 @@ hr{border-bottom: 1px solid grey; width: 85%;}
 .supported-leagues-container{
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 .supported-leagues-header-para{text-align: start;}
@@ -964,11 +972,12 @@ body{
 }
 h1{
   letter-spacing: -3px;
+  font-weight: 700;
 }
 .header-container{
   /* position: absolute;
   top: 25%; */
-  
+  padding: 2rem;
   z-index: 10000;
   width: 100vw;
   display: flex;
@@ -1083,9 +1092,12 @@ h1{
 .button-64:hover span {
   background: none;
 }
-@media (max-width: 1410px) {
+@media (max-width: 1550px) {
   .avaliable-league{width: 93.5%;}
   .favorite-selector-current-favorites{padding: .5rem;width: 90.5%;}
+  .about-para-and-img{flex-direction: column;}
+  .about-paragraph{ width: 82%;}
+  .about-image{width: 45rem;}
 }
 @media (max-width: 768px) {
   .offerings-container{
@@ -1237,12 +1249,19 @@ h1{
 }
 .favorite-team-highlight{
   
-    background: linear-gradient(
+    /* background: linear-gradient(
         to right,
         #ff0000 20%,
         #ff0000 30%,
         #00affa 70%,
         #ff0000 80%
+    ); */
+     background: linear-gradient(
+        to right,
+        #ff914d 20%,
+        #ff914d 30%,
+        #00affa 70%,
+        #ff914d 80%
     );
     -webkit-background-clip: text;
     background-clip: text;

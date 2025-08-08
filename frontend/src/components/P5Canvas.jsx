@@ -14,15 +14,15 @@ const P5Canvas = () => {
                 let container_wid = document.getElementById("root").getBoundingClientRect().width;
                 let container_hei = document.getElementById("root").getBoundingClientRect().height;
                 //p.createCanvas(container_wid / 2, (document.getElementsByTagName("body")[0].clientHeight) - 50);
-                p.createCanvas(p.windowWidth, p.windowHeight / 2);//(2*(p.windowWidth/3))//(2*(p.windowHeight/3))
-                for(let i = 0; i<p.width / 15; i++){
+                p.createCanvas(p.windowWidth, (p.windowHeight / 2) + 100);//(2*(p.windowWidth/3))//(2*(p.windowHeight/3))
+                for(let i = 0; i<p.width / 12; i++){
                     particles.push(new Particle());
                 }
                 console.log(particles);
             };
 
             p.draw = () => {
-                p.background("#7c8990", 0);
+                p.background("#90877cff", 0);
                 p.fill(255, 0, 0);
                 for(let i = 0;i<particles.length;i++) {
                     particles[i].createParticle();
@@ -34,17 +34,17 @@ const P5Canvas = () => {
                 // setting the co-ordinates, radius and the
                 // speed of a particle in both the co-ordinates axes.
                 constructor() {
-                    this.x = p.random(0,  p.windowWidth);//(2*(p.windowWidth/3))
+                    this.x = p.random(0,  p.windowWidth - 50);//(2*(p.windowWidth/3))
                     this.y = p.random(0, p.windowHeight / 2);//(2*(p.windowHeight/3))
-                    this.r = p.random(1,4);
-                    this.xSpeed = p.random(-.6,.6);
-                    this.ySpeed = p.random(-.6,.6);
+                    this.r = p.random(5,10);
+                    this.xSpeed = p.random(-.2,.2);
+                    this.ySpeed = p.random(-.2 ,.2);
                 }
             
             // creation of a particle.
                 createParticle() {
                     p.noStroke();
-                    p.fill('rgba(185, 229, 243, 0.25)');
+                    p.fill('#009fff');//rgba(185, 229, 243, 0.25)
                     p.circle(this.x,this.y,this.r);
                 }
             
@@ -64,7 +64,7 @@ const P5Canvas = () => {
                 particles.forEach(element =>{
                     let dis = p.dist(this.x,this.y,element.x,element.y);
                     if(dis<p.width/20) {//p.width/10
-                        p.stroke('rgba(255, 127, 77, 1)');
+                        p.stroke('#009fff');//rgba(255, 127, 77, 1)
                         p.strokeWeight(2)
                         p.line(this.x,this.y,element.x,element.y);
                         if(this.x > element.x){

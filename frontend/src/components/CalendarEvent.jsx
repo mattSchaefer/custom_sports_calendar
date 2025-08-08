@@ -3,13 +3,15 @@ import { useState, useEffect } from 'react';
 import {useAuth} from '../contexts/auth_context.jsx';
 const CalendarEvent = ({eventInfo}) => {
     const league_name_sport_map = {
-        MLB: "baseball-ball",
-        MLS: "futbol",
-        EPL: "futbol",
-        NCAAF: "football-ball",
-        NFL: "football-ball",
-        NASCAR: "racing",
-        F1: "racing"
+        "MLB": "baseball-ball",
+        "MLS": "futbol",
+        "EPL": "futbol",
+        "NCAAF": "football-ball",
+        "NFL": "football-ball",
+        "NASCAR": "racing",
+        "F1": "racing",
+        "Leagues Cup": "futbol",
+        "FIFA WORLD CUP": "futbol"
     }
     const icon_class = `fa fa-${league_name_sport_map[eventInfo.event.extendedProps.league]}`
     const { user, loginWithGoogle, loginWithFacebook, loading, signOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames, cfbRankings, setCfbRankings } = useAuth();
