@@ -207,6 +207,9 @@ def get_leagues_or_teams(request, data: LeaguesOrTeamsRequest):
             ret_data = clean_for_json(ret_data)
             ret_obj = {"leagues": ret_data}
         elif data.which == "teams":
+            decoded_token = auth.verify_id_token(data.accessToken)
+            if decoded_token.get("uid") != data.uid:
+                return JsonResponse({"error": "Unauthorized"}, status=401)
             ret_data = get_all_teams()
             ret_data = clean_for_json(ret_data)
             ret_obj = {"teams": ret_data}

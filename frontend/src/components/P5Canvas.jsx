@@ -14,7 +14,9 @@ const P5Canvas = () => {
                 let container_wid = document.getElementById("root").getBoundingClientRect().width;
                 let container_hei = document.getElementById("root").getBoundingClientRect().height;
                 //p.createCanvas(container_wid / 2, (document.getElementsByTagName("body")[0].clientHeight) - 50);
-                p.createCanvas(p.windowWidth, (p.windowHeight / 2) + 100);//(2*(p.windowWidth/3))//(2*(p.windowHeight/3))
+                var top_h = document.getElementById("top").offsetHeight
+                
+                p.createCanvas(p.windowWidth, top_h);//(2*(p.windowWidth/3))//(2*(p.windowHeight/3))
                 for(let i = 0; i<p.width / 12; i++){
                     particles.push(new Particle());
                 }
@@ -36,7 +38,7 @@ const P5Canvas = () => {
                 constructor() {
                     this.x = p.random(0,  p.windowWidth - 50);//(2*(p.windowWidth/3))
                     this.y = p.random(0, p.windowHeight / 2);//(2*(p.windowHeight/3))
-                    this.r = p.random(5,10);
+                    this.r = p.random(2,6);
                     this.xSpeed = p.random(-.2,.2);
                     this.ySpeed = p.random(-.2 ,.2);
                 }

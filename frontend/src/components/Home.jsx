@@ -11,6 +11,30 @@ import favorite_selector_screenshot from '../assets/favorite_selector_screenshot
 import current_favorite_list from '../assets/current_favorite_list_screenshot.png'
 import curr_fav_list_2 from '../assets/curr_fav_list_2.png'
 import cal_4_day_1 from '../assets/cal_4_day_1.png'
+import curr_favorites_3 from '../assets/current_favorites_3.png'
+import calendar_month_3 from '../assets/calendar_month_3.png'
+import team_selector_3 from '../assets/team_selector_3.png'
+
+import epl_icon from '../assets/league_icons/epl_icon.png'
+import bundesliga_icon from '../assets/league_icons/bundesliga_icon.png'
+import seriea_icon from '../assets/league_icons/seriea_icon.png'
+import ufc_icon from '../assets/league_icons/ufc_icon.png'
+import nhl_icon from '../assets/league_icons/nhl_icon.png'
+import nfl_icon from '../assets/league_icons/nfl_icon.png'
+import nascar_icon from '../assets/league_icons/nascar_icon.png'
+import mls_icon from '../assets/league_icons/mls_icon.png'
+import mlb_icon from '../assets/league_icons/mlb_icon.png'
+import leagues_cup_icon from '../assets/league_icons/leagues_cup_icon.png'
+import fa_cup_icon from '../assets/league_icons/fa_cup_icon.png'
+import europa_league_icon from '../assets/league_icons/europa_league_icon.png'
+import champions_league_icon from '../assets/league_icons/champions_league_icon.png'
+import carabao_cup_icon from '../assets/league_icons/carabao_cup_icon.png'
+import laliga_icon from '../assets/league_icons/laliga_icon.png'
+import world_cup_icon from '../assets/league_icons/world_cup_icon.png'
+import f1_icon from '../assets/league_icons/f1_icon.png'
+import nba_icon from '../assets/league_icons/nba_icon.png'
+import ncaa_icon from '../assets/league_icons/ncaa-1.svg'
+
 import logo from '../assets/sportsynclogov1.svg'
 import useLeaguesAndTeamsHook from '../hooks/LeaguesAndTeamsHook.jsx'
 function Home({}){
@@ -59,7 +83,7 @@ function Home({}){
     return(
         <div className="homepage-sections text-center">
             <div className="section" id="section-1">
-                <span className="header-container on-top">
+                <span className="header-container on-top" id="top">
                     <span className="h1-container">
                         {/* <h1 className="text-2xl font-bold main-header">SportSync<span className="inner-header">Schedule</span></h1>
                         <h1 className="sub-header">All your favorite sports, one unified calendar</h1> */}
@@ -68,9 +92,9 @@ function Home({}){
                     </span>
                     <h1 className="sub-header fade-in-on-scroll">All your favorite sports, one unified calendar</h1>
                     <p className="header-paragraph fade-in-on-scroll"><span className="bold">SportSync</span> is your one-stop-shop for staying on top of the games that matter most to you.</p>
-                    <span className="header-buttons fade-in-on-scroll">
+                    {/* <span className="header-buttons fade-in-on-scroll">
                         <button id="get-started-btn" className="header-btn"><i className="fa fa-arrow-right" />Learn More</button>
-                    </span>
+                    </span> */}
                     <div className="p-4">
                     
                     {/* <button className="header-btn" onClick={() => handleLogin(signInWithTwitter)}>Sign in with X (Twitter)</button> */}
@@ -84,7 +108,7 @@ function Home({}){
                     <h1 id="about-header">Why SportSync?</h1>
                     <span className="about-para-and-img">
                         <span className="about-image-container">
-                            <img src={favorite_selector_screenshot} alt="About SportSync" className="about-image fade-in-on-scroll" />
+                            <img src={team_selector_3} alt="About SportSync" className="about-image fade-in-on-scroll" />
                         </span>
                         <p className="about-paragraph fade-in-on-scroll">Tired of jumping between apps, websites, schedules, and google searches, just to keep track of your favorite teams? 
                         </p>
@@ -92,8 +116,8 @@ function Home({}){
                     <span className="about-para-and-img">
                         <p className="about-paragraph fade-in-on-scroll">With SportSync, you can build a personalized sports calendar that combines games from multiple leagues and teams into one clean, unified view!</p>
                         <span className="about-image-container">
-                            <img src={curr_fav_list_2} alt="About SportSync" className="about-image fade-in-on-scroll" />
-                            <img src={cal_4_day_1} alt="About SportSync" className="about-image fade-in-on-scroll" />
+                            <img src={curr_favorites_3} alt="About SportSync" className="about-image fade-in-on-scroll" />
+                            <img src={calendar_month_3} alt="About SportSync" className="about-image fade-in-on-scroll" />
                         </span>
                     </span>
                 </span>
@@ -152,7 +176,7 @@ function Home({}){
                 <div className="supported-leagues-container">
                     <div className="supported-leagues-header-para">
                         <h1>Supported Leagues</h1>
-                        <p>We care about serving you the sports you care about.  If you're interested a league that's not listed here, please let us know!</p>
+                        
                     </div>
                     <div className="league-list-home">
                         {/* <div className="league-card">
@@ -173,7 +197,29 @@ function Home({}){
                         {
                             leagues.map((league) => {
                                 return (<div className="league-card">
-                                    {league.name}
+                                    <img src={
+                                        league.name.toLowerCase() == "epl" ? epl_icon :
+                                        league.name.toLowerCase() == "bundesliga" ? bundesliga_icon  : 
+                                        league.name.toLowerCase() == "serie a" ? seriea_icon  : 
+                                        league.name.toLowerCase() == "laliga" ? laliga_icon  : 
+                                        league.name.toLowerCase() == "mls" ? mls_icon  : 
+                                        league.name.toLowerCase() == "nfl" ? nfl_icon  : 
+                                        league.name.toLowerCase() == "nhl" ? nhl_icon  : 
+                                        league.name.toLowerCase() == "fifa world cup" ? world_cup_icon  : 
+                                        league.name.toLowerCase() == "ufc" ? ufc_icon  : 
+                                        league.name.toLowerCase() == "uefa champions league" ? champions_league_icon  : 
+                                        league.name.toLowerCase() == "uefa europa league" ? europa_league_icon  : 
+                                        league.name.toLowerCase() == "fa cup" ? fa_cup_icon  : 
+                                        league.name.toLowerCase() == "efl carabao cup" ? carabao_cup_icon  :
+                                        league.name.toLowerCase() == "mlb" ? mlb_icon  : 
+                                        league.name.toLowerCase() == "nascar" ? nascar_icon  : 
+                                        league.name.toLowerCase() == "f1" ? f1_icon  : 
+                                        league.name.toLowerCase() == "nba" ? nba_icon  : 
+                                        league.name.toLowerCase() == "leagues cup" ? leagues_cup_icon  :
+                                        league.name.toLowerCase().indexOf("ncaa") <= 0 ? ncaa_icon  : ""
+                                       
+                                    } className="league-image" />
+                                    <h3>{league.name}</h3>
                                 </div>)
                             })
                         }

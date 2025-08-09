@@ -8,7 +8,8 @@ const Footer = () => {
     return(
         <footer className="footer">
             <div className="footer-content">
-                <p>© 2025 SportSync. All rights reserved.</p>
+                <p>© 2025 SportSyncSchedule. All rights reserved.</p>
+                <p>contact/support: sportsyncschedule@gmail.com</p>
                 <div>
 
                 </div>

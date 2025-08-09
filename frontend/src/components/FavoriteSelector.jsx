@@ -9,7 +9,13 @@ const FavoriteSelector = ({teams, league, index}) => {
     const [showInput, setShowInput] = useState(false)
     useEffect(() => {if(filteredTeams.length == 0){setFilteredTeams(() => teams)}},[teams])
     useEffect(() => {
+        var tooltips = document.querySelectorAll("follow-team-tooltip")
+        tooltips.forEach((tooltip) => {
+            //tooltip.classList.add('hidden')
+            document.getElementById(tooltip.id).classList.add('hidden')
+        })
         if(showInput){
+            
             setTimeout(() => {
                 const input = document.querySelector('#filter-input-' + league.id.replaceAll(' ', '-'));
                 if(input) input.focus();
@@ -92,19 +98,39 @@ const FavoriteSelector = ({teams, league, index}) => {
             })
         }
     }
-    
+    const toggleShowTooltip = (e, which, mouse_ac) => {
+        if(mouse_ac == "enter"){
+            document.getElementById(which).classList.remove('hidden')
+        }else{
+            document.getElementById(which).classList.add('hidden')
+        }
+        if(which.indexOf('search') >= 0 && showInput)
+            return
+        // if(document.getElementById(which).classList.contains('hidden')){
+        //     document.getElementById(which).classList.remove('hidden')
+        // }else{
+        //     document.getElementById(which).classList.add('hidden')
+        // }
+    }
     console.log(filteredTeams)
     return (
         <div className="avaliable-league" key={index}>
             <span className="league-header-span">
+                
                 <h3 className="league-name-header" key={index}>{league.name}</h3>
                 {
                     teams.length > 0 &&
                     <span className="favorite-selector-header-buttons">
+                        
                         { 
                             league.id !== "NCAAF"
                             &&
-                            <button  onClick={(e) => toggleFollowLeague(e, league)} className="favorite-selector-follow-league-button">
+                            <button  
+                                onClick={(e) => toggleFollowLeague(e, league)} 
+                                className="favorite-selector-follow-league-button" 
+                                onMouseEnter={(e) => toggleShowTooltip(e, "follow-tooltip-" + league.id, "enter")}
+                                onMouseLeave={(e) => toggleShowTooltip(e, "follow-tooltip-" + league.id, "exit")}
+                            >
                                 {
                                     favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length > 0 && league.id !== "NCAAF" &&
                                     <i className="fa fa-minus" />
@@ -115,16 +141,31 @@ const FavoriteSelector = ({teams, league, index}) => {
                                 }
                             </button>
                         }
-                        
-                        
-                        <button onClick={(e) => setShowInput((prev) => !prev)} className="favorite-selector-search-button">
+                        <span class="follow-team-tooltip hidden" id={"follow-tooltip-" + league.id }>
+                            <i className="fa fa-chevron-left" />{favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length > 0 ? "   unfollow " + league.name : "   follow " + league.name}
+                        </span>
+                        {/* <Tooltip id="search-league-tooltip" /> */}
+                        <button 
+                            onClick={(e) => setShowInput((prev) => !prev)} 
+                            className="favorite-selector-search-button"
+                            onMouseEnter={(e) => toggleShowTooltip(e, "search-tooltip-" + league.id, "enter")}
+                            onMouseLeave={(e) => toggleShowTooltip(e, "search-tooltip-" + league.id, "exit")}
+                        >
                             <i className="fa fa-search" />
                         </button>
+                         
+                            
                         
                         {
                             showInput &&
                             <input className="favorite-selector-filter-input" id={"filter-input-" + league.id.replaceAll(' ', '-')} onChange={(e) => filter_by_term(e)} placeholder="filter by team name..." />
                             // favorite-selector-filter-input
+                        }
+                        {
+                            !showInput &&
+                            <span class="follow-team-tooltip hidden" id={"search-tooltip-" + league.id }>
+                                <i className="fa fa-chevron-left" />{"search " + league.name}
+                            </span>
                         }
                     </span>
                 }
@@ -135,7 +176,14 @@ const FavoriteSelector = ({teams, league, index}) => {
                     {
                         teams.length == 0 &&
                         <span className="no-teams-found big-toggle-follow-button-container">
-                            <button  onClick={(e) => toggleFollowLeague(e, league)} className="favorite-selector-follow-league-button big-toggle-follow-league">
+                            <span class="follow-team-tooltip-big hidden" id={"follow-league-tooltip-" + league.id + "-large"}>
+                                <i className="fa fa-chevron-down" />{"follow " + league.name}
+                            </span>
+                            <button  
+                                onClick={(e) => toggleFollowLeague(e, league)} 
+                                className="favorite-selector-follow-league-button big-toggle-follow-league"
+                               
+                            >
                                 {
                                     favorites.followed_leagues.filter((fav) => { return fav.id == league.id}).length > 0 && league.id !== "NCAAF" &&
                                     <i className="fa fa-minus" />
@@ -162,7 +210,16 @@ const FavoriteSelector = ({teams, league, index}) => {
                                         }
                                     </h5>
                                     <span className="add-and-fav-button-container">
-                                        <button className="team-add" onClick={(e) => toggleFollowTeam(e, team)}>
+                                         <span class="follow-team-tooltip hidden" id={"follow-tooltip-" + team.id}>
+                                            {favorites.followed_teams.filter((fav) => { return fav.id == team.id}).length > 0 ? "unfollow " + team.name : "follow " + team.name}
+                                            <i className="fa fa-chevron-right" />
+                                         </span>
+                                        <button 
+                                            className="team-add" 
+                                            onClick={(e) => toggleFollowTeam(e, team)}
+                                            onMouseEnter={(e) => toggleShowTooltip(e, "follow-tooltip-" + team.id, "enter")}
+                                            onMouseLeave={(e) => toggleShowTooltip(e, "follow-tooltip-" + team.id, "exit")}
+                                        >
                                             {
                                                 favorites.followed_teams.filter((fav) => { return fav.id == team.id}).length > 0 &&
                                                 <i className="fa fa-minus" />
@@ -172,7 +229,18 @@ const FavoriteSelector = ({teams, league, index}) => {
                                                 <i className="fa fa-plus" />
                                             }
                                         </button>
-                                    <button className="team-favorite" onClick={(e) => toggleFavoriteTeam(e, team)}><i className={favorites.favorite_teams.filter((fav) => { return fav.id == team.id}).length > 0 ? 'favorite-team-highlight fa fa-star' : 'fa fa-star' } /></button>
+                                        <span class="follow-team-tooltip hidden" id={"favorite-tooltip-" + team.id}>
+                                            {favorites.favorite_teams.filter((fav) => { return fav.id == team.id}).length > 0 ? "unfavorite " + team.name : "favorite " + team.name}
+                                            <i className="fa fa-chevron-right" />
+                                         </span>
+                                        <button 
+                                            className="team-favorite" 
+                                            onClick={(e) => toggleFavoriteTeam(e, team)}
+                                            onMouseEnter={(e) => toggleShowTooltip(e, "favorite-tooltip-" + team.id, "enter")}
+                                            onMouseLeave={(e) => toggleShowTooltip(e, "favorite-tooltip-" + team.id, "exit")}
+                                        >
+                                            <i className={favorites.favorite_teams.filter((fav) => { return fav.id == team.id}).length > 0 ? 'favorite-team-highlight fa fa-star' : 'fa fa-star' } />
+                                        </button>
                                     </span>
                                 </span>
                             )
