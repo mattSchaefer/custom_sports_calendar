@@ -12,20 +12,21 @@ const Header = () => {
     const { user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames  } = useAuth();
     
     return (
-        <header className="header fade-in-on-scroll">
+        <header className="header fade-in-on-scroll" id="header-home">
             
             {
-                (!user || !user.provider_email) &&
+                (!user || (!user.provider_email && !user.provider_display_name)) &&
                 <span className="header-left">
-                    <img src={logo} alt="SportSync Logo" className="logo" />
-                    <a href="#about" className="header-link">About</a>
-                    <a href="#about" className="header-link">Leagues</a>
-                    <a href="#about" className="header-link">Princing</a>
-                    <a href="#contact" className="header-link">Contact</a>
+                    <a href="#top"> <img src={logo} alt="SportSync Logo" className="logo" /></a>
+                    <a href="#about-us" className="header-link about-header-link">About</a>
+                    <a href="#leagues-home-anchor" className="header-link leagues-header-link">Leagues</a>
+                    <a href="#contact" className="header-link contact-header-link" onClick={() => {document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });}}>Contact</a>
                 </span>
             }
             {
-                user && user.provider_email &&
+                user && (user.provider_email || user.provider_display_name) &&
                 <span className="header-left">
                     <img src={logo} alt="SportSync Logo" className="logo" />
                     <div className="favorite-selector-modal-and-account-favorites">

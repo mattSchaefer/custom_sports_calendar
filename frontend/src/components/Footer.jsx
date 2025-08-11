@@ -9,7 +9,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="footer-content">
                 <p>© 2025 SportSyncSchedule. All rights reserved.</p>
-                <p>contact/support: sportsyncschedule@gmail.com</p>
+                <p id="contact">contact/support: sportsyncschedule@gmail.com</p>
                 <div>
 
                 </div>

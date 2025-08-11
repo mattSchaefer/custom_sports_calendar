@@ -4,7 +4,7 @@ import '../App.css';
 import { useAuth } from '../contexts/auth_context.jsx';
 import {build_delete_user_request} from '../factories/delete_user_request_factory.js';
 const accountDropdown = () => {
-    const { user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken } = useAuth()
+    const { user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken , loginWithTwitter} = useAuth()
     const [dropdownShow, setDropdownShow] = useState(false)
     const toggleDropdownShow = () => {
         setDropdownShow(!dropdownShow);
@@ -62,15 +62,21 @@ const accountDropdown = () => {
                 !user &&
                 <div className="unauth-home-login-container">
                     <button className="header-btn fade-in-on-scroll " onClick={() => loginWithGoogle()}>{/*handleLogin(signInWithGoogle) */}
-                        <span className="login-button-highlight login-button-inner-span">
+                        <span className="login-button-highlight login-button-inner-span google-login-highlight">
                             <i className="fa fa-brands fa-google"></i>
                             Sign in with Google
                         </span>
                     </button>
                     <button className="header-btn fade-in-on-scroll" onClick={() => loginWithFacebook()}>
-                        <span className="login-button-highlight login-button-inner-span">
+                        <span className="login-button-highlight login-button-inner-span facebook-login-highlight">
                             <i className="fa fa-brands fa-facebook"></i>
                             Sign in with Facebook
+                        </span>
+                    </button>
+                    <button className="header-btn fade-in-on-scroll" onClick={() => loginWithTwitter()}>
+                        <span className="login-button-highlight login-button-inner-span x-login-highlight">
+                            <i className="fa fa-brands fa-x-twitter"></i>
+                            Sign in with X {"("}Twitter{")"}
                         </span>
                     </button>
                 </div>

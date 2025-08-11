@@ -28,6 +28,7 @@
  html, body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   /* overflow-x: hidden; hides the extra scroll */
 }
  .offering-card, .league-card {
@@ -1336,6 +1337,51 @@ h1{
     animation: textShine 5s ease-in-out infinite alternate;
     font-weight: bold;
 
+}
+.google-login-highlight{
+  background: linear-gradient(
+        to right,
+        #ff4d4d 20%,
+        #0019fa 45%,
+        #017e07 80%
+    );
+  -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+    font-weight: bold;
+}
+.facebook-login-highlight{
+  background: linear-gradient(
+        to right,
+        #000a68 20%,
+        #eccb34 45%,
+        #000a68 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+    font-weight: bold;
+}
+.x-login-highlight{
+  background: linear-gradient(
+        to right,
+        #000000 20%,
+        #70adf3 45%,
+        #000000 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 5s ease-in-out infinite alternate;
+    font-weight: bold;
 }
 @keyframes textShine {
     0% {

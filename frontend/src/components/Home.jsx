@@ -171,7 +171,7 @@ function Home({}){
                         <button>sign up</button>
                     </span>
                 </div>
-                <p className="center-para">Whether you're a casual fan or a die-hard supporter, <span className="bold-red">SportSync</span> helps you never miss a game, no matter how packed your sports world gets.</p>
+                <p className="center-para" id="leagues-home-anchor">Whether you're a casual fan or a die-hard supporter, <span className="bold-red">SportSync</span> helps you never miss a game, no matter how packed your sports world gets.</p>
                 <hr />
                 <div className="supported-leagues-container">
                     <div className="supported-leagues-header-para">

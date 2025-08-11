@@ -1,4 +1,4 @@
-import {signInWithGoogle, signInWithFacebook, logOut} from '../config/firebase/auth.js';
+import {signInWithGoogle, signInWithFacebook, signInWithTwitter, logOut} from '../config/firebase/auth.js';
 import { build_save_user_request } from '../factories/save_user_request_factory.js'
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { createContext, useContext, useState, React, useEffect, useMemo } from 'react';
@@ -23,6 +23,16 @@ export const AuthProvider = ({ children }) => {
     const loginWithFacebook = async () => {
         try {
             const result = await signInWithFacebook()
+            //console.log(getDbUser(result.user))
+            //setUser(() => result.user);
+            console.log(result)
+        } catch (error) {
+            console.error("Login failed:", error)
+        }
+    };
+    const loginWithTwitter = async () => {
+        try {
+            const result = await signInWithTwitter()
             //console.log(getDbUser(result.user))
             //setUser(() => result.user);
             console.log(result)
@@ -112,8 +122,8 @@ export const AuthProvider = ({ children }) => {
         setFavorites, 
         sync_favorites,
         games,
-        setGames, cfbRankings, setCfbRankings
-    }), [user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames, cfbRankings, setCfbRankings]);
+        setGames, cfbRankings, setCfbRankings, loginWithTwitter
+    }), [user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken, favorites, setFavorites, sync_favorites, games, setGames, cfbRankings, setCfbRankings, loginWithTwitter]);
     return (
         <AuthContext.Provider value={authContextValue}> {/*</AuthContext.Provider><AuthContext.Provider value={{ user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken }}>*/}
             {children}
