@@ -123,7 +123,7 @@ const FavoriteSelector = ({teams, league, index}) => {
                     <span className="favorite-selector-header-buttons">
                         
                         { 
-                            league.id !== "NCAAF"
+                            league.id !== "NCAAF" && league.name !== "MLB"
                             &&
                             <button  
                                 onClick={(e) => toggleFollowLeague(e, league)} 

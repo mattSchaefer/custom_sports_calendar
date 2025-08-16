@@ -18,6 +18,8 @@ from django.conf import settings
 from firebase_admin import credentials, auth, firestore
 from firebase_admin._auth_utils import InvalidIdTokenError
 from google.api_core.exceptions import InternalServerError, GoogleAPICallError
+import logging
+logger = logging.getLogger(__name__)
 api = NinjaAPI()
 
 
@@ -52,6 +54,7 @@ def get_league_teams(request, data: LeagueTeams):
         content = get_league_teams_meta(data.leagueId)
         return JsonResponse(content.json(), status=200)
     except Exception as e:
+        logger.exception("Error in get_league_teams: %s", str(e))
         return JsonResponse({"error": str(e)}, status=500)
     
 class UserData(Schema):
@@ -81,6 +84,7 @@ def delete_user_record(request, data: UserData):
         print("User deleted:", updated)
         return updated
     except Exception as e:
+        logger.exception("Error in delete_user_record: %s", str(e))
         return JsonResponse({"error": str(e)}, status=500)
 @api.post("/save_user_data")
 def save_user_data(request, data: UserData):
@@ -95,6 +99,7 @@ def save_user_data(request, data: UserData):
         print("User data saved or updated:", updated)
         return updated
     except Exception as e:
+        logger.exception("Error in save_user_data: %s", str(e))
         return JsonResponse({"error": str(e)}, status=500)
 @api.post("/update_user_team_or_leagues")
 def update_team_or_league_list(request, data: UserData):
@@ -109,6 +114,7 @@ def update_team_or_league_list(request, data: UserData):
         print("User data saved or updated:", updated)
         return updated
     except Exception as e:
+        logger.exception("Error in update_team_or_league_list: %s", str(e))
         return JsonResponse({"error": str(e)}, status=500)
 @api.post("/refresh_schedule")
 def refresh_user_schedule(request, data: UserData):
@@ -122,6 +128,7 @@ def refresh_user_schedule(request, data: UserData):
         games = get_user_schedule(data.dict())
         return JsonResponse({"games": games}, status=200)
     except Exception as e:
+        logger.exception("Error in refresh_user_schedule: %s", str(e))
         return JsonResponse({"error": str(e)}, status=500)
 @api.post("/get_user_schedule_range")
 def get_user_schedule_range(request, data: UserData):
@@ -137,6 +144,7 @@ def get_user_schedule_range(request, data: UserData):
         if isinstance(games, tuple):
             games, error = games
             if error:
+                logger.error("Error retrieving user schedule: %s", error)
                 return error
         
         return JsonResponse({"games": games}, status=200)
@@ -148,6 +156,7 @@ def get_user_schedule_range(request, data: UserData):
         tb_str = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
         print("Exception occurred views...:", str(e))
         traceback.print_exc()
+        logger.exception("Exception occurred in get_user_schedule_range: %s", tb_str)
         return JsonResponse({
             "error": str(e),
             # "traceback": tb_str  # Uncomment for debugging only
@@ -173,6 +182,7 @@ def get_user_data(request, data: RetUserData):
         uid = decoded_token.get("uid")
         user_ref = db.collection("users").document(uid)
         snapshot = user_ref.get()
+        logger.info(f"Fetching user data for UID: {uid}")
         if snapshot.exists:
             return JsonResponse(snapshot.to_dict(), status=200)
         else:
@@ -181,6 +191,7 @@ def get_user_data(request, data: RetUserData):
         import traceback
         exc_type, exc_value, exc_tb = sys.exc_info()
         tb_str = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
+        logger.exception("Exception occurred in get_user_data: %s", tb_str)
         return JsonResponse({
             "error": str(e),
             # "exception_type": str(exc_type),
@@ -219,6 +230,7 @@ def get_leagues_or_teams(request, data: LeaguesOrTeamsRequest):
     except Exception as e:
         import traceback
         traceback.print_exc()
+        logger.exception("Error in get_leagues_or_teams: %s", str(e))
         return JsonResponse({"error": str(e)}, status=500)
 @api.post("get_cfb_rankings")
 def get_cfb_rankings(request, data: LeaguesOrTeamsRequest):
@@ -239,6 +251,7 @@ def get_cfb_rankings(request, data: LeaguesOrTeamsRequest):
     except Exception as e:
         import traceback
         traceback.print_exc()
+        logger.exception("Error in get_cfb_rankings: %s", str(e))
         return JsonResponse({"error": str(e)}, status=500)
 @api.get("/hello")
 def hello(request):

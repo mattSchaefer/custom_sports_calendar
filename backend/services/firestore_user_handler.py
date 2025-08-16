@@ -6,26 +6,30 @@ from django.conf import settings
 from firebase_admin import credentials, auth, firestore
 from firebase_admin._auth_utils import InvalidIdTokenError
 import sys
-
+import logging
+logger = logging.getLogger(__name__)
     
 def delete_user(oauth_user):
     try:
         db = get_firestore_client()
         token = oauth_user["accessToken"]#request.headers.get("Authorization", "").split("Bearer ")[-1]
         if not token:
+            logger.warning("lack of token %s", oauth_user.str())
             return JsonResponse({"error": "Unauthorized"}, status=401)
         try:
             decoded_token = auth.verify_id_token(token)
         except auth.InvalidIdTokenError:
+            logger.warning("invalid token %s", token if token else "None")
             return JsonResponse({"error": "Invalid token"}, status=401)
         except Exception as e:
             import traceback
             exc_type, exc_value, exc_tb = sys.exc_info()
             tb_str = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
-            print("Exception occurred firestore_user-handler:", str(e))
+            logger.exception("delete user exception %s", tb_str)
             traceback.print_exc()
             return JsonResponse({"error": str(e),}, status=500)
         if decoded_token.get("uid") != oauth_user["uid"]:
+            logger.warning("Unauthorized access attempt by user %s", oauth_user["uid"])
             return JsonResponse({"error": "Unauthorized"}, status=401)
         uid = decoded_token.get("uid")
         #user_ref = db.collection("users").document(oauth_user["uid"])
@@ -40,7 +44,7 @@ def delete_user(oauth_user):
                     doc.reference.delete()
         delete_subcollections(user_doc_ref)
         user_doc_ref.delete()
-        print(f"Deleted Firestore user data for UID: {uid}")
+        logger.info(f"Deleted Firestore user data for UID: {uid}")
         # Delete the user from Firebase Authentication
         auth.delete_user(uid)
         print(f"Deleted Firebase Auth user: {uid}")
@@ -53,16 +57,19 @@ def save_or_update_user(oauth_user):
         db = get_firestore_client()
         token = oauth_user["accessToken"]#request.headers.get("Authorization", "").split("Bearer ")[-1]
         if not token:
+            logger.warning("lack of token %s", oauth_user.str())
             return JsonResponse({"error": "Unauthorized"}, status=401)
         try:
             decoded_token = auth.verify_id_token(token)
         except auth.InvalidIdTokenError:
+            logger.warning("Unauthorized access attempt by user %s", oauth_user["uid"])
             return JsonResponse({"error": "Invalid token"}, status=401)
         except Exception as e:
             import traceback
             exc_type, exc_value, exc_tb = sys.exc_info()
             tb_str = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
-            print("Exception occurred firestore_user-handler:", str(e))
+            #print("Exception occurred firestore_user-handler:", str(e))
+            logger.exception("Exception occurred in save_or_update_user: %s", tb_str)
             traceback.print_exc()
             return JsonResponse({"error": str(e),}, status=500)
         if decoded_token.get("uid") != oauth_user["uid"]:
@@ -87,6 +94,7 @@ def save_or_update_user(oauth_user):
             data["followed_teams"] = []
             data["followed_leagues"] = []
             user_ref.set(data)
+        logger.info(f"User data saved/updated for UID: {uid}")
         snapshot = user_ref.get()
         return JsonResponse(snapshot.to_dict())
     except Exception as e:
@@ -97,16 +105,19 @@ def update_user_favorite_or_added_teams_or_leagues(oauth_user):
     try:
         token = oauth_user["accessToken"]#request.headers.get("Authorization", "").split("Bearer ")[-1]
         if not token:
+            logger.warning("lack of token %s", oauth_user.str())
             return JsonResponse({"error": "Unauthorized"}, status=401)
         try:
             decoded_token = auth.verify_id_token(token)
         except auth.InvalidIdTokenError:
+            logger.warning("Unauthorized access attempt by user %s", oauth_user["uid"])
             return JsonResponse({"error": "Invalid token"}, status=401)
         except Exception as e:
             import traceback
             exc_type, exc_value, exc_tb = sys.exc_info()
             tb_str = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
             print("Exception occurred firestore_user-handler:", str(e))
+            logger.exception("Exception occurred in update_user_favorite_or_added_teams_or_leagues: %s", tb_str)
             traceback.print_exc()
             return JsonResponse({"error": str(e),}, status=500)
         if decoded_token.get("uid") != oauth_user["uid"]:
@@ -119,11 +130,13 @@ def update_user_favorite_or_added_teams_or_leagues(oauth_user):
         user_data = snapshot.to_dict()
         user_data[oauth_user["which"]] = list(oauth_user["teams_or_leagues"])
         user_ref.update(user_data)
+        logger.info(f"Updated user {oauth_user['uid']} {oauth_user['which']} with {len(oauth_user['teams_or_leagues'])} items")
         return JsonResponse({"message": list(user_data[oauth_user["which"]])})
     except Exception as e:
         import traceback
         print("Exception occurred:", str(e))
-        traceback.print_exc() 
+        traceback.print_exc()
+        logger.exception("Exception occurred in update_user_favorite_or_added_teams_or_leagues: %s", str(e))
         return JsonResponse({"error": str(e)}, status=500)
 def get_user_schedule(oauth_user):
     try:
@@ -159,6 +172,7 @@ def get_user_schedule(oauth_user):
         teams_for_query = []
         all_games = []
         all_teams = followed_teams + favorite_teams
+        logger.info(f"Fetching schedule for user UID: {uid} with range: {oauth_user["start"]} - {oauth_user["end"]} " )
         for team in all_teams:
             if team["league_id"] not in followed_league_ids:
                 teams_for_query.append(team["id"])
@@ -194,6 +208,7 @@ def get_user_schedule(oauth_user):
                     all_games.append(game)
         return all_games
     except (InvalidIdTokenError) as e:
+        logger.warning("Invalid token for user %s: %s", oauth_user["uid"], str(e))
         return JsonResponse({"error": str(e)}, status=401)
     except Exception as e:
         import traceback
@@ -201,6 +216,7 @@ def get_user_schedule(oauth_user):
         tb_str = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
         print("Exception occurred:", str(e))
         traceback.print_exc()
+        logger.exception("Exception occurred in get_user_schedule: %s", tb_str)
         return {"error": str(e),}
         # return JsonResponse({
         #     "error": str(e),
@@ -235,7 +251,7 @@ def parse_game_date(date_str):
         return parser.parse(cleaned)
 def get_leagues():
     db = get_firestore_client()
-    leagues_ref = db.collection("leagues")
+    leagues_ref = db.collection("leagues").order_by("order")
     docs = leagues_ref.stream()
     leagues = []
     for doc in docs:

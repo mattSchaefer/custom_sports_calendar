@@ -276,6 +276,7 @@ footer{
   padding: 5px;
   border: 1px solid lightgrey;
   border-radius: 4px;
+  transition: all 2s ease-in-out;
 }
 .follow-team-tooltip-big{
   position: relative;
@@ -294,6 +295,9 @@ footer{
 }
 .hidden{
   display: none;
+  width: 0px;
+  height: 0px;
+  transition: all .25s cubic-bezier(0.215, 0.610, 0.355, 1) ;
 }
 .toggle-fav-selector, .fc-button, .team-add, .team-favorite, .toggle-fav-selector, .favorite-selector-header-buttons button, .close-list-editor button, .dropdown-toggle, .signout-button, .favorite-selector-follow-league-button, .team-add, .team-favorite{
   background: transparent !important;
@@ -820,7 +824,8 @@ h4{margin-top: 0; margin-bottom: 0;}
   justify-content: start;
   align-items: center;
   min-height: 50vh;
-  background: #1111114d;
+  /* background: #1111114d; */
+  background: radial-gradient(circle,rgba(245, 104, 10, 0.46) 0%, rgba(4, 149, 245, 0.51) 100%);
 }
 .dropdown{
   min-width: 3rem;
@@ -1002,8 +1007,8 @@ hr{border-bottom: 1px solid grey; width: 85%;}
 .sub-header{
   /* font-style: italic;
   color: #009fff; */
-  color: #ff914d;
-  text-shadow: 3px 2px #ff0060;
+  color: #eee;
+  text-shadow: 3px 2px #ff914d;
 }
 body{
   background: #010618;
@@ -1189,13 +1194,16 @@ h1{
   .unauth-home-login-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
     position: absolute;
-    top: 4rem;
-    right: 0;
+    top: 3.65rem;
+    right: -17px;
     width: 100%;
     margin-right: 0;
+    padding: 5px 10px;
+    background: #111;
+    border-bottom: 2px solid #009fff;
   }
   .header-left{
     gap: .5rem;
@@ -1218,7 +1226,7 @@ h1{
     align-items: center;
     min-height: 50vh;
     width: 100%;
-    background: #1111112e;
+    
   }
   .about-image {
     width: 19rem;
@@ -1245,7 +1253,18 @@ h1{
     position: relative;
     top: -2rem;
   }
-  .header{width: 100vw;}
+  .header{
+    position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111 !important;
+  color: #fffdf4 !important;
+  color: #fffdf4 !important;
+  background: #111 !important;
+  z-index: 100000;
+  border-bottom: 2px solid #111;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 3.5rem;}
   .fc-toolbar-title{
     font-size: 1.2rem !important;
   }
@@ -1274,11 +1293,12 @@ h1{
     width: 90% !important;
   }
   .logo-homepage{
-    max-width: 85%;
+    max-width: 100%;
     height: auto;
     margin-bottom: 1rem;
-    margin-top: 2rem;
+    margin-top: 5rem;
   }
+  
 }
 @media (min-width: 768px) {
   .button-64 {
@@ -1354,12 +1374,7 @@ h1{
     font-weight: bold;
 }
 .facebook-login-highlight{
-  background: linear-gradient(
-        to right,
-        #000a68 20%,
-        #eccb34 45%,
-        #000a68 80%
-    );
+  background: linear-gradient( to right, #0116df 20%, #fbf8ec 25%, #1227f2 80% );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1420,7 +1435,7 @@ h1{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 .button-85:before{
   content: "";

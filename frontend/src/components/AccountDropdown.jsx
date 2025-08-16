@@ -3,6 +3,8 @@ import {useState, useEffect} from 'react';
 import '../App.css';
 import { useAuth } from '../contexts/auth_context.jsx';
 import {build_delete_user_request} from '../factories/delete_user_request_factory.js';
+import google_icon from '../assets/login_google.svg'
+
 const accountDropdown = () => {
     const { user, loginWithGoogle, loginWithFacebook, loading, logOut, accessToken , loginWithTwitter} = useAuth()
     const [dropdownShow, setDropdownShow] = useState(false)
@@ -64,19 +66,22 @@ const accountDropdown = () => {
                     <button className="header-btn fade-in-on-scroll " onClick={() => loginWithGoogle()}>{/*handleLogin(signInWithGoogle) */}
                         <span className="login-button-highlight login-button-inner-span google-login-highlight">
                             <i className="fa fa-brands fa-google"></i>
-                            Sign in with Google
+                            sign in
                         </span>
+                        {/* <img src={google_icon} alt="Google login" className="google-login-icon" /> */}
                     </button>
+                    {/* <div class="fb-login-button" data-width="" data-size="medium" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="false"></div> */}
                     <button className="header-btn fade-in-on-scroll" onClick={() => loginWithFacebook()}>
                         <span className="login-button-highlight login-button-inner-span facebook-login-highlight">
                             <i className="fa fa-brands fa-facebook"></i>
-                            Sign in with Facebook
+                            sign in
                         </span>
                     </button>
                     <button className="header-btn fade-in-on-scroll" onClick={() => loginWithTwitter()}>
                         <span className="login-button-highlight login-button-inner-span x-login-highlight">
                             <i className="fa fa-brands fa-x-twitter"></i>
-                            Sign in with X {"("}Twitter{")"}
+                            sign in 
+                            {/* {"("}Twitter{")"} */}
                         </span>
                     </button>
                 </div>

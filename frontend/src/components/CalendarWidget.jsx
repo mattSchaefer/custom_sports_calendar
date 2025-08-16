@@ -199,7 +199,7 @@ const CalendarWidget = () => {
           </h1>
           <FullCalendar
               plugins={[dayGridPlugin, timeGridPlugin]}
-              initialView='timeGridFourDay'
+              initialView={is_mobile ? 'dayGridDay' : 'timeGridFourDay'}
               nowIndicator={true}
               weekends={true}
               footerToolbar={is_mobile ? mobileFooterToolbar : footerToolbar}
@@ -211,6 +211,7 @@ const CalendarWidget = () => {
               views={fc_custom_views}
               stickyHeaderDates={true}
               lazyFetching={true}
+              validRange={{ start: new Date() }}
           />
         </div>
       </div>

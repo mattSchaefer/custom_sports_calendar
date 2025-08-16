@@ -9,7 +9,8 @@ from backend.services.firestore_user_handler import seed_games
 from backend.firebase_init import get_firestore_client
 from datetime import datetime
 import pytz
-
+import logging
+logger = logging.getLogger(__name__)
 load_dotenv()
 def api_key():
     return os.getenv("SPORTS_DATA_API_KEY")
